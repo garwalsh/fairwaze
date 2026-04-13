@@ -22,6 +22,19 @@ import anthropic
 from anthropic import Anthropic
 
 
+def load_env_file(env_path=".env"):
+    """Simple .env file loader"""
+    if not os.path.exists(env_path):
+        return
+
+    with open(env_path, 'r') as f:
+        for line in f:
+            line = line.strip()
+            if line and not line.startswith('#') and '=' in line:
+                key, value = line.split('=', 1)
+                os.environ[key.strip()] = value.strip()
+
+
 @dataclass
 class EvalResult:
     """Structure for storing evaluation results"""
@@ -69,6 +82,9 @@ class EvalHarness:
             output_dir: Directory to save results
             rate_limit_delay: Delay between API calls in seconds
         """
+        # Load environment variables from .env file
+        load_env_file()
+
         self.api_key = api_key or os.getenv("ANTHROPIC_API_KEY")
         if not self.api_key:
             raise ValueError("API key must be provided or set in ANTHROPIC_API_KEY environment variable")

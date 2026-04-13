@@ -11,10 +11,14 @@
             "id": "d4509e21bffc4342",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "USAGE.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "USAGE"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "USAGE.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for USAGE"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "USAGE.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from USAGE"
             }
           },
           {
@@ -150,12 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "USAGE.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of USAGE"
             }
           }
         ]
@@ -178,13 +185,18 @@
   },
   "active": "d4509e21bffc4342",
   "lastOpenFiles": [
-    "setup.py",
-    "example_usage.py",
+    "eval_results/eval_summary_20260413_110016.json",
+    "eval_results/eval_results_20260413_110016.json",
+    "eval_results/eval_harness.log",
+    "test_results/eval_summary_20260413_105935.json",
+    "test_results/eval_results_20260413_105935.json",
+    "api_test.py",
+    "test_results/eval_summary_20260413_105903.json",
+    "test_results/eval_results_20260413_105903.json",
+    "test_results/eval_summary_20260413_105856.json",
+    "test_results/eval_results_20260413_105856.json",
+    "test_results/eval_summary_20260413_105851.json",
     "USAGE.md",
-    "sample_prompts.csv",
-    "sample_prompts.json",
-    "requirements.txt",
-    "eval_harness.py",
     "README.md"
   ]
 }
