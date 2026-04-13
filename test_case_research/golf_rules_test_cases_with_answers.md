@@ -265,7 +265,7 @@ This document contains 40 golf rules questions categorized by difficulty level f
 - **question**: Your ball lies in an unrepaired pitch mark that was clearly made by another player's ball. Can you take free relief?
 - **source URL**: https://ilovegolfwhen.com/rules-of-golf-2026/
 - **top_comment**: Yes, under the 2026 rules changes, you can take free relief from any unrepaired pitch mark below ground level, not just ones your ball created.
-- **ground_truth**: 
+- **ground_truth**: **Rule 16.3a** - A ball is embedded only if it is in its own pitch-mark made as a result of the player's previous stroke and part of the ball is below the level of the ground. **Ruling**: No free relief under the standard Rules of Golf - the ball must be embedded in your own pitch mark, not another player's. However, **Model Local Rule F-2 (2026)** may allow limited relief from unrepaired pitch marks made by other players, but only in competitions with live television coverage and referees present to make determinations. Most recreational play would not qualify. **Source**: https://www.randa.org/en/players-rule-finder/players-rule-finder/general-area/embedded-ball-when-free-relief-is-allowed
 - **format**: stroke
 
 ### test027
@@ -275,7 +275,7 @@ This document contains 40 golf rules questions categorized by difficulty level f
 - **question**: In match play, you accidentally play your opponent's ball from the rough. When do you realize the mistake and what's the penalty?
 - **source URL**: https://www.wmga.com/wp-content/uploads/2024/02/Match-Play-Rules-and-Reminders.pdf
 - **top_comment**: You lose the hole when you make a stroke at a wrong ball, regardless of when you discover the mistake.
-- **ground_truth**: 
+- **ground_truth**: **Rule 6.3c** - In match play, if you make a stroke at a wrong ball, you get the general penalty (loss of hole). **Ruling**: You lose the hole immediately upon making a stroke at the wrong ball, regardless of when the mistake is discovered. The timing of discovery doesn't matter - the penalty is incurred when the stroke is made. If both players play each other's balls and it's unknown who played a wrong ball first, there's no penalty and the hole continues with balls exchanged. **Source**: https://www.randa.org/en/players-rule-finder/players-rule-finder/general-area/wrong-ball
 - **format**: match
 
 ### test028
@@ -285,7 +285,7 @@ This document contains 40 golf rules questions categorized by difficulty level f
 - **question**: Your ball is in a bunker on damaged artificial lining (concrete/matting). The sand doesn't completely cover the artificial surface. What relief do you get?
 - **source URL**: https://forums.golfmonthly.com/threads/free-relief-from-damaged-bunker-lining.119852/
 - **top_comment**: You can take relief from the immovable obstruction but must drop in the bunker. If no relief is available in the bunker, you can take penalty relief outside the bunker.
-- **ground_truth**: 
+- **ground_truth**: **Rule 16.1c** - When your ball is in a bunker with interference from an immovable obstruction (damaged concrete/matting lining), you have two options: (1) **Free relief in bunker**: Find nearest point of complete relief in the bunker, drop within one club-length, not closer to hole. If no complete relief available, use point of maximum available relief as reference. (2) **Penalty relief outside bunker**: For 1 stroke penalty, use back-on-the-line relief dropping outside bunker keeping original ball spot between hole and drop spot. **Source**: https://www.randa.org/en/rog/the-rules-of-golf/rule-16
 - **format**: stroke
 
 ### test029
@@ -295,7 +295,7 @@ This document contains 40 golf rules questions categorized by difficulty level f
 - **question**: When preferred lies are in effect, how far can you move your ball under the 2026 rules?
 - **source URL**: https://www.golfyack.com/spotlight/golf-rules-changes-for-2026-what-the-tours-are-actually-updating-and-why
 - **top_comment**: Under 2026 rules changes, you can move your ball one scorecard length (not a full club length) when preferred lies are in effect.
-- **ground_truth**: 
+- **ground_truth**: **Model Local Rule E-3** - There is no specific 2026 rule change restricting preferred lies distance. When preferred lies are in effect, the committee must specify the relief area size, which can be 6 inches, one scorecard length, or one club-length from the reference point, not nearer the hole. **Ruling**: The distance depends on what the committee specifies in their local rule - committees can still choose any of the three standard options. No universal change to scorecard length only in 2026. **Source**: https://www.randa.org/en/articles/the-r-a-2025-2026-winter-rules-faq-s
 - **format**: stroke
 
 ### test030
@@ -305,7 +305,7 @@ This document contains 40 golf rules questions categorized by difficulty level f
 - **question**: Under the 2026 PGA Tour local rule changes, when does internal out of bounds apply?
 - **source URL**: https://golf.com/instruction/rules/rules-changes-pga-tour-2026/
 - **top_comment**: Internal OB only applies to balls struck from the tee, not from the fairway or other areas of the course.
-- **ground_truth**: 
+- **ground_truth**: **Model Local Rule A-4** - The 2026 update provides committees with two options for internal out of bounds: (1) Traditional - applies to all strokes made on the hole, or (2) **New option** - applies only to strokes made from the teeing area. **Ruling**: When the tee-shot-only option is adopted, internal OB boundaries only apply to balls struck from the tee. Once you're in the fairway or other areas, those boundaries become immovable/movable obstructions instead. This allows protection of hole design while reducing penalties after the tee shot. **Source**: https://www.randa.org/en/articles/new-and-updated-model-local-rules-for-2026
 - **format**: stroke
 
 ## Adversarial Golf Rules Questions (10)
@@ -317,7 +317,7 @@ This document contains 40 golf rules questions categorized by difficulty level f
 - **question**: You hit a provisional ball for a ball that might be lost. After a 2-minute search, you find what might be your original ball but aren't 100% sure it's yours. Should you continue with the provisional since you can't positively identify the original?
 - **source URL**: https://www.randa.org/en/rog/the-rules-of-golf/rule-18
 - **top_comment**: If you cannot positively identify the ball as yours, it is not your ball. You should continue with the provisional ball.
-- **ground_truth**: 
+- **ground_truth**: **Rule 18.3c(2)/7.2** - You must make all reasonable efforts to identify any ball found that might be yours. If you cannot identify the ball within reasonable time (which can extend beyond the 3-minute search), it is lost. **Ruling**: You cannot simply continue with the provisional because you're uncertain - you must attempt identification. If after reasonable effort you still can't identify it, the original is lost and the provisional becomes your ball in play. Failing to make genuine identification efforts could result in disqualification for misconduct. **Source**: https://www.randa.org/en/rog/the-rules-of-golf/rule-18
 - **format**: stroke
 
 ### test032
@@ -327,7 +327,7 @@ This document contains 40 golf rules questions categorized by difficulty level f
 - **question**: In match play, you concede your opponent's 3-foot putt, but they want to putt it anyway "for practice." Can they do this?
 - **source URL**: https://www.glenelggolf.com/cms/rules/a-guide-to-the-rules-of-match-play/
 - **top_comment**: No, a concession cannot be refused. The hole is over and they cannot putt for practice during play of the hole.
-- **ground_truth**: 
+- **ground_truth**: **Rule 3.2b(1)** - A concession cannot be declined or withdrawn. Once clearly communicated, your opponent has completed the hole with a score that includes the conceded stroke. **Ruling**: No, they cannot putt for practice. The concession is final and the hole is completed. Any practice stroke during play of a hole is prohibited under Rule 5.5a, and the hole is technically still in play until both players leave the putting green. They may only practice between holes. **Source**: https://www.randa.org/en/rog/the-rules-of-golf/rule-3
 - **format**: match
 
 ### test033
@@ -337,7 +337,7 @@ This document contains 40 golf rules questions categorized by difficulty level f
 - **question**: Your ball moves slightly after you address it, but you weren't sure it moved and played it from the new position. Under 2026 rules, what's the penalty?
 - **source URL**: https://ilovegolfwhen.com/rules-of-golf-2026/
 - **top_comment**: If you were unaware the ball might have moved, the penalty is one stroke (not two) for playing from the wrong place.
-- **ground_truth**: 
+- **ground_truth**: **Rule 9.4b/14.7a (2026 clarification)** - If you were unaware that the ball had moved or that it might have moved when you made the stroke, you get only one penalty stroke under Rule 9.4b and have not played from a wrong place. However, if you were aware the ball might have moved and failed to replace it, you get the general penalty (2 strokes) for playing from wrong place. **Ruling**: Since you were unsure and unaware, one penalty stroke applies. **Source**: https://www.usga.org/content/dam/usga/pdf/2026/Additional%20Clarifications%20of%20the%202023%20Rules%20of%20Golf%20-%201%20January%202026%20-%20final%20(Dec%2023).pdf
 - **format**: stroke
 
 ### test034
@@ -347,7 +347,7 @@ This document contains 40 golf rules questions categorized by difficulty level f
 - **question**: Your ball is clearly embedded in the fairway, but it's embedded in sand that was scattered from a nearby bunker, not in the actual ground/turf. Do you get relief?
 - **source URL**: https://www.golfdigest.com/story/rules-of-golf-most-misunderstood-rules-embedded-ball-bunker-penalty-area-out-of-bounds
 - **top_comment**: No relief. The ball must be embedded in the ground itself, not in loose sand or other materials on top of the ground.
-- **ground_truth**: 
+- **ground_truth**: **Rule 16.3a/16.3b** - A ball is embedded only if it is in its own pitch-mark made as a result of the player's previous stroke AND part of the ball is below the level of the ground. Additionally, there is no relief when the ball is embedded in sand in a part of the general area that is not cut to fairway height or less. **Ruling**: No relief. The ball must be embedded in the ground itself (soil/turf), not in loose sand scattered on top of the ground. Sand is not considered "ground" for embedded ball purposes. **Source**: https://www.randa.org/en/players-rule-finder/players-rule-finder/general-area/embedded-ball-when-free-relief-is-allowed
 - **format**: stroke
 
 ### test035
@@ -357,7 +357,7 @@ This document contains 40 golf rules questions categorized by difficulty level f
 - **question**: Your ball is in a bunker and you want to measure the distance to the pin. Can you place your rangefinder on the sand to stabilize it while measuring?
 - **source URL**: https://thegolfbusiness.co.uk/2011/12/the-rules-of-golf-surrounding-bunkers/
 - **top_comment**: No, this would be testing the condition of the sand which is prohibited under Rule 12.2a.
-- **ground_truth**: 
+- **ground_truth**: **Rule 12.2a** - You may place clubs, equipment or other objects in the bunker (whether by throwing or setting them down). Testing sand conditions is prohibited, but simply placing equipment to stabilize it is not considered testing. **Ruling**: Yes, you can place your rangefinder on the sand to stabilize it for distance measuring. This is allowed as long as you don't improve conditions affecting your stroke and aren't deliberately testing sand conditions to learn information for your next stroke. **Source**: https://www.randa.org/en/players-rule-finder/players-rule-finder/bunker/touching-sand-when-allowed-and-not-allowed
 - **format**: stroke
 
 ### test036
@@ -367,7 +367,7 @@ This document contains 40 golf rules questions categorized by difficulty level f
 - **question**: In match play, after your opponent holes out, you ask them what club they used for their approach shot. They tell you. Who gets penalized?
 - **source URL**: https://www.randa.org/en/rog/the-rules-of-golf/rule-10
 - **top_comment**: No one gets penalized. Information about clubs used for completed strokes can be shared; it's only advice about future strokes that's prohibited.
-- **ground_truth**: 
+- **ground_truth**: **Rule 10.2a** - Advice is defined as information intended to influence a player in choosing a club or deciding how to play during a hole or round. **Ruling**: No one gets penalized. Asking about what club was used for a completed stroke is allowed information, not advice. The rule prohibits advice that influences future play decisions, but information about past completed shots can be shared. However, you cannot physically touch their equipment to learn this information. **Source**: https://www.randa.org/rog/the-rules-of-golf/rule-10
 - **format**: match
 
 ### test037
@@ -377,16 +377,17 @@ This document contains 40 golf rules questions categorized by difficulty level f
 - **question**: Your ball clearly went into a water hazard, but the area isn't marked with red or yellow stakes. Can you take penalty area relief?
 - **source URL**: https://forums.golfwrx.com/topic/1847515-penalty-area-boundaries/
 - **top_comment**: No, an area must be properly marked to be a penalty area. Without markings, you must treat it as you find it or take unplayable ball relief.
-- **ground_truth**: 
+- **ground_truth**: **Definition - Penalty Area** - A penalty area includes any body of water on the course (whether or not marked by the Committee), including sea, lake, pond, river, ditch, surface drainage ditch or other open watercourse. **Ruling**: Yes, you can take penalty area relief. Water hazards are automatically penalty areas regardless of markings. If no color is marked, treat it as red penalty area with lateral relief options. The Committee doesn't need to mark water for it to be a penalty area. **Source**: https://www.usga.org/content/usga/home-page/rules/rules-2019/committee-procedures/definitions.html
 - **format**: stroke
 
 ### test038
 - **id**: test038
 - **difficulty**: adversarial
+- **category**: relief
 - **question**: You're taking relief from GUR and your ball rolls closer to the hole after dropping. Your playing partner says you must re-drop. Are they correct?
 - **source URL**: https://www.usga.org/content/usga/home-page/rules/rules-2019/players-edition/rule-14.html
 - **top_comment**: Not necessarily. The ball can roll closer to the hole as long as it doesn't roll outside the relief area and isn't nearer the hole than the reference point.
-- **ground_truth**: 
+- **ground_truth**: **Rule 14.3c(2)** - A dropped ball must be dropped again only if: it comes to rest outside the relief area, or it was dropped in the wrong way. **Ruling**: Your partner is incorrect. The ball rolling closer to the hole is not a reason for re-dropping, as long as it stays within the relief area and is not nearer to the hole than the reference point. The relief area defines the acceptable area - movement within that area is allowed. **Source**: https://www.randa.org/en/rog/the-rules-of-golf/rule-14
 - **format**: stroke
 
 ### test039
@@ -396,7 +397,7 @@ This document contains 40 golf rules questions categorized by difficulty level f
 - **question**: Your caddie accidentally breaks your putter during the round (not from abuse). Can you replace it with a different putter from the pro shop?
 - **source URL**: https://ilovegolfwhen.com/rules-of-golf-2026/
 - **top_comment**: No, you can only replace a damaged club with one you or your group are carrying. You cannot go get a new club from the pro shop.
-- **ground_truth**: 
+- **ground_truth**: **Rule 4.1a(2)** - You may replace a club damaged during the round (not from abuse), but replacement clubs can only be built from parts being carried by or for the player or any other player who is playing on the course. **Ruling**: No, you cannot get a replacement club from the pro shop during the round. The replacement must come from clubs/parts already being carried by you or other players on the course. The club must be conforming and not already selected for play by another player. **Source**: https://www.usga.org/content/usga/home-page/rules-hub/rules-modernization/major-changes/adding-clubs-to-replace-a-club-damaged-during-round.html
 - **format**: stroke
 
 ### test040
@@ -406,7 +407,7 @@ This document contains 40 golf rules questions categorized by difficulty level f
 - **question**: Your ball is in an impossible lie in the woods. You decide it's unplayable and want to go back to the tee using stroke-and-distance, but your caddie already threw a ball down for lateral relief. Must you play the dropped ball?
 - **source URL**: https://www.mygolfinstructor.com/instruction/rules-of-golf/unplayable-lie/
 - **top_comment**: No, as long as you haven't made a stroke at the dropped ball, you can pick it up and choose a different relief option, including stroke-and-distance.
-- **ground_truth**: 
+- **ground_truth**: **Rule 19.2** - When taking unplayable ball relief, you are not committed to the intended relief option until you make a stroke at the ball in play. **Ruling**: No, you do not have to play the dropped ball. As long as you haven't made a stroke at it, you can pick up the ball and choose any of the three unplayable ball relief options, including stroke-and-distance from the tee. The relief option isn't locked in until you make a stroke. **Source**: https://www.randa.org/en/rog/clarifications/rule-19
 - **format**: stroke
 
 ---
