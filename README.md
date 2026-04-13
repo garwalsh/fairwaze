@@ -1,0 +1,3 @@
+# FairWaze
+
+Welcome to FairWaze!
