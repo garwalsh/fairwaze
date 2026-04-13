@@ -63,6 +63,12 @@ test_results/
 example_results/
 *.log
 
+# Development and internal notes
+dev_notes.md
+*_notes.md
+TODO.md
+CHANGELOG.md
+
 # Temporary files
 *.tmp
 *.temp
