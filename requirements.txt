@@ -1,0 +1,4 @@
+# FairWaze Evaluation Harness Dependencies
+
+anthropic>=0.34.0
+asyncio-compat>=0.1.0  # For compatibility

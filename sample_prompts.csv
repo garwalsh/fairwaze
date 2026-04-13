@@ -1,0 +1,5 @@
+id,prompt,expected_response,category,difficulty,metadata
+basic_001,"What is 2 + 2?","4",math,easy,"{""topic"": ""arithmetic""}"
+basic_002,"What is the capital of France?","Paris",geography,easy,"{""topic"": ""world_capitals""}"
+basic_003,"Explain what machine learning is in one sentence.",,,ai,medium,"{""topic"": ""definitions"", ""brevity_required"": true}"
+basic_004,"Write a function to reverse a string in Python.",,,programming,medium,"{""language"": ""python"", ""concept"": ""string_manipulation""}"

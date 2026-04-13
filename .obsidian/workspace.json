@@ -178,6 +178,13 @@
   },
   "active": "d4509e21bffc4342",
   "lastOpenFiles": [
+    "setup.py",
+    "example_usage.py",
+    "USAGE.md",
+    "sample_prompts.csv",
+    "sample_prompts.json",
+    "requirements.txt",
+    "eval_harness.py",
     "README.md"
   ]
 }

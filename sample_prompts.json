@@ -1,0 +1,91 @@
+[
+  {
+    "id": "reasoning_001",
+    "prompt": "If a train travels 120 miles in 2 hours, what is its average speed in miles per hour?",
+    "expected_response": "60 miles per hour",
+    "category": "math",
+    "difficulty": "easy",
+    "metadata": {
+      "topic": "basic_arithmetic",
+      "requires_calculation": true
+    }
+  },
+  {
+    "id": "reasoning_002",
+    "prompt": "Explain the concept of photosynthesis in simple terms that a 10-year-old could understand.",
+    "expected_response": null,
+    "category": "science",
+    "difficulty": "medium",
+    "metadata": {
+      "topic": "biology",
+      "requires_explanation": true,
+      "target_audience": "children"
+    }
+  },
+  {
+    "id": "creativity_001",
+    "prompt": "Write a short haiku about artificial intelligence.",
+    "expected_response": null,
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "metadata": {
+      "format": "haiku",
+      "theme": "technology"
+    }
+  },
+  {
+    "id": "logic_001",
+    "prompt": "All birds can fly. Penguins are birds. Therefore, penguins can fly. What is wrong with this reasoning?",
+    "expected_response": null,
+    "category": "logic",
+    "difficulty": "medium",
+    "metadata": {
+      "topic": "logical_fallacies",
+      "type": "syllogism"
+    }
+  },
+  {
+    "id": "coding_001",
+    "prompt": "Write a Python function that takes a list of numbers and returns the sum of all even numbers in the list.",
+    "expected_response": null,
+    "category": "programming",
+    "difficulty": "easy",
+    "metadata": {
+      "language": "python",
+      "concept": "filtering_and_summing"
+    }
+  },
+  {
+    "id": "ethics_001",
+    "prompt": "A self-driving car must choose between hitting one person or swerving to hit five people. What ethical framework should guide this decision?",
+    "expected_response": null,
+    "category": "ethics",
+    "difficulty": "hard",
+    "metadata": {
+      "topic": "trolley_problem",
+      "domain": "autonomous_vehicles"
+    }
+  },
+  {
+    "id": "comprehension_001",
+    "prompt": "The quick brown fox jumps over the lazy dog. How many words are in this sentence?",
+    "expected_response": "9 words",
+    "category": "comprehension",
+    "difficulty": "easy",
+    "metadata": {
+      "task": "word_counting",
+      "sentence_type": "pangram"
+    }
+  },
+  {
+    "id": "analysis_001",
+    "prompt": "Analyze the pros and cons of remote work from both employee and employer perspectives.",
+    "expected_response": null,
+    "category": "analysis",
+    "difficulty": "medium",
+    "metadata": {
+      "topic": "workplace_trends",
+      "requires_balanced_view": true
+    }
+  }
+]
