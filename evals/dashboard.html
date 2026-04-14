@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf Rules Bot — Evaluation Dashboard</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0ea5e9;
+            --primary-dark: #0284c7;
+            --secondary: #06b6d4;
+            --accent: #f59e0b;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --error: #ef4444;
+            --dark-bg: #0f172a;
+            --card-bg: #1e293b;
+            --border: #334155;
+        }
+
+        * {
+            font-feature-settings: "liga" 1, "kern" 1;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark-bg);
+            min-height: 100vh;
+            color: #e2e8f0;
+        }
+
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+            opacity: 0.4;
+        }
+
+        .metric-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            transform: translateY(0);
+        }
+
+        .metric-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            border-color: var(--primary);
+        }
+
+        .score-excellent { color: var(--success); }
+        .score-good { color: var(--primary); }
+        .score-warning { color: var(--warning); }
+        .score-poor { color: var(--error); }
+
+        .difficulty-pill {
+            font-size: 0.75rem;
+            font-weight: 500;
+            padding: 4px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .difficulty-easy {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--success);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .difficulty-medium {
+            background: rgba(245, 158, 11, 0.1);
+            color: #d97706;
+            border: 1px solid rgba(245, 158, 11, 0.2);
+        }
+
+        .difficulty-hard {
+            background: rgba(239, 68, 68, 0.1);
+            color: #dc2626;
+            border: 1px solid rgba(239, 68, 68, 0.2);
+        }
+
+        .difficulty-adversarial {
+            background: rgba(147, 51, 234, 0.1);
+            color: #9333ea;
+            border: 1px solid rgba(147, 51, 234, 0.2);
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .fade-in-delay-1 { animation-delay: 0.1s; }
+        .fade-in-delay-2 { animation-delay: 0.2s; }
+        .fade-in-delay-3 { animation-delay: 0.3s; }
+        .fade-in-delay-4 { animation-delay: 0.4s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            height: 6px;
+            border-radius: 3px;
+            transition: width 0.8s ease-out;
+        }
+
+        .table-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .expandable-row {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+
+        .expandable-row:hover {
+            border-left-color: var(--primary);
+            background-color: rgba(14, 165, 233, 0.05);
+        }
+
+        .golf-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            margin: 2rem 0;
+        }
+
+        .dropdown-select {
+            background: var(--card-bg);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 8px 16px;
+            font-weight: 500;
+            color: #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+<script>
+// Embedded evaluation data
+const EVAL_DATA = {
+    "v0.1_haiku_rv0.1_20260413_202842": {
+        "summary": {
+            "total_questions": 40,
+            "overall_average": 7.95,
+            "max_possible_score": 10,
+            "dimension_averages": {
+                "accuracy": 1.425,
+                "completeness": 1.7,
+                "format": 1.75,
+                "guardrails": 1.825
+            },
+            "difficulty_breakdown": {
+                "easy": {"count": 10, "avg": 9.4},
+                "medium": {"count": 10, "avg": 8.9},
+                "hard": {"count": 10, "avg": 7.1},
+                "adversarial": {"count": 10, "avg": 6.4}
+            },
+            "category_breakdown": {
+                "embedded": {"count": 1, "avg": 3.0},
+                "preferred_lies": {"count": 1, "avg": 3.0},
+                "ball_in_motion": {"count": 1, "avg": 4.0},
+                "ball_moved": {"count": 3, "avg": 5.333333333333333},
+                "unplayable": {"count": 2, "avg": 6.5},
+                "provisional": {"count": 2, "avg": 7.5},
+                "bunker": {"count": 3, "avg": 7.666666666666667},
+                "match_play": {"count": 9, "avg": 7.888888888888889},
+                "penalty_area": {"count": 4, "avg": 8.25},
+                "lost_ball": {"count": 2, "avg": 8.5},
+                "OB": {"count": 1, "avg": 10.0},
+                "relief": {"count": 2, "avg": 10.0},
+                "putting_green": {"count": 1, "avg": 10.0},
+                "flagstick": {"count": 1, "avg": 10.0},
+                "dropping": {"count": 2, "avg": 10.0},
+                "GUR": {"count": 2, "avg": 10.0},
+                "obstruction": {"count": 2, "avg": 10.0},
+                "equipment": {"count": 1, "avg": 10.0}
+            },
+            "fail_conditions": {
+                "Cited rule number": 4,
+                "Safety Violation": 1
+            },
+            "score_distribution": {
+                "10": 26, "7": 1, "6": 2, "5": 2, "4": 2, "3": 7
+            },
+            "timestamp": "2026-04-13T20:30:42.390794"
+        },
+        "manifest": {
+            "version": "v0.1",
+            "timestamp": "2026-04-13T20:28:42.886326",
+            "commit_hash": "7cb477c",
+            "model": "claude-3-haiku-20240307",
+            "grader_model": "claude-3-haiku-20240307",
+            "temperature": 0,
+            "n_cases": 40,
+            "changes_from_previous": "Baseline run"
+        },
+        "grades": [{"id":"test_001","question":"Your tee shot lands in a yellow penalty area (water hazard). What are your options?","difficulty":"easy","category":"penalty_area","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":10,"fail_conditions_triggered":[],"reasoning":"The model response accurately identifies the three main relief options available under Rule 17.1d when a ball is in a yellow penalty area: (1) play th..."},{"id":"test_002","question":"You hit your tee shot and it goes out of bounds. What must you do?","difficulty":"easy","category":"OB","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":10,"fail_conditions_triggered":[],"reasoning":"The model response accurately identifies the correct rule (Rule 18.2a) and provides the complete set of required information - the ruling, the penalti..."},{"id":"test_003","question":"Your ball is in a greenside bunker. Can you remove a small stone lying next to your ball before playing your shot?","difficulty":"easy","category":"bunker","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":10,"fail_conditions_triggered":[],"reasoning":"The model response accurately identifies the correct rule (Rule 12.2a) and provides the appropriate ruling that the player may remove the small stone ..."},{"id":"test_004","question":"Your ball comes to rest on a paved cart path in the fairway. Are you entitled to free relief?","difficulty":"easy","category":"relief","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":10,"fail_conditions_triggered":[],"reasoning":"The model response accurately identifies the correct rule (Rule 16.1b) and provides the appropriate ruling, procedures, and penalties. All required el..."},{"id":"test_005","question":"Your ball is on the putting green. Can you repair spike marks in your line of putt?","difficulty":"easy","category":"putting_green","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":10,"fail_conditions_triggered":[],"reasoning":"The model response accurately identifies the correct rule (Rule 13.1c(2)) and provides the complete details on the player's ability to repair spike ma..."},{"id":"test_006","question":"In match play, you and your opponent both make a 5 on a hole. What is the result of the hole?","difficulty":"easy","category":"match_play","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":10,"fail_conditions_triggered":[],"reasoning":"The model response correctly identifies the ruling that the hole is halved when both players make the same score in match play, per Rule 3.2a(2). The ..."},{"id":"test_007","question":"You hit your ball into thick rough and cannot find it. How long do you have to search before it is considered lost?","difficulty":"easy","category":"lost_ball","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":10,"fail_conditions_triggered":[],"reasoning":"The model response accurately identifies the correct rule (Rule 18.2a(1)) and provides the complete details, including the 3-minute search time, the p..."},{"id":"test_008","question":"In match play, your putt from the green hits the flagstick that was left in the hole. Is there a penalty?","difficulty":"easy","category":"flagstick","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":10,"fail_conditions_triggered":[],"reasoning":"The model response accurately identifies the correct rule (Rule 13.2a) and provides a complete explanation of the ruling, including the options, proce..."},{"id":"test_009","question":"In match play, your opponent concedes your next putt. Can you refuse the concession and putt anyway?","difficulty":"easy","category":"match_play","accuracy":0,"completeness":1,"format":1,"guardrails":2,"total":4,"fail_conditions_triggered":[],"reasoning":"The response is incorrect - it states that the player can refuse the concession, which is not accurate according to Rule 3.2b. The response provides s..."},{"id":"test_010","question":"You think your tee shot might be lost in the woods. You announce you will play a provisional ball and hit another. Your original is then found in the fairway. Which ball do you play?","difficulty":"easy","category":"provisional","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":10,"fail_conditions_triggered":[],"reasoning":"The model response accurately identifies the correct ruling, citing the relevant Rule 18.3c. It provides all the required elements, including the proc..."},{"id":"test_011","question":"You take a free drop from an immovable obstruction. You drop the ball from knee height and it bounces and rolls outside the one-club-length relief area. What must you do?","difficulty":"medium","category":"dropping","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":10,"fail_conditions_triggered":[],"reasoning":"The model response accurately identifies the correct ruling based on Rule 14.3c(2) - that the player must re-drop the ball since it did not come to re..."},{"id":"test_012","question":"Your ball is unplayable in a bunker. You decide to take back-on-the-line relief. Must you drop the ball inside the bunker or can you drop outside it?","difficulty":"medium","category":"unplayable","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":10,"fail_conditions_triggered":[],"reasoning":"The model response accurately identifies the correct rule (Rule 19.3b) and provides the complete set of options and procedures for taking back-on-the-..."},{"id":"test_013","question":"Your ball lies in the general area just outside a GUR boundary, but your stance would be inside the GUR. Are you entitled to free relief?","difficulty":"medium","category":"GUR","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":10,"fail_conditions_triggered":[],"reasoning":"The model response accurately identifies the correct rule (Rule 16.1a(1)) and provides the complete ruling, including the procedures and penalties. Th..."},{"id":"test_014","question":"While searching for your ball in the rough, you accidentally kick it. What is the penalty and what must you do?","difficulty":"medium","category":"ball_moved","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":10,"fail_conditions_triggered":[],"reasoning":"The response accurately identifies the correct rule (Rule 9.4b Exception 2) and provides the complete details on the penalty and procedures. The rulin..."},{"id":"test_015","question":"In match play, you play out of turn from the tee. Can your opponent make you replay the shot?","difficulty":"medium","category":"match_play","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":10,"fail_conditions_triggered":[],"reasoning":"The model response accurately identifies the correct rule (Rule 6.4a(2)) and clearly states that in match play, if a player plays out of turn from the..."},{"id":"test_016","question":"Your ball is in a red penalty area. You find your ball sitting on dry land with a playable lie. Are you required to take a penalty drop, or can you play the ball as it lies?","difficulty":"medium","category":"penalty_area","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":10,"fail_conditions_triggered":[],"reasoning":"The model response accurately identifies the correct ruling based on Rule 17.1b, which allows the player to play the ball as it lies in the penalty ar..."},{"id":"test_017","question":"A movable obstruction (a rake) is lying in a bunker. Your ball is not in the bunker but the rake is on your line of play. Can you move the rake?","difficulty":"medium","category":"obstruction","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":10,"fail_conditions_triggered":[],"reasoning":"The model response accurately identifies the correct rule (Rule 15.2a) and provides the complete details, including the ability to remove the movable ..."},{"id":"test_018","question":"You start your round with 14 clubs. On the 5th hole you discover that one of the clubs belongs to another player and was placed in your bag by mistake. How many clubs do you have for the purpose of the 14-club limit?","difficulty":"medium","category":"equipment","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":10,"fail_conditions_triggered":[],"reasoning":"The model response accurately identifies the correct ruling based on Rule 4.1b(1) - the mistaken club does not count towards the 14-club limit, so the..."},{"id":"test_019","question":"In match play, you realize on the 4th tee that you have been playing with 15 clubs since the start of the round. What is the penalty?","difficulty":"medium","category":"match_play","accuracy":1,"completeness":1,"format":1,"guardrails":2,"total":6,"fail_conditions_triggered":[],"reasoning":"The response is partially correct, as it identifies the correct penalty for having more than 14 clubs in match play (loss of hole). However, it is mis..."},{"id":"test_020","question":"Your ball is embedded in the face of a bunker, above the sand, in a grassy area that is part of the bunker wall. Are you entitled to free relief for an embedded ball?","difficulty":"medium","category":"embedded","accuracy":0,"completeness":1,"format":1,"guardrails":1,"total":3,"fail_conditions_triggered":["Cited rule number"],"reasoning":"The response is completely incorrect, as it states that the player is entitled to free relief for an embedded ball in the bunker face, which is not th..."},{"id":"test_021","question":"You play a provisional ball from the tee. Your provisional lands in a red penalty area. Before searching for your original, you play a second provisional from the tee. Is the second provisional valid?","difficulty":"hard","category":"provisional","accuracy":0,"completeness":1,"format":2,"guardrails":2,"total":5,"fail_conditions_triggered":[],"reasoning":"The model response is incorrect. According to Rule 18.3a, the player is allowed to play another provisional ball if the first provisional ball might b..."},{"id":"test_022","question":"Your ball is at rest on the putting green. A strong gust of wind moves it into a bunker. Must you play it from the bunker or can you replace it on the green?","difficulty":"hard","category":"ball_moved","accuracy":0,"completeness":1,"format":1,"guardrails":1,"total":3,"fail_conditions_triggered":[],"reasoning":"The response is completely incorrect, as the rules state that the ball must be played from the bunker where it came to rest due to the wind. The respo..."},{"id":"test_023","question":"Your ball is in a red penalty area. You decide to take lateral relief, but the nearest point within two club-lengths is on the other side of the penalty area. Can you drop there?","difficulty":"hard","category":"penalty_area","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":10,"fail_conditions_triggered":[],"reasoning":"The response accurately identifies the correct ruling based on Rule 17.1d(3), which states that the relief area when taking lateral relief must be on ..."},{"id":"test_024","question":"In match play, you and your opponent both play wrong balls on a par 3. You each realize the mistake before teeing off on the next hole. What is the ruling?","difficulty":"hard","category":"match_play","accuracy":1,"completeness":1,"format":1,"guardrails":2,"total":6,"fail_conditions_triggered":[],"reasoning":"The response is partially correct, as it identifies the need to replay the hole with the proper balls, but it does not provide the full details of the..."},{"id":"test_025","question":"Your ball is in the general area and an immovable obstruction (a sprinkler head) interferes with your stance. However, the obstruction is inside a red penalty area while your ball is outside it. Can you take free relief from the obstruction?","difficulty":"hard","category":"obstruction","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":10,"fail_conditions_triggered":[],"reasoning":"The response accurately identifies that the player cannot take free relief from the immovable obstruction (sprinkler head) located inside the penalty ..."},{"id":"test_026","question":"Your ball is plugged in the steep face of a bunker. You declare it unplayable and choose lateral relief (two club-lengths). All points within two club-lengths that are not nearer the hole are outside the bunker in the general area. Where must you drop?","difficulty":"hard","category":"bunker","accuracy":0,"completeness":1,"format":1,"guardrails":1,"total":3,"fail_conditions_triggered":["Cited rule number"],"reasoning":"The response is incorrect, as it states that lateral relief can be used in this scenario, which is not the case. The rules state that when the ball is..."},{"id":"test_027","question":"In stroke play, you putt from on the green and your ball is still moving when it hits another player's ball that was at rest on the green. What happens?","difficulty":"hard","category":"ball_in_motion","accuracy":0,"completeness":1,"format":1,"guardrails":2,"total":4,"fail_conditions_triggered":[],"reasoning":"The response is completely incorrect, as it states that there is no penalty when a player's ball in motion hits another player's ball at rest on the p..."},{"id":"test_028","question":"In match play, you are 3 down with 3 holes to play. On the 16th tee, your opponent concedes the hole. On the 17th, you win the hole. You are now 1 down with 1 to play. On the 18th green, your opponent concedes your birdie putt, tying the match. Your opponent then says they want to withdraw the concession on hole 16 because they made it by mistake. Can they?","difficulty":"hard","category":"match_play","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":10,"fail_conditions_triggered":[],"reasoning":"The model response accurately identifies the correct ruling based on Rule 3.2b, which states that a concession is final and cannot be declined or with..."},{"id":"test_029","question":"Your ball is in the general area and you have interference from an animal hole. The nearest point of complete relief would be on a putting green (not the green of the hole being played). Where do you take relief?","difficulty":"hard","category":"relief","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":10,"fail_conditions_triggered":[],"reasoning":"The model response accurately identifies the correct rule (Rule 16.1b) and provides the appropriate ruling, procedures, and penalties. All required el..."},{"id":"test_030","question":"In match play, you hit your approach shot and it lands on the green. Your opponent, who hasn't played yet, picks up your ball thinking it's theirs. They realize the mistake and replace it. What is the penalty?","difficulty":"hard","category":"match_play","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":10,"fail_conditions_triggered":[],"reasoning":"The model response accurately identifies the correct rule (Rule 9.5b Exception 2) and provides the complete details of the ruling, including the lack ..."},{"id":"test_031","question":"Your ball is in a red penalty area. Before playing your next stroke, you ground your club in the penalty area and take a practice swing that touches the ground. What is the penalty?","difficulty":"adversarial","category":"penalty_area","accuracy":0,"completeness":1,"format":1,"guardrails":1,"total":3,"fail_conditions_triggered":["Cited rule number"],"reasoning":"The response is incorrect - there is no penalty for touching the ground in the penalty area with a practice swing under the current rules. The model c..."},{"id":"test_032","question":"You take relief from a cart path. You determine the nearest point of complete relief and drop within one club-length. The ball comes to rest in a position where you now have interference from a sprinkler head. Must you play it as it lies, or can you take additional relief from the sprinkler head?","difficulty":"adversarial","category":"dropping","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":10,"fail_conditions_triggered":[],"reasoning":"The response accurately identifies the correct rule (Rule 16.1b) and provides the appropriate ruling, procedures, and penalties. All required elements..."},{"id":"test_033","question":"In match play, on the final hole, both players are on the green. Player A is 20 feet away, Player B is 6 feet away. Player A putts first and misses, leaving a 2-foot putt. Player B then concedes Player A's next putt. Player A picks up their ball. Player B then three-putts from 6 feet. Player A claims they win the hole because Player B made 5 and their conceded putt means they made 4. Player B says the hole was halved because the concession happened before B finished. Who is correct?","difficulty":"adversarial","category":"match_play","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":10,"fail_conditions_triggered":[],"reasoning":"The response accurately identifies the correct ruling based on Rule 3.2b, which states that a concession takes effect immediately when made. The respo..."},{"id":"test_034","question":"Your ball is in a bunker. Before your stroke, you smooth footprints in the bunker that are 10 feet away from your ball and not on your line of play. You do this to care for the course. Is there a penalty?","difficulty":"adversarial","category":"bunker","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":10,"fail_conditions_triggered":[],"reasoning":"The model response accurately identifies the relevant rule (Rule 12.2b) and correctly states that there is no penalty for smoothing footprints in the ..."},{"id":"test_035","question":"In stroke play, you hit your tee shot into the woods. You don't play a provisional. After searching for 2 minutes, your playing partner finds a ball. You identify it as yours but it's in an unplayable lie. You declare it unplayable and take lateral relief, dropping within two club-lengths. After you play your next shot, you discover the ball you found was actually not yours (the markings were similar). What is the ruling?","difficulty":"adversarial","category":"lost_ball","accuracy":1,"completeness":1,"format":2,"guardrails":2,"total":7,"fail_conditions_triggered":[],"reasoning":"The response correctly identifies that the player incurred a one-stroke penalty for playing from a wrong ball, and that the player must go back and pl..."},{"id":"test_036","question":"In match play, your opponent's tee shot goes into a red penalty area. They drop under penalty of one stroke and hit their third shot onto the green. You then notice that when they dropped, they dropped on the wrong side of the penalty area (the side closer to the hole). You say nothing until after they two-putt for a 5. You then raise the issue. Is your opponent's score valid?","difficulty":"adversarial","category":"match_play","accuracy":0,"completeness":2,"format":2,"guardrails":1,"total":5,"fail_conditions_triggered":["Safety Violation"],"reasoning":"The response is completely incorrect, as it states that the opponent's score is not valid, when the rules clearly state that the opponent's score is v..."},{"id":"test_037","question":"Your ball is on a steep slope in the general area. You carefully place your club behind the ball to address it, and the ball moves. Under the current Rules of Golf (2023), are you deemed to have caused the ball to move?","difficulty":"adversarial","category":"ball_moved","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":3,"fail_conditions_triggered":["Cited rule number"],"reasoning":"The response accurately identifies the correct rule (Rule 9.4b) and provides the appropriate ruling, penalties, and procedures. All required elements ..."},{"id":"test_038","question":"Your ball lands in a flower bed adjacent to the clubhouse. The flower bed is not marked as GUR and there is no local rule about it. Your ball is playable. A committee member walking by tells you that flower beds are always treated as GUR. Is the committee member correct?","difficulty":"adversarial","category":"GUR","accuracy":2,"completeness":2,"format":2,"guardrails":2,"total":10,"fail_conditions_triggered":[],"reasoning":"The response accurately identifies that the committee member is incorrect, as the flower bed is not automatically considered ground under repair (GUR)..."},{"id":"test_039","question":"Your ball is unplayable in a penalty area. Can you declare it unplayable and take unplayable ball relief (back-on-the-line or two club-lengths) under Rule 19?","difficulty":"adversarial","category":"unplayable","accuracy":0,"completeness":1,"format":1,"guardrails":1,"total":3,"fail_conditions_triggered":[],"reasoning":"The model's response is completely incorrect. It states that you can declare the ball unplayable and take unplayable ball relief when the ball is in a..."},{"id":"test_040","question":"Preferred lies (lift, clean, and place) are in effect via local rule. Your ball is in the first cut of rough just off the fairway. Can you lift, clean, and place your ball under the preferred lies local rule?","difficulty":"adversarial","category":"preferred_lies","accuracy":0,"completeness":1,"format":1,"guardrails":1,"total":3,"fail_conditions_triggered":[],"reasoning":"The model's response is completely incorrect. The preferred lies local rule typically does not apply to the rough, only the fairway. The model incorre..."}]
+    }
+};
+
+function getScoreClass(score, max = 10) {
+    const percentage = (score / max) * 100;
+    if (percentage >= 90) return 'score-excellent';
+    if (percentage >= 70) return 'score-good';
+    if (percentage >= 50) return 'score-warning';
+    return 'score-poor';
+}
+
+function formatScore(score, decimals = 1) {
+    return typeof score === 'number' ? score.toFixed(decimals) : score;
+}
+
+function formatCategoryName(category) {
+    const categoryMap = {
+        'embedded': 'embedded lies',
+        'preferred_lies': 'preferred lies',
+        'ball_in_motion': 'ball in motion',
+        'ball_moved': 'ball moved',
+        'penalty_area': 'penalty area',
+        'lost_ball': 'lost ball',
+        'putting_green': 'putting green',
+        'match_play': 'match play'
+    };
+    return categoryMap[category] || category.replace('_', ' ');
+}
+</script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+const { useState, useMemo, useEffect } = React;
+
+function Dashboard() {
+    const versions = Object.keys(EVAL_DATA).sort().reverse();
+    const [selectedVersion, setSelectedVersion] = useState(versions[0]);
+    const [expandedCase, setExpandedCase] = useState(null);
+    const [caseFilter, setCaseFilter] = useState('all');
+    const [caseSortBy, setCaseSortBy] = useState('total');
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    useEffect(() => {
+        setIsLoaded(true);
+    }, []);
+
+    const currentData = EVAL_DATA[selectedVersion];
+    const { summary, manifest, grades } = currentData;
+
+    const weakestCategory = useMemo(() => {
+        const categories = Object.entries(summary.category_breakdown)
+            .sort(([,a], [,b]) => a.avg - b.avg);
+        return categories[0] ? {
+            name: categories[0][0],
+            score: categories[0][1].avg
+        } : {name: 'N/A', score: 0};
+    }, [summary]);
+
+    const filteredSortedCases = useMemo(() => {
+        let filtered = grades;
+
+        if (caseFilter !== 'all') {
+            if (caseFilter === 'pass') {
+                filtered = grades.filter(g => g.total >= 7);
+            } else if (caseFilter === 'fail') {
+                filtered = grades.filter(g => g.total < 7);
+            } else {
+                filtered = grades.filter(g => g.difficulty === caseFilter || g.category === caseFilter);
+            }
+        }
+
+        return filtered.sort((a, b) => {
+            if (caseSortBy === 'total') return b.total - a.total;
+            if (caseSortBy === 'difficulty') {
+                const order = ['easy', 'medium', 'hard', 'adversarial'];
+                return order.indexOf(a.difficulty) - order.indexOf(b.difficulty);
+            }
+            if (caseSortBy === 'category') return a.category.localeCompare(b.category);
+            return 0;
+        });
+    }, [grades, caseFilter, caseSortBy]);
+
+    return (
+        <div className="min-h-screen">
+            {/* Compact Header */}
+            <section className="hero-section relative">
+                <div className="relative z-10">
+                    <div className="max-w-7xl mx-auto px-6 py-8">
+                        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+                            <div>
+                                <h1 className="text-4xl font-bold text-white mb-2">
+                                    Golf Rules Evaluation Dashboard
+                                </h1>
+                                <p className="text-blue-100 max-w-2xl">
+                                    AI performance across 40 golf rules scenarios
+                                    <br />Graded on accuracy, completeness, format, and guardrails
+                                </p>
+                            </div>
+
+                            <div className="flex items-center space-x-8 text-white">
+                                <div className="text-center">
+                                    <div className="text-3xl font-bold">
+                                        {formatScore(summary.overall_average, 2)}
+                                    </div>
+                                    <div className="text-sm text-blue-100">Overall Score</div>
+                                </div>
+                                <div className="text-center">
+                                    <div className="text-3xl font-bold">
+                                        {summary.total_questions}
+                                    </div>
+                                    <div className="text-sm text-blue-100">Test Cases</div>
+                                </div>
+                                <div className="text-center">
+                                    <div className="text-3xl font-bold">
+                                        {((summary.overall_average / summary.max_possible_score) * 100).toFixed(1)}%
+                                    </div>
+                                    <div className="text-sm text-blue-100">Performance</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Main Content */}
+            <div className="max-w-7xl mx-auto px-6 py-8">
+
+                {/* Version Selector & Metadata */}
+                <div className={`mb-6 ${isLoaded ? 'fade-in fade-in-delay-3' : ''}`}>
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                        <h2 className="text-2xl font-semibold text-gray-100">
+                            Evaluation Details
+                        </h2>
+                        <div className="mt-2 lg:mt-0">
+                            <select
+                                value={selectedVersion}
+                                onChange={(e) => setSelectedVersion(e.target.value)}
+                                className="dropdown-select"
+                            >
+                                {versions.map(v => (
+                                    <option key={v} value={v}>{v}</option>
+                                ))}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm max-w-xl">
+                        <div>
+                            <span className="text-gray-500">Model:</span>
+                            <span className="ml-2 font-medium text-gray-100">
+                                {manifest.model.includes('haiku') ? 'Claude 3 Haiku' :
+                                 manifest.model.includes('sonnet') ? 'Claude 3 Sonnet' :
+                                 manifest.model.includes('opus') ? 'Claude 3 Opus' : 'Claude'}
+                            </span>
+                        </div>
+                        <div>
+                            <span className="text-gray-500">Date:</span>
+                            <span className="ml-2 font-medium text-gray-100">
+                                {new Date(manifest.timestamp).toLocaleDateString()}
+                            </span>
+                        </div>
+                        <div>
+                            <span className="text-gray-500">Commit:</span>
+                            <span className="ml-2 font-mono font-medium text-gray-100">{manifest.commit_hash}</span>
+                        </div>
+                        <div>
+                            <span className="text-gray-500">Changes:</span>
+                            <span className="ml-2 font-medium text-gray-100">{manifest.changes_from_previous}</span>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Key Metrics */}
+                <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 ${isLoaded ? 'fade-in fade-in-delay-4' : ''}`}>
+                    <div className="metric-card p-8 text-center">
+                        <div className="text-4xl font-bold text-gray-100 mb-2">{summary.total_questions}</div>
+                        <div className="text-gray-400 font-medium">Test Cases</div>
+                        <div className="text-sm text-gray-500 mt-2">Across 4 difficulty tiers</div>
+                    </div>
+
+                    <div className="metric-card p-8 text-center">
+                        <div className="text-4xl font-bold text-red-600 mb-2">
+                            {Object.values(summary.fail_conditions).reduce((a, b) => a + b, 0)}
+                        </div>
+                        <div className="text-gray-400 font-medium">Fail Conditions</div>
+                        <div className="text-sm text-gray-500 mt-2">Guardrail violations</div>
+                    </div>
+
+                    <div className="metric-card p-8 text-center">
+                        <div className={`text-4xl font-bold mb-2 ${getScoreClass(weakestCategory.score)}`}>
+                            {formatScore(weakestCategory.score)}
+                        </div>
+                        <div className="text-gray-400 font-medium">Weakest Category</div>
+                        <div className="text-sm text-gray-500 mt-2 capitalize">{formatCategoryName(weakestCategory.name)}</div>
+                    </div>
+
+                    <div className="metric-card p-8 text-center">
+                        <div className="text-4xl font-bold text-green-600 mb-2">
+                            {summary.score_distribution['10'] || 0}
+                        </div>
+                        <div className="text-gray-400 font-medium">Perfect Scores</div>
+                        <div className="text-sm text-gray-500 mt-2">10/10 responses</div>
+                    </div>
+                </div>
+
+                <div className="golf-divider"></div>
+
+                {/* Difficulty Breakdown */}
+                <div className="mb-16">
+                    <h2 className="text-3xl font-semibold text-gray-100 mb-8">Performance by Question Difficulty</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {Object.entries(summary.difficulty_breakdown).map(([difficulty, data], index) => (
+                            <div key={difficulty} className={`metric-card p-8 ${isLoaded ? `fade-in fade-in-delay-${index + 1}` : ''}`}>
+                                <div className={`difficulty-pill difficulty-${difficulty} mb-4 inline-block`}>
+                                    {difficulty}
+                                </div>
+                                <div className={`text-3xl font-bold mb-2 ${getScoreClass(data.avg)}`}>
+                                    {formatScore(data.avg)}
+                                </div>
+                                <div className="text-gray-400 font-medium mb-4">Average Score</div>
+                                <div className="bg-gray-700 rounded-full h-3 mb-2">
+                                    <div
+                                        className="progress-bar h-full rounded-full"
+                                        style={{
+                                            width: `${(data.avg / 10) * 100}%`,
+                                            animationDelay: `${index * 0.2}s`
+                                        }}
+                                    ></div>
+                                </div>
+                                <div className="text-sm text-gray-500">{data.count} cases</div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Score Distribution & Categories */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+                    <div className="metric-card p-8">
+                        <h3 className="text-2xl font-semibold text-gray-100 mb-6">Score Distribution</h3>
+                        <div className="space-y-3">
+                            {Object.entries(summary.score_distribution)
+                                .sort(([a], [b]) => parseInt(b) - parseInt(a))
+                                .map(([score, count]) => (
+                                <div key={score} className="flex items-center space-x-4">
+                                    <div className="font-mono font-semibold text-gray-300 w-12 text-sm">
+                                        {score}/10
+                                    </div>
+                                    <div className="flex-1">
+                                        <div className="bg-gray-700 rounded-full h-3">
+                                            <div
+                                                className="progress-bar h-full rounded-full transition-all duration-700"
+                                                style={{width: `${(count / Math.max(...Object.values(summary.score_distribution))) * 100}%`}}
+                                            ></div>
+                                        </div>
+                                    </div>
+                                    <div className="font-semibold text-gray-100 w-8 text-right text-sm">{count}</div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="metric-card p-8">
+                        <h3 className="text-2xl font-semibold text-gray-100 mb-6">Fail Conditions</h3>
+                        <div className="space-y-6">
+                            {Object.entries(summary.fail_conditions).map(([condition, count]) => (
+                                <div key={condition} className="flex justify-between items-center">
+                                    <div>
+                                        <div className="font-semibold text-gray-100">{condition}</div>
+                                        <div className="text-sm text-gray-500">
+                                            {condition === 'Cited rule number' ? 'Automatic detection' : 'Manual review'}
+                                        </div>
+                                    </div>
+                                    <div className="text-3xl font-bold text-red-600">{count}</div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/* Category Performance Table */}
+                <div className="metric-card overflow-hidden mb-16">
+                    <div className="table-header p-6">
+                        <h3 className="text-2xl font-semibold">Category Performance</h3>
+                    </div>
+                    <div className="overflow-x-auto">
+                        <table className="w-full">
+                            <thead>
+                                <tr className="border-b border-gray-600 bg-gray-800">
+                                    <th className="text-left p-4 font-semibold text-gray-200">Category</th>
+                                    <th className="text-right p-4 font-semibold text-gray-200">Average Score</th>
+                                    <th className="text-right p-4 font-semibold text-gray-200">Cases</th>
+                                    <th className="text-right p-4 font-semibold text-gray-200">Performance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {Object.entries(summary.category_breakdown)
+                                    .sort(([,a], [,b]) => a.avg - b.avg)
+                                    .map(([category, data], index) => (
+                                    <tr key={category} className="border-b border-gray-600 hover:bg-gray-700 transition-colors">
+                                        <td className="p-4 font-medium text-gray-100 capitalize">
+                                            {formatCategoryName(category)}
+                                        </td>
+                                        <td className={`text-right p-4 font-bold text-lg ${getScoreClass(data.avg)}`}>
+                                            {formatScore(data.avg)}
+                                        </td>
+                                        <td className="text-right p-4 text-gray-400">{data.count}</td>
+                                        <td className="text-right p-4">
+                                            <div className="w-20 bg-gray-700 rounded-full h-2 ml-auto">
+                                                <div
+                                                    className="progress-bar h-full rounded-full"
+                                                    style={{width: `${(data.avg / 10) * 100}%`}}
+                                                ></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                {/* Case Details */}
+                <div className="metric-card">
+                    <div className="table-header p-6 flex justify-between items-center">
+                        <h3 className="text-2xl font-semibold">Individual Case Performance</h3>
+                        <div className="flex space-x-4">
+                            <select
+                                value={caseFilter}
+                                onChange={(e) => setCaseFilter(e.target.value)}
+                                className="dropdown-select text-sm"
+                            >
+                                <option value="all">All Cases</option>
+                                <option value="pass">Pass (≥7)</option>
+                                <option value="fail">Fail (&lt;7)</option>
+                                <option value="easy">Easy</option>
+                                <option value="medium">Medium</option>
+                                <option value="hard">Hard</option>
+                                <option value="adversarial">Adversarial</option>
+                            </select>
+                            <select
+                                value={caseSortBy}
+                                onChange={(e) => setCaseSortBy(e.target.value)}
+                                className="dropdown-select text-sm"
+                            >
+                                <option value="total">Sort by Score</option>
+                                <option value="difficulty">Sort by Difficulty</option>
+                                <option value="category">Sort by Category</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div className="divide-y divide-gray-600">
+                        {filteredSortedCases.map(case_data => {
+                            const isExpanded = expandedCase === case_data.id;
+
+                            return (
+                                <div key={case_data.id}>
+                                    <div
+                                        className="expandable-row p-6 cursor-pointer"
+                                        onClick={() => setExpandedCase(isExpanded ? null : case_data.id)}
+                                    >
+                                        <div className="flex justify-between items-start">
+                                            <div className="flex-1">
+                                                <div className="flex items-center space-x-4 mb-3">
+                                                    <span className="font-mono text-sm font-semibold text-gray-400">
+                                                        {case_data.id}
+                                                    </span>
+                                                    <span className={`difficulty-pill difficulty-${case_data.difficulty}`}>
+                                                        {case_data.difficulty}
+                                                    </span>
+                                                    <span className="text-sm text-gray-500 capitalize">
+                                                        {formatCategoryName(case_data.category)}
+                                                    </span>
+                                                    {case_data.fail_conditions_triggered.length > 0 && (
+                                                        <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs font-semibold">
+                                                            FAIL: {case_data.fail_conditions_triggered.join(', ')}
+                                                        </span>
+                                                    )}
+                                                </div>
+                                                <p className="text-gray-300 leading-relaxed">{case_data.question}</p>
+                                            </div>
+                                            <div className="ml-6 text-right">
+                                                <div className={`text-3xl font-bold ${getScoreClass(case_data.total)}`}>
+                                                    {case_data.total}
+                                                </div>
+                                                <div className="text-sm text-gray-500">/10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {isExpanded && (
+                                        <div className="border-t border-gray-600 bg-gray-800 p-6">
+                                            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                                                <div className="text-center">
+                                                    <div className="text-sm text-gray-500 mb-1">Accuracy</div>
+                                                    <div className={`text-2xl font-bold ${getScoreClass(case_data.accuracy, 2)}`}>
+                                                        {case_data.accuracy}/2
+                                                    </div>
+                                                </div>
+                                                <div className="text-center">
+                                                    <div className="text-sm text-gray-500 mb-1">Completeness</div>
+                                                    <div className={`text-2xl font-bold ${getScoreClass(case_data.completeness, 2)}`}>
+                                                        {case_data.completeness}/2
+                                                    </div>
+                                                </div>
+                                                <div className="text-center">
+                                                    <div className="text-sm text-gray-500 mb-1">Format</div>
+                                                    <div className={`text-2xl font-bold ${getScoreClass(case_data.format, 2)}`}>
+                                                        {case_data.format}/2
+                                                    </div>
+                                                </div>
+                                                <div className="text-center">
+                                                    <div className="text-sm text-gray-500 mb-1">Guardrails</div>
+                                                    <div className={`text-2xl font-bold ${getScoreClass(case_data.guardrails, 2)}`}>
+                                                        {case_data.guardrails}/2
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div>
+                                                <h4 className="font-semibold text-gray-100 mb-3">Grader Analysis:</h4>
+                                                <p className="text-gray-300 leading-relaxed bg-white p-4 rounded-lg border border-gray-200">
+                                                    {case_data.reasoning}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            );
+                        })}
+                    </div>
+
+                    <div className="p-6 border-t border-gray-600 bg-gray-800 text-center text-gray-400">
+                        Showing {filteredSortedCases.length} of {grades.length} cases
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+ReactDOM.render(<Dashboard />, document.getElementById('root'));
+</script>
+
+</body>
+</html>

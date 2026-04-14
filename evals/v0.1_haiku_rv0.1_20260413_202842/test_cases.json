@@ -1,0 +1,402 @@
+[
+  {
+    "id": "test_001",
+    "difficulty": "easy",
+    "category": "penalty_area",
+    "question": "Your tee shot lands in a yellow penalty area (water hazard). What are your options?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "**Rule 17.1d** - \"The player may play the original ball or another ball from where the previous stroke was made\" and \"keeping the estimated point where the original ball last crossed the edge of the penalty area between the hole and the spot where the ball is dropped\" **Ruling**: You have two relief options from a yellow penalty area, each with a one-stroke penalty. **Penalties/Procedures**: (1) Stroke-and-distance relief: Play from where your last stroke was made, adding one penalty stroke. (2) Back-on-the-line relief: Drop outside the penalty area keeping the crossing point between the hole and drop spot, adding one penalty stroke. Unlike red penalty areas, lateral relief is not available. **Source**: https://www.randa.org/en/rog/the-rules-of-golf/rule-17",
+    "format": "stroke"
+  },
+  {
+    "id": "test_002",
+    "difficulty": "easy",
+    "category": "OB",
+    "question": "You hit your tee shot and it goes out of bounds. What must you do?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "**Rule 18** - \"the player must take stroke-and-distance relief by adding one penalty stroke and playing the original ball or another ball from where the previous stroke was made\" **Ruling**: When your ball goes out of bounds, you must take stroke-and-distance relief. **Penalties/Procedures**: Add one penalty stroke to your score and play another ball from the tee (where the previous stroke was made). A ball is out of bounds only when all of it is outside the boundary edge of the course. The original ball must be abandoned once you put another ball into play. **Source**: https://www.randa.org/en/rog/the-rules-of-golf/rule-18",
+    "format": "stroke"
+  },
+  {
+    "id": "test_003",
+    "difficulty": "easy",
+    "category": "bunker",
+    "question": "Your ball is in a greenside bunker. Can you remove a small stone lying next to your ball before playing your shot?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "**Rule 12.2a** - \"Before playing a ball in a bunker, a player may remove loose impediments under Rule 15.1 and movable obstructions under Rule 15.2\" **Ruling**: Yes, you can remove loose impediments like stones from bunkers without penalty. **Penalties/Procedures**: No penalty for removing stones or other loose impediments from bunkers. Incidental contact with sand during removal is permitted. However, you cannot deliberately touch sand to test conditions or during practice swings (Rule 12.2b - general penalty applies). **Source**: https://www.randa.org/en/rog/the-rules-of-golf/rule-12",
+    "format": "stroke"
+  },
+  {
+    "id": "test_004",
+    "difficulty": "easy",
+    "category": "relief",
+    "question": "Your ball comes to rest on a paved cart path in the fairway. Are you entitled to free relief?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "**Rule 16.1** - \"You are only allowed to take free relief from a cart path if it is artificially surfaced\" **Ruling**: Yes, you are entitled to free relief from an artificially surfaced (paved) cart path, which is classified as an immovable obstruction. **Penalties/Procedures**: No penalty. Locate the nearest point where you no longer have interference, drop within one club-length of that point not nearer the hole. The ball must stay in the same area of the course. Natural grass or sand paths do not qualify for relief. **Source**: https://www.randa.org/en/articles/taking-free-relief-under-the-rules",
+    "format": "stroke"
+  },
+  {
+    "id": "test_005",
+    "difficulty": "easy",
+    "category": "putting_green",
+    "question": "Your ball is on the putting green. Can you repair spike marks in your line of putt?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "**Rule 13.1c** - \"Damage on the putting green includes shoe damage (such as spike marks) and scrapes or indentations caused by equipment or a flagstick\" **Ruling**: Yes, you can repair spike marks on the putting green, including in your line of putt. **Penalties/Procedures**: No penalty for repairing spike marks. Use your hand, foot, body part, ball-mark repair tool, tee, club or similar equipment. Must not unreasonably delay play. Cannot repair natural surface imperfections, aeration holes, or damage from normal maintenance practices. **Source**: https://www.randa.org/en/rog/the-rules-of-golf/rule-13",
+    "format": "stroke"
+  },
+  {
+    "id": "test_006",
+    "difficulty": "easy",
+    "category": "match_play",
+    "question": "In match play, you and your opponent both make a 5 on a hole. What is the result of the hole?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "**Rule 3.2a(2)** - \"The player and opponent complete the hole in the same number of strokes (including strokes made and penalty strokes)\" **Ruling**: The hole is halved (tied). **Penalties/Procedures**: No penalty. When both players complete a hole with the same score, the hole is halved and neither player wins the hole. Players can also agree to halve a hole after at least one player has made a stroke to begin the hole. The match status remains unchanged for that hole. **Source**: https://www.randa.org/en/rog/the-rules-of-golf/rule-3",
+    "format": "match"
+  },
+  {
+    "id": "test_007",
+    "difficulty": "easy",
+    "category": "lost_ball",
+    "question": "You hit your ball into thick rough and cannot find it. How long do you have to search before it is considered lost?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "**Rule 18.2a(1)** - \"A ball is lost if not found in three minutes after the player or their caddie begins to search for it\" **Ruling**: You have three minutes to search for your ball before it is considered lost. **Penalties/Procedures**: If not found in three minutes, the ball is lost and you must take stroke-and-distance relief by returning to where your previous stroke was made and adding one penalty stroke. If found within three minutes but identity is uncertain, you get reasonable additional time to identify it. **Source**: https://www.randa.org/en/rog/the-rules-of-golf/rule-18",
+    "format": "stroke"
+  },
+  {
+    "id": "test_008",
+    "difficulty": "easy",
+    "category": "flagstick",
+    "question": "In match play, your putt from the green hits the flagstick that was left in the hole. Is there a penalty?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "match"
+  },
+  {
+    "id": "test_009",
+    "difficulty": "easy",
+    "category": "match_play",
+    "question": "In match play, your opponent concedes your next putt. Can you refuse the concession and putt anyway?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "match"
+  },
+  {
+    "id": "test_010",
+    "difficulty": "easy",
+    "category": "provisional",
+    "question": "You think your tee shot might be lost in the woods. You announce you will play a provisional ball and hit another. Your original is then found in the fairway. Which ball do you play?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test_011",
+    "difficulty": "medium",
+    "category": "dropping",
+    "question": "You take a free drop from an immovable obstruction. You drop the ball from knee height and it bounces and rolls outside the one-club-length relief area. What must you do?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test_012",
+    "difficulty": "medium",
+    "category": "unplayable",
+    "question": "Your ball is unplayable in a bunker. You decide to take back-on-the-line relief. Must you drop the ball inside the bunker or can you drop outside it?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test_013",
+    "difficulty": "medium",
+    "category": "GUR",
+    "question": "Your ball lies in the general area just outside a GUR boundary, but your stance would be inside the GUR. Are you entitled to free relief?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test_014",
+    "difficulty": "medium",
+    "category": "ball_moved",
+    "question": "While searching for your ball in the rough, you accidentally kick it. What is the penalty and what must you do?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test_015",
+    "difficulty": "medium",
+    "category": "match_play",
+    "question": "In match play, you play out of turn from the tee. Can your opponent make you replay the shot?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "match"
+  },
+  {
+    "id": "test_016",
+    "difficulty": "medium",
+    "category": "penalty_area",
+    "question": "Your ball is in a red penalty area. You find your ball sitting on dry land with a playable lie. Are you required to take a penalty drop, or can you play the ball as it lies?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test_017",
+    "difficulty": "medium",
+    "category": "obstruction",
+    "question": "A movable obstruction (a rake) is lying in a bunker. Your ball is not in the bunker but the rake is on your line of play. Can you move the rake?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test_018",
+    "difficulty": "medium",
+    "category": "equipment",
+    "question": "You start your round with 14 clubs. On the 5th hole you discover that one of the clubs belongs to another player and was placed in your bag by mistake. How many clubs do you have for the purpose of the 14-club limit?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test_019",
+    "difficulty": "medium",
+    "category": "match_play",
+    "question": "In match play, you realize on the 4th tee that you have been playing with 15 clubs since the start of the round. What is the penalty?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "match"
+  },
+  {
+    "id": "test_020",
+    "difficulty": "medium",
+    "category": "embedded",
+    "question": "Your ball is embedded in the face of a bunker, above the sand, in a grassy area that is part of the bunker wall. Are you entitled to free relief for an embedded ball?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test_021",
+    "difficulty": "hard",
+    "category": "provisional",
+    "question": "You play a provisional ball from the tee. Your provisional lands in a red penalty area. Before searching for your original, you play a second provisional from the tee. Is the second provisional valid?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test_022",
+    "difficulty": "hard",
+    "category": "ball_moved",
+    "question": "Your ball is at rest on the putting green. A strong gust of wind moves it into a bunker. Must you play it from the bunker or can you replace it on the green?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test_023",
+    "difficulty": "hard",
+    "category": "penalty_area",
+    "question": "Your ball is in a red penalty area. You decide to take lateral relief, but the nearest point within two club-lengths is on the other side of the penalty area. Can you drop there?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test_024",
+    "difficulty": "hard",
+    "category": "match_play",
+    "question": "In match play, you and your opponent both play wrong balls on a par 3. You each realize the mistake before teeing off on the next hole. What is the ruling?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "match"
+  },
+  {
+    "id": "test_025",
+    "difficulty": "hard",
+    "category": "obstruction",
+    "question": "Your ball is in the general area and an immovable obstruction (a sprinkler head) interferes with your stance. However, the obstruction is inside a red penalty area while your ball is outside it. Can you take free relief from the obstruction?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test_026",
+    "difficulty": "hard",
+    "category": "bunker",
+    "question": "Your ball is plugged in the steep face of a bunker. You declare it unplayable and choose lateral relief (two club-lengths). All points within two club-lengths that are not nearer the hole are outside the bunker in the general area. Where must you drop?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test_027",
+    "difficulty": "hard",
+    "category": "ball_in_motion",
+    "question": "In stroke play, you putt from on the green and your ball is still moving when it hits another player's ball that was at rest on the green. What happens?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test_028",
+    "difficulty": "hard",
+    "category": "match_play",
+    "question": "In match play, you are 3 down with 3 holes to play. On the 16th tee, your opponent concedes the hole. On the 17th, you win the hole. You are now 1 down with 1 to play. On the 18th green, your opponent concedes your birdie putt, tying the match. Your opponent then says they want to withdraw the concession on hole 16 because they made it by mistake. Can they?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "match"
+  },
+  {
+    "id": "test_029",
+    "difficulty": "hard",
+    "category": "relief",
+    "question": "Your ball is in the general area and you have interference from an animal hole. The nearest point of complete relief would be on a putting green (not the green of the hole being played). Where do you take relief?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test_030",
+    "difficulty": "hard",
+    "category": "match_play",
+    "question": "In match play, you hit your approach shot and it lands on the green. Your opponent, who hasn't played yet, picks up your ball thinking it's theirs. They realize the mistake and replace it. What is the penalty?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "match"
+  },
+  {
+    "id": "test_031",
+    "difficulty": "adversarial",
+    "category": "penalty_area",
+    "question": "Your ball is in a red penalty area. Before playing your next stroke, you ground your club in the penalty area and take a practice swing that touches the ground. What is the penalty?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test_032",
+    "difficulty": "adversarial",
+    "category": "dropping",
+    "question": "You take relief from a cart path. You determine the nearest point of complete relief and drop within one club-length. The ball comes to rest in a position where you now have interference from a sprinkler head. Must you play it as it lies, or can you take additional relief from the sprinkler head?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test_033",
+    "difficulty": "adversarial",
+    "category": "match_play",
+    "question": "In match play, on the final hole, both players are on the green. Player A is 20 feet away, Player B is 6 feet away. Player A putts first and misses, leaving a 2-foot putt. Player B then concedes Player A's next putt. Player A picks up their ball. Player B then three-putts from 6 feet. Player A claims they win the hole because Player B made 5 and their conceded putt means they made 4. Player B says the hole was halved because the concession happened before B finished. Who is correct?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "match"
+  },
+  {
+    "id": "test_034",
+    "difficulty": "adversarial",
+    "category": "bunker",
+    "question": "Your ball is in a bunker. Before your stroke, you smooth footprints in the bunker that are 10 feet away from your ball and not on your line of play. You do this to care for the course. Is there a penalty?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test_035",
+    "difficulty": "adversarial",
+    "category": "lost_ball",
+    "question": "In stroke play, you hit your tee shot into the woods. You don't play a provisional. After searching for 2 minutes, your playing partner finds a ball. You identify it as yours but it's in an unplayable lie. You declare it unplayable and take lateral relief, dropping within two club-lengths. After you play your next shot, you discover the ball you found was actually not yours (the markings were similar). What is the ruling?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test_036",
+    "difficulty": "adversarial",
+    "category": "match_play",
+    "question": "In match play, your opponent's tee shot goes into a red penalty area. They drop under penalty of one stroke and hit their third shot onto the green. You then notice that when they dropped, they dropped on the wrong side of the penalty area (the side closer to the hole). You say nothing until after they two-putt for a 5. You then raise the issue. Is your opponent's score valid?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "match"
+  },
+  {
+    "id": "test_037",
+    "difficulty": "adversarial",
+    "category": "ball_moved",
+    "question": "Your ball is on a steep slope in the general area. You carefully place your club behind the ball to address it, and the ball moves. Under the current Rules of Golf (2023), are you deemed to have caused the ball to move?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test_038",
+    "difficulty": "adversarial",
+    "category": "GUR",
+    "question": "Your ball lands in a flower bed adjacent to the clubhouse. The flower bed is not marked as GUR and there is no local rule about it. Your ball is playable. A committee member walking by tells you that flower beds are always treated as GUR. Is the committee member correct?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test_039",
+    "difficulty": "adversarial",
+    "category": "unplayable",
+    "question": "Your ball is unplayable in a penalty area. Can you declare it unplayable and take unplayable ball relief (back-on-the-line or two club-lengths) under Rule 19?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test_040",
+    "difficulty": "adversarial",
+    "category": "preferred_lies",
+    "question": "Preferred lies (lift, clean, and place) are in effect via local rule. Your ball is in the first cut of rough just off the fairway. Can you lift, clean, and place your ball under the preferred lies local rule?",
+    "source_url": "",
+    "top_comment": "",
+    "ground_truth": "",
+    "format": "stroke"
+  }
+]
