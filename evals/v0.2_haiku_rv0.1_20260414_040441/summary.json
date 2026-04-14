@@ -1,0 +1,237 @@
+{
+  "total_questions": 40,
+  "overall_average": 8.125,
+  "max_possible_score": 10,
+  "dimension_averages": {
+    "accuracy": 1.6,
+    "completeness": 1.8,
+    "format": 1.825,
+    "guardrails": 1.85
+  },
+  "difficulty_breakdown": {
+    "easy": {
+      "count": 10,
+      "total_scores": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        3,
+        10,
+        10
+      ],
+      "avg": 9.3
+    },
+    "medium": {
+      "count": 10,
+      "total_scores": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        3,
+        6,
+        3
+      ],
+      "avg": 8.2
+    },
+    "hard": {
+      "count": 10,
+      "total_scores": [
+        10,
+        4,
+        10,
+        10,
+        10,
+        3,
+        3,
+        10,
+        10,
+        3
+      ],
+      "avg": 7.3
+    },
+    "adversarial": {
+      "count": 10,
+      "total_scores": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        8,
+        3,
+        10,
+        3,
+        3
+      ],
+      "avg": 7.7
+    }
+  },
+  "category_breakdown": {
+    "penalty_area": {
+      "count": 4,
+      "total_scores": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "avg": 10.0
+    },
+    "OB": {
+      "count": 1,
+      "total_scores": [
+        10
+      ],
+      "avg": 10.0
+    },
+    "bunker": {
+      "count": 3,
+      "total_scores": [
+        10,
+        3,
+        10
+      ],
+      "avg": 7.666666666666667
+    },
+    "relief": {
+      "count": 2,
+      "total_scores": [
+        10,
+        10
+      ],
+      "avg": 10.0
+    },
+    "putting_green": {
+      "count": 1,
+      "total_scores": [
+        10
+      ],
+      "avg": 10.0
+    },
+    "match_play": {
+      "count": 9,
+      "total_scores": [
+        10,
+        10,
+        10,
+        6,
+        10,
+        10,
+        3,
+        10,
+        8
+      ],
+      "avg": 8.555555555555555
+    },
+    "lost_ball": {
+      "count": 2,
+      "total_scores": [
+        10,
+        10
+      ],
+      "avg": 10.0
+    },
+    "flagstick": {
+      "count": 1,
+      "total_scores": [
+        3
+      ],
+      "avg": 3.0
+    },
+    "provisional": {
+      "count": 2,
+      "total_scores": [
+        10,
+        10
+      ],
+      "avg": 10.0
+    },
+    "dropping": {
+      "count": 2,
+      "total_scores": [
+        10,
+        10
+      ],
+      "avg": 10.0
+    },
+    "unplayable": {
+      "count": 2,
+      "total_scores": [
+        10,
+        3
+      ],
+      "avg": 6.5
+    },
+    "GUR": {
+      "count": 2,
+      "total_scores": [
+        10,
+        10
+      ],
+      "avg": 10.0
+    },
+    "ball_moved": {
+      "count": 3,
+      "total_scores": [
+        10,
+        4,
+        3
+      ],
+      "avg": 5.666666666666667
+    },
+    "obstruction": {
+      "count": 2,
+      "total_scores": [
+        10,
+        10
+      ],
+      "avg": 10.0
+    },
+    "equipment": {
+      "count": 1,
+      "total_scores": [
+        3
+      ],
+      "avg": 3.0
+    },
+    "embedded": {
+      "count": 1,
+      "total_scores": [
+        3
+      ],
+      "avg": 3.0
+    },
+    "ball_in_motion": {
+      "count": 1,
+      "total_scores": [
+        3
+      ],
+      "avg": 3.0
+    },
+    "preferred_lies": {
+      "count": 1,
+      "total_scores": [
+        3
+      ],
+      "avg": 3.0
+    }
+  },
+  "fail_conditions": {
+    "Cited rule number": 7
+  },
+  "score_distribution": {
+    "10": 28,
+    "3": 9,
+    "6": 1,
+    "4": 1,
+    "8": 1
+  }
+}

@@ -205,7 +205,7 @@ GROUND TRUTH ANSWER:
 MODEL RESPONSE TO GRADE:
 {response_data.get('response', 'No response provided')}
 
-Please grade this response and return ONLY a JSON object with the following structure:
+Please grade this response and return ONLY a JSON object with the following structure. Keep your reasoning to 2-3 sentences maximum:
 {{
     "accuracy": <0-2>,
     "completeness": <0-2>,
@@ -222,7 +222,7 @@ Remember: Accuracy is weighted x2 in the total score calculation.
         try:
             response = self._api_call_with_retry(
                 model=self.model,
-                max_tokens=2048,
+                max_tokens=4096,
                 temperature=0.0,  # Deterministic grading
                 messages=[
                     {"role": "user", "content": grading_prompt}

@@ -4,9 +4,9 @@ An AI golf rules assistant, built evals-first. This project walks through buildi
 
 The bot acts as an experienced USGA rules official, providing rulings for on-course scenarios. The interesting part isn't the bot itself though. It's the methodology: decomposing a fuzzy domain into testable cases, building a grading rubric, identifying failure patterns, and iterating with data instead of intuition.
 
-**v0.1 Baseline: 79.5% (7.95/10)**
+**v0.2: 81.2% (8.12/10)** | v0.1 Baseline: 79.5% (7.95/10)
 
-![Dashboard Screenshot](evals/dashboard_screenshot.png)
+![v0.2 Dashboard Screenshot](evals/dashboard_screenshotv0.2.png)
 
 ---
 
@@ -22,7 +22,8 @@ The real challenge isn't getting the model to answer easy questions. It's unders
 
 ```
 prompts/
-  golf_rules_system_prompt_v0.1.md    # Versioned system prompt (YAML frontmatter)
+  golf_rules_system_prompt_v0.1.md    # Baseline system prompt (YAML frontmatter)
+  golf_rules_system_prompt_v0.2.md    # Iteration: 2019 rules, provisionals, match play
   generate_test_cases.md              # Test case generation instructions
   dashboard.md                        # Dashboard build instructions
 
@@ -34,6 +35,7 @@ evals/
   golf_rules_test_cases.json         # Current 40 test cases across 4 difficulty tiers
   golf_rules_test_cases_with_answers.json  # Ground truth answers with sources
   v0.1_haiku_rv0.1_20260413_202842/  # Immutable snapshot from v0.1 baseline run
+  v0.2_haiku_rv0.1_20260414_040441/  # Immutable snapshot from v0.2 iteration
     manifest.json                    # Metadata: model, grader, changes, scores
     system_prompt.md                 # Copy of prompt used (not a reference)
     rubric.md                        # Copy of rubric used
@@ -147,6 +149,35 @@ This cost time but meant every subsequent iteration would produce trustworthy si
 
 ---
 
+## v0.2 Results 📈
+
+**Overall: 81.2% (8.12/10)**, up from 79.5% in v0.1.
+
+| Difficulty | Avg Score | v0.1 | Delta |
+|---|---|---|---|
+| Easy | 9.3 | 9.4 | -0.1 |
+| Medium | 8.2 | 8.9 | -0.7 |
+| Hard | 7.3 | 7.1 | +0.2 |
+| Adversarial | 7.7 | 6.4 | +1.3 |
+
+v0.2 targeted the four failure patterns from v0.1: added explicit 2019 rule revision guidance, provisional ball edge cases, and match play timing rules to the system prompt.
+
+### What Improved
+
+Penalty area rulings went to 10.0 across all 4 cases (the 2019 rule guidance worked). Provisional ball rulings hit 10.0 (up from 5.0 on hard cases). The adversarial tier showed the largest gain at +1.3 points.
+
+### What Regressed
+
+Rule number citations increased from 4/40 (10%) to 7/40 (17.5%). Adding detailed domain knowledge to the prompt appears to prime the model to cite rule numbers despite the explicit prohibition. Four of the seven capped responses had perfect underlying scores. This is the core tension: the model needs domain knowledge to get rulings right, but that same knowledge triggers the behaviour we're trying to suppress.
+
+### Prompt Engineering Insight
+
+The rule number regression illustrates a general prompt engineering pattern: instructions that add domain knowledge can undermine instructions that constrain output format. The v0.3 plan is to move rule number suppression from prompt instruction to post-processing (regex strip), accepting that the prompt alone can't reliably prevent this.
+
+![v0.1 Dashboard Screenshot](evals/dashboard_screenshotv0.1.png)
+
+---
+
 ## Recall vs Retrieval: Why RAG Is the Next Milestone 🔍
 
 The production bot and the ground truth research subagent are the same model with the same weights. They produce different reliability because of one difference: tools.
@@ -164,7 +195,7 @@ v0.1 deliberately uses a higher-powered oracle (model + tools) to establish grou
 | Version | Scope | Status |
 |---|---|---|
 | **v0.1** | Eval harness, 40 test cases, baseline prompt, grader, dashboard | Complete (79.5%) |
-| **v0.2** | Iterate prompt: target pre-2019 confusion, provisional edge cases, match play timing | Next |
+| **v0.2** | Iterate prompt: 2019 rule guidance, provisional edge cases, match play timing | Complete (81.2%) |
 | **v0.3+** | Continue iteration based on failure clusters | Planned |
 | **v1.0** | Mobile web app (Vercel) | Planned |
 | **v1.x** | RAG (retrieval at query time), match play/stroke play toggle, local rules via photo OCR | Planned |
