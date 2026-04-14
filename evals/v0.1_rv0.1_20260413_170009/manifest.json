@@ -1,0 +1,17 @@
+{
+  "version": "v0.1",
+  "timestamp": "2026-04-13T17:00:09.221881",
+  "commit_hash": "f7052b8",
+  "model": "claude-3-haiku-20240307",
+  "grader_model": null,
+  "temperature": 0,
+  "grader_temperature": null,
+  "n_cases": 40,
+  "changes_from_previous": "Baseline run",
+  "aggregate_score": null,
+  "aggregate_max": null,
+  "breakdowns": null,
+  "rubric_version": "v0.1",
+  "successful_responses": 40,
+  "rate_limit_delay": 1.0
+}

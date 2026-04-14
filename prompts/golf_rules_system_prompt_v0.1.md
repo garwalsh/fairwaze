@@ -1,3 +1,10 @@
+---
+version: v0.1
+last_updated: 2026-04-13
+changes_from_previous: >
+  Initial baseline version of golf rules system prompt.
+---
+
 # Golf Rules Bot System Prompt v0.1
 
 ## Role and Context

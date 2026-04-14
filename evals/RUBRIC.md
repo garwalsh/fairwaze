@@ -1,3 +1,10 @@
+---
+version: v0.1
+last_updated: 2026-04-13
+changes_from_previous: |
+  Initial version of golf rules bot evaluation rubric with 4-dimensional  scoring system (accuracy, completeness, format, guardrails) and 10-point scale.
+---
+
 # Golf Rules Bot Evaluation Rubric
 
 ## Scoring Overview
