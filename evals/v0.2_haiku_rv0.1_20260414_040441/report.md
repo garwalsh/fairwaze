@@ -94,6 +94,8 @@ Penalty area improved from mixed results in v0.1 to a perfect 10.0 across all 4 
 - **Medium tier:** -0.7 point regression, driven by two new rule citation failures.
 - **Score polarisation:** The distribution shifted toward 10s and 3s, with fewer partial scores in between.
 
+![v0.2 Dashboard](../../dashboard/dashboard_screenshotv0.2.png)
+
 ## Recommended Actions for v0.3
 
 1. **Add post-processing to strip rule numbers.** The prompt instruction alone is insufficient and adding domain knowledge makes it worse. A regex replacement on the output (before grading) would eliminate this failure mode entirely. Alternatively, update the fail condition to not cap scores when the underlying response is otherwise correct — but this changes the rubric, which is a bigger decision.

@@ -88,6 +88,8 @@ The reduction from 20% to 10% on rule number citations confirms the system promp
 - **Score distribution** shifted from bimodal (all 10s or 3s) to a healthy spread with meaningful partial scores.
 - **Difficulty staircase** now shows a clear 3-point gradient from easy to adversarial.
 
+![v0.1 Dashboard](../../dashboard/dashboard_screenshotv0.1.png)
+
 ## Recommended Actions for v0.2
 
 1. **Target pre-2019 vs post-2019 rule confusion.** Add explicit guidance in the system prompt about rules that changed in the 2019 revision: penalty area grounding, ball moved by natural forces on the green, etc.

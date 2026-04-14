@@ -18,22 +18,29 @@ The bot acts as an experienced USGA rules official, providing rulings for on-cou
 <tbody>
 <tr>
 <td><strong>v0.1</strong></td>
-<td>79.5% (7.95/10)</td>
+<td>79.5%</td>
 <td>Baseline: eval harness, 40 test cases, grading rubric</td>
 </tr>
 <tr>
 <td><strong>v0.2</strong></td>
-<td>81.2% (8.12/10)</td>
+<td>81.2%</td>
 <td>+1.7pp: 2019 rule guidance, provisional/match play fixes</td>
+</tr>
+<tr>
+<td><strong>v0.3</strong></td>
+<td>~92%*</td>
+<td>Accuracy highest yet, but exposed a <a href="#the-domain-knowledge-vs-format-compliance-tradeoff-">domain knowledge vs format compliance tradeoff</a></td>
 </tr>
 </tbody>
 </table>
 
+<sub>*v0.3 uncapped accuracy score. Headline score (78.5%) is depressed by a rule citation fail condition that caps otherwise-perfect responses — 6 of 10 capped cases scored 10/10 on all rubric dimensions. See analysis below.</sub>
+
 <br>
 
 <figure>
-<img src="dashboard/dashboard_screenshotv0.2.png" alt="v0.2 Eval Dashboard">
-<figcaption><em>Interactive eval dashboard showing v0.2 results across 40 test cases and 4 difficulty tiers.</em></figcaption>
+<img src="dashboard/dashboard_screenshotv0.3.png" alt="v0.3 Eval Dashboard">
+<figcaption><em>Interactive eval dashboard showing v0.3 results across 40 test cases and 4 difficulty tiers.</em></figcaption>
 </figure>
 
 ---
@@ -52,6 +59,7 @@ The real challenge isn't getting the model to answer easy questions. It's unders
 prompts/
   golf_rules_system_prompt_v0.1.md    # Baseline system prompt (YAML frontmatter)
   golf_rules_system_prompt_v0.2.md    # Iteration: 2019 rules, provisionals, match play
+  golf_rules_system_prompt_v0.3.md    # Iteration: rule citation suppression, ball moved, preferred lies
   generate_test_cases.md              # Test case generation instructions
   dashboard.md                        # Dashboard build instructions
 
@@ -63,6 +71,7 @@ evals/
   golf_rules_test_cases_with_answers.json  # Ground truth answers with sources
   v0.1_haiku_rv0.1_20260413_202842/  # Immutable snapshot from v0.1 baseline run
   v0.2_haiku_rv0.1_20260414_040441/  # Immutable snapshot from v0.2 iteration
+  v0.3_haiku_rv0.1_20260414_055658/  # Immutable snapshot from v0.3 iteration
     manifest.json                    # Metadata: model, grader, changes, scores
     system_prompt.md                 # Copy of prompt used (not a reference)
     rubric.md                        # Copy of rubric used
@@ -77,6 +86,7 @@ dashboard/
   dashboard.html                     # Interactive results dashboard with version comparison
   dashboard_screenshotv0.1.png       # v0.1 dashboard screenshot
   dashboard_screenshotv0.2.png       # v0.2 dashboard screenshot
+  dashboard_screenshotv0.3.png       # v0.3 dashboard screenshot
 ```
 
 Every eval run is a self-contained, reproducible snapshot. The result folder contains copies of all inputs rather than references to files that might change later. Anyone can open a version folder and see exactly what produced those numbers.
@@ -199,11 +209,46 @@ Penalty area rulings went to 10.0 across all 4 cases (the 2019 rule guidance wor
 
 Rule number citations increased from 4/40 (10%) to 7/40 (17.5%). Adding detailed domain knowledge to the prompt appears to prime the model to cite rule numbers despite the explicit prohibition. Four of the seven capped responses had perfect underlying scores. This is the core tension: the model needs domain knowledge to get rulings right, but that same knowledge triggers the behaviour we're trying to suppress.
 
-### Prompt Engineering Insight
+---
 
-The rule number regression illustrates a general prompt engineering pattern: instructions that add domain knowledge can undermine instructions that constrain output format. The v0.3 plan is to move rule number suppression from prompt instruction to post-processing (regex strip), accepting that the prompt alone can't reliably prevent this.
+## v0.3 Results
 
-![v0.1 Dashboard Screenshot](dashboard/dashboard_screenshotv0.1.png)
+**Overall: 78.5% (7.85/10)** — down from 81.2%, but the headline score is misleading.
+
+| Difficulty | Avg Score | v0.2 | v0.1 |
+|---|---|---|---|
+| Easy | 9.3 | 9.3 | 9.4 |
+| Medium | 7.0 | 8.2 | 8.9 |
+| Hard | 6.9 | 7.3 | 7.1 |
+| Adversarial | 8.2 | 7.7 | 6.4 |
+
+v0.3 targeted four specific failing cases from v0.2: ball moved by natural forces (worked examples), preferred lies scope (fairway only), match play exception for lifting opponent's ball, and a reframed rule number suppression strategy (positive instruction instead of prohibition, all rule number examples removed from the prompt).
+
+### What Improved
+
+Three of four targeted cases went from failing to perfect scores. The adversarial tier hit 8.2, its highest across all three versions (+1.8 from v0.1 baseline). Preferred lies moved from 3.0 to 10.0. Without the fail condition cap, the underlying accuracy score would be approximately 9.2/10 — the best of any version.
+
+### What Regressed
+
+Rule number citations increased again, from 7/40 (17.5%) to 10/40 (25%). Six of the ten capped responses had perfect underlying scores across all four dimensions. The fail condition is now the dominant source of score variance.
+
+---
+
+## The Domain Knowledge vs Format Compliance Tradeoff 🔬
+
+The most significant finding from the v0.1–v0.3 iteration cycle:
+
+| Version | Prompt Size | Rule Citations | Accuracy (uncapped) | Headline Score |
+|---|---|---|---|---|
+| v0.1 | ~500 tokens | 4 (10%) | ~8.5 | 79.5% |
+| v0.2 | ~1500 tokens | 7 (17.5%) | ~9.0 | 81.2% |
+| v0.3 | ~2200 tokens | 10 (25%) | ~9.2 | 78.5% |
+
+Adding domain knowledge to the system prompt improves accuracy on targeted cases but causes a proportional increase in rule number citations, regardless of suppression strategy. Three approaches were tested across v0.1–v0.3: direct prohibition, prohibition with rephrasing guidance, and positive framing with no rule number examples in the prompt. None reduced citations.
+
+This suggests the model's tendency to cite rule numbers is driven by contextual priming from the domain content itself, not by failure to understand the suppression instruction. With Haiku specifically, instruction-following cannot override strong domain priming.
+
+This is a general pattern, not a golf-specific one. Any domain where you need to inject expert knowledge into a system prompt while constraining output format will face this tradeoff. The resolution paths are: use a stronger model with better instruction-following, move the constraint to post-processing, soften the evaluation penalty, or accept the tradeoff and defer to RAG (where rule numbers become verifiable rather than hallucinated).
 
 ---
 
@@ -225,7 +270,8 @@ v0.1 deliberately uses a higher-powered oracle (model + tools) to establish grou
 |---|---|---|
 | **v0.1** | Eval harness, 40 test cases, baseline prompt, grader, dashboard | Complete (79.5%) |
 | **v0.2** | Iterate prompt: 2019 rule guidance, provisional edge cases, match play timing | Complete (81.2%) |
-| **v0.3+** | Continue iteration based on failure clusters | Planned |
+| **v0.3** | Iterate prompt: ball moved, preferred lies, rule citation suppression strategies | Complete (78.5%) |
+| **v0.4+** | Stronger model (Sonnet), softer fail condition, or post-processing for rule citations | Next |
 | **v1.0** | Mobile web app (Vercel) | Planned |
 | **v1.x** | RAG (retrieval at query time), match play/stroke play toggle, local rules via photo OCR | Planned |
 | **v2.x** | Model routing (Haiku/Sonnet/Opus by complexity), cost optimisation, prompt caching | Planned |
