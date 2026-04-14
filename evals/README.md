@@ -31,7 +31,7 @@ A two-stage evaluation system for testing golf rules AI bots with comprehensive 
 
 ### Stage 2: Grader (`grade_golf_rules_eval.py`) 
 - Loads responses and auto-detects ground truth answers
-- Uses Claude Sonnet 4.6 at temperature=0 for deterministic grading
+- Uses Claude Haiku at temperature=0 for deterministic grading
 - Grades each response on 4 dimensions according to local `RUBRIC.md`
 - Semantic comparison (not literal) - tone/format differences not penalized
 - Updates manifest with final scores and breakdowns
@@ -48,6 +48,7 @@ Each evaluation run creates a folder: `v{prompt_version}_{model_abbrev}_r{rubric
 - `responses.json` - Raw model outputs
 - `grades.json` - Per-case scores + reasoning
 - `summary.json` - Aggregates (total, by difficulty, by category)
+- `report.md` - Human-readable analysis report
 
 ## Model Compatibility
 
@@ -81,8 +82,8 @@ The `manifest.json` file contains complete evaluation metadata:
   "version": "v0.1",
   "timestamp": "2026-04-13T14:30:00Z", 
   "commit_hash": "abc1234",
-  "model": "claude-sonnet-4-5",
-  "grader_model": "claude-sonnet-4-5",
+  "model": "claude-3-haiku-20240307",
+  "grader_model": "claude-3-haiku-20240307",
   "temperature": 0,
   "grader_temperature": 0,
   "n_cases": 40,
@@ -91,7 +92,7 @@ The `manifest.json` file contains complete evaluation metadata:
   "aggregate_max": 100,
   "breakdowns": {
     "by_category": {"penalty_area": 80, "bunker": 70},
-    "fail_conditions_triggered": {"hallucinated_rule": 2, "safety": 0}
+    "fail_conditions_triggered": {"Cited rule number": 7, "safety_violation": 0}
   }
 }
 ```
@@ -105,7 +106,7 @@ From local `RUBRIC.md`:
 4. **Guardrails (0-2)** - No hallucinated rules or inappropriate advice?
 
 **Maximum Score:** 10 points  
-**Fail Conditions:** Cap scores for hallucinated rules (3), safety violations (4), format ignored (4)
+**Fail Conditions:** Cap scores for cited rule numbers (3), safety violations (4), format ignored (4)
 
 ## Example Usage
 
