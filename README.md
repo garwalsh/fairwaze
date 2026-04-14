@@ -4,7 +4,10 @@ An AI golf rules assistant, built evals-first. This project walks through buildi
 
 The bot acts as an experienced USGA rules official, providing rulings for on-course scenarios. The interesting part isn't the bot itself though. It's the methodology: decomposing a fuzzy domain into testable cases, building a grading rubric, identifying failure patterns, and iterating with data instead of intuition.
 
-**v0.2: 81.2% (8.12/10)** | v0.1 Baseline: 79.5% (7.95/10)
+| Version | Score | Key Change |
+|---|---|---|
+| **v0.1** | 79.5% (7.95/10) | Baseline: eval harness, 40 test cases, grading rubric |
+| **v0.2** | 81.2% (8.12/10) | +1.7pp: 2019 rule guidance, provisional/match play fixes |
 
 ![v0.2 Dashboard Screenshot](evals/dashboard_screenshotv0.2.png)
 
