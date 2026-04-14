@@ -22,21 +22,33 @@ The real challenge isn't getting the model to answer easy questions. It's unders
 
 ```
 prompts/
-  system_prompt.md          # Versioned system prompt (YAML frontmatter)
+  golf_rules_system_prompt_v0.1.md    # Versioned system prompt (YAML frontmatter)
+  generate_test_cases.md              # Test case generation instructions
+  dashboard.md                        # Dashboard build instructions
+
 evals/
-  rubric.md                 # Grading rubric (4 dimensions + fail conditions)
-  run_golf_rules_eval.py    # Generates model responses for all test cases
-  grade_golf_rules_eval.py  # Grades responses against ground truth
-  dashboard.html            # Interactive results dashboard
-  results/
-    v0.1_YYYYMMDD_HHMMSS/  # Immutable snapshot per eval run
-      manifest.json         # Metadata: model, grader, changes, scores
-      system_prompt.md      # Copy of prompt used (not a reference)
-      rubric.md             # Copy of rubric used
-      test_cases.json       # Copy of test cases used
-      responses.json        # Raw model outputs
-      grades.json           # Per-case scores + grader reasoning
-      summary.json          # Aggregate scores and breakdowns
+  RUBRIC.md                          # Grading rubric (4 dimensions + fail conditions)
+  run_golf_rules_eval.py             # Generates model responses for all test cases
+  grade_golf_rules_eval.py           # Grades responses against ground truth  
+  dashboard.html                     # Interactive results dashboard
+  golf_rules_test_cases.json         # Current 40 test cases across 4 difficulty tiers
+  golf_rules_test_cases_with_answers.json  # Ground truth answers with sources
+  v0.1_haiku_rv0.1_20260413_202842/  # Immutable snapshot from v0.1 baseline run
+    manifest.json                    # Metadata: model, grader, changes, scores
+    system_prompt.md                 # Copy of prompt used (not a reference)
+    rubric.md                        # Copy of rubric used
+    test_cases.json                  # Copy of test cases used
+    responses.json                   # Raw model outputs
+    grades.json                      # Per-case scores + grader reasoning
+    summary.json                     # Aggregate scores and breakdowns
+    report.md                        # Human-readable analysis report
+
+test_case_research/
+  golf_rules_test_cases.json         # Working copy during test case development
+  golf_rules_test_cases_with_answers.json  # Working copy with ground truth
+
+archive/
+  [old_files...]                     # Previous evaluation framework versions
 ```
 
 Every eval run is a self-contained, reproducible snapshot. The result folder contains copies of all inputs rather than references to files that might change later. Anyone can open a version folder and see exactly what produced those numbers.
