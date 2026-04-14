@@ -180,6 +180,11 @@ class GolfRulesGrader:
     async def grade_single_response(self, response_data: Dict[str, Any], ground_truth: Dict[str, Any], output_file: Path) -> Dict[str, Any]:
         """Grade a single response"""
 
+        # Programmatic check for rule number citations before LLM grading
+        import re
+        response_text = response_data.get('response', '')
+        cited_rule_number = bool(re.search(r'Rule \d', response_text))
+
         grading_prompt = f"""You are grading a golf rules bot response according to the evaluation rubric below.
 
 EVALUATION RUBRIC:
@@ -189,6 +194,7 @@ IMPORTANT GRADING INSTRUCTIONS:
 - Grade semantically, not literally - tone/format/warmth differences should NOT be penalized
 - Focus on rule accuracy, completeness of information, format adherence, and guardrail compliance
 - Temperature is set to 0 for deterministic grading
+- RULE CITATION CHECK: Programmatic check detected rule number citation: {"YES" if cited_rule_number else "NO"}
 
 QUESTION:
 {response_data['question']}
@@ -282,7 +288,16 @@ Remember: Accuracy is weighted x2 in the total score calculation.
 
             # Apply fail conditions
             fail_conditions = grade_data.get('fail_conditions_triggered', [])
+
+            # Programmatic rule citation check - override LLM grader decision
+            if cited_rule_number:
+                if 'Cited rule number' not in fail_conditions:
+                    fail_conditions.append('Cited rule number')
+
+            # Apply fail condition score caps
             if fail_conditions:
+                if 'Cited rule number' in fail_conditions:
+                    total = min(total, 3)
                 if 'hallucinated_rule' in fail_conditions:
                     total = min(total, 3)
                 if 'safety_violation' in fail_conditions or 'format_ignored' in fail_conditions:
