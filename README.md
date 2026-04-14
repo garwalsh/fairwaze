@@ -58,8 +58,7 @@ prompts/
 evals/
   RUBRIC.md                          # Grading rubric (4 dimensions + fail conditions)
   run_golf_rules_eval.py             # Generates model responses for all test cases
-  grade_golf_rules_eval.py           # Grades responses against ground truth  
-  dashboard.html                     # Interactive results dashboard
+  grade_golf_rules_eval.py           # Grades responses against ground truth
   golf_rules_test_cases.json         # Current 40 test cases across 4 difficulty tiers
   golf_rules_test_cases_with_answers.json  # Ground truth answers with sources
   v0.1_haiku_rv0.1_20260413_202842/  # Immutable snapshot from v0.1 baseline run
@@ -70,12 +69,14 @@ evals/
     test_cases.json                  # Copy of test cases used
     responses.json                   # Raw model outputs
     grades.json                      # Per-case scores + grader reasoning
+    grades_compact.json              # Compact grades for dashboard embedding
     summary.json                     # Aggregate scores and breakdowns
     report.md                        # Human-readable analysis report
 
-test_case_research/
-  golf_rules_test_cases.json         # Working copy during test case development
-  golf_rules_test_cases_with_answers.json  # Working copy with ground truth
+dashboard/
+  dashboard.html                     # Interactive results dashboard with version comparison
+  dashboard_screenshotv0.1.png       # v0.1 dashboard screenshot
+  dashboard_screenshotv0.2.png       # v0.2 dashboard screenshot
 ```
 
 Every eval run is a self-contained, reproducible snapshot. The result folder contains copies of all inputs rather than references to files that might change later. Anyone can open a version folder and see exactly what produced those numbers.
