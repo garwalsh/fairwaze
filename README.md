@@ -46,9 +46,6 @@ evals/
 test_case_research/
   golf_rules_test_cases.json         # Working copy during test case development
   golf_rules_test_cases_with_answers.json  # Working copy with ground truth
-
-archive/
-  [old_files...]                     # Previous evaluation framework versions
 ```
 
 Every eval run is a self-contained, reproducible snapshot. The result folder contains copies of all inputs rather than references to files that might change later. Anyone can open a version folder and see exactly what produced those numbers.

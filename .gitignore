@@ -44,6 +44,7 @@ env/
 # IDE and editor files
 .vscode/
 .idea/
+.obsidian/
 *.swp
 *.swo
 *~
@@ -72,4 +73,5 @@ CHANGELOG.md
 # Temporary files
 *.tmp
 *.temp
-test_prompts.json
+test_prompts.jsonarchive/
+archive/
