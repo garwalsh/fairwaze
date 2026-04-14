@@ -47,7 +47,7 @@ class GolfRulesGrader:
     def __init__(
         self,
         api_key: Optional[str] = None,
-        model: str = "claude-3-5-sonnet-20241022",
+        model: str = "claude-3-haiku-20240307",
         rate_limit_delay: float = 1.0
     ):
         """Initialize the grader"""
@@ -95,6 +95,32 @@ class GolfRulesGrader:
                     return content
 
         raise FileNotFoundError(f"RUBRIC.md not found. Tried: {possible_paths}")
+
+    def _api_call_with_retry(self, **kwargs):
+        """Make API call with exponential backoff retry for rate limiting"""
+        max_retries = 3
+        base_delay = 5  # Start with 5 seconds
+
+        for attempt in range(max_retries + 1):
+            try:
+                return self.client.messages.create(**kwargs)
+            except Exception as e:
+                # Check if it's a rate limiting error (429 or 529)
+                error_str = str(e)
+                is_rate_limit = (
+                    '429' in error_str or
+                    '529' in error_str or
+                    'rate' in error_str.lower() or
+                    'too many requests' in error_str.lower()
+                )
+                if is_rate_limit and attempt < max_retries:
+                    delay = base_delay * (2 ** attempt)  # 5, 10, 20 seconds
+                    self.logger.warning(f"Rate limited (attempt {attempt + 1}/{max_retries + 1}), waiting {delay}s...")
+                    time.sleep(delay)
+                    continue
+                else:
+                    # Re-raise if not rate limiting or max retries exceeded
+                    raise
 
     def load_responses_and_ground_truth(self, eval_dir: str):
         """Load responses and ground truth from eval directory"""
@@ -163,7 +189,7 @@ Remember: Accuracy is weighted x2 in the total score calculation.
 """
 
         try:
-            response = self.client.messages.create(
+            response = self._api_call_with_retry(
                 model=self.model,
                 max_tokens=2048,
                 temperature=0.0,  # Deterministic grading
@@ -228,7 +254,7 @@ Remember: Accuracy is weighted x2 in the total score calculation.
             return grade_result
 
         except Exception as e:
-            self.logger.error(f"✗ Grading error for {response_data['id']}: {str(e)}")
+            # Error logged to result, not terminal
 
             error_result = {
                 'id': response_data['id'],
@@ -383,7 +409,6 @@ Remember: Accuracy is weighted x2 in the total score calculation.
             "aggregate_score": summary['overall_average'],
             "aggregate_max": 10,
             "breakdowns": {
-                "by_difficulty": {diff: data['avg'] for diff, data in summary['difficulty_breakdown'].items()},
                 "by_category": {cat: data['avg'] for cat, data in summary['category_breakdown'].items()},
                 "fail_conditions_triggered": summary['fail_conditions']
             }
@@ -406,7 +431,7 @@ async def main():
                        help="Directory containing evaluation results to grade")
     # Removed --ground-truth argument since it's now auto-detected
     parser.add_argument("--model",
-                       default="claude-3-5-sonnet-20241022",
+                       default="claude-3-haiku-20240307",
                        help="Model to use for grading")
     parser.add_argument("--rate-limit",
                        type=float, default=0.5,
@@ -436,11 +461,6 @@ async def main():
         print(f"\n🎯 Grading completed successfully!")
         print(f"📊 Overall average: {summary['overall_average']:.2f}/10")
         print(f"📁 Results saved to: {eval_path}")
-
-        # Print difficulty breakdown
-        print(f"\n📈 Breakdown by difficulty:")
-        for difficulty, data in summary['difficulty_breakdown'].items():
-            print(f"  {difficulty}: {data['avg']:.2f}/10 ({data['count']} questions)")
 
         # Print fail conditions if any
         if summary['fail_conditions']:

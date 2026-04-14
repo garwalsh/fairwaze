@@ -1,402 +1,402 @@
 [
   {
-    "id": "test001\n- **difficulty**: easy\n- **category**: bunker\n- **question**: If you touch the sand in a bunker with your club before making a stroke, what is the penalty?\n- **source URL**: https://onlineexammaker.com/kb/20-golf-rules-quiz-questions-and-answers/\n- **top_comment**: One penalty stroke is added according to Rule 12.2b for improving conditions affecting the stroke.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "easy\n- **category**: bunker\n- **question**: If you touch the sand in a bunker with your club before making a stroke, what is the penalty?\n- **source URL**: https://onlineexammaker.com/kb/20-golf-rules-quiz-questions-and-answers/\n- **top_comment**: One penalty stroke is added according to Rule 12.2b for improving conditions affecting the stroke.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "bunker\n- **question**: If you touch the sand in a bunker with your club before making a stroke, what is the penalty?\n- **source URL**: https://onlineexammaker.com/kb/20-golf-rules-quiz-questions-and-answers/\n- **top_comment**: One penalty stroke is added according to Rule 12.2b for improving conditions affecting the stroke.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "If you touch the sand in a bunker with your club before making a stroke, what is the penalty?\n- **source URL**: https://onlineexammaker.com/kb/20-golf-rules-quiz-questions-and-answers/\n- **top_comment**: One penalty stroke is added according to Rule 12.2b for improving conditions affecting the stroke.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://onlineexammaker.com/kb/20-golf-rules-quiz-questions-and-answers/\n- **top_comment**: One penalty stroke is added according to Rule 12.2b for improving conditions affecting the stroke.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "One penalty stroke is added according to Rule 12.2b for improving conditions affecting the stroke.\n- **ground_truth**: \n- **format**: stroke",
+    "id": "test001",
+    "difficulty": "easy",
+    "category": "bunker",
+    "question": "If you touch the sand in a bunker with your club before making a stroke, what is the penalty?",
+    "source URL": "https://onlineexammaker.com/kb/20-golf-rules-quiz-questions-and-answers/",
+    "top_comment": "One penalty stroke is added according to Rule 12.2b for improving conditions affecting the stroke.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test002",
+    "difficulty": "easy",
+    "category": "ball_marking",
+    "question": "How should you mark your ball on the putting green before lifting it?",
+    "source URL": "https://www.usga.org/content/usga/home-page/rules/rules-2019/players-edition/rule-14.html",
+    "top_comment": "You must mark the spot by placing a ball-marker immediately behind or next to the ball or by placing a club on the ground immediately behind or next to the ball.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test003",
+    "difficulty": "easy",
+    "category": "equipment",
+    "question": "Who is allowed to drop your ball when taking relief?",
+    "source URL": "https://www.randa.org/en/rog/the-rules-of-golf/rule-14",
+    "top_comment": "The ball must be dropped only by the player. Neither the player's caddie nor anyone else may do so.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test004",
+    "difficulty": "easy",
+    "category": "provisional",
+    "question": "When can you play a provisional ball?",
+    "source URL": "https://sites.google.com/site/kitchenergaffers/rules-guidelines/provisional-ball",
+    "top_comment": "A provisional ball can be played if a ball might be lost or if it might be out of bounds.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test005",
+    "difficulty": "easy",
+    "category": "embedded",
+    "question": "Where on the course can you get free relief from an embedded ball?",
+    "source URL": "https://www.golfmonthly.com/videos/rules/rules-of-golf-plugged-lie",
+    "top_comment": "Unless you are in a bunker or penalty area, you get relief without penalty from an embedded ball in the general area.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test006",
+    "difficulty": "easy",
+    "category": "match_play",
+    "question": "In match play, if your ball in motion accidentally hits your opponent, what is the penalty?",
+    "source URL": "https://www.glenelggolf.com/cms/rules/a-guide-to-the-rules-of-match-play/",
+    "top_comment": "There is no penalty to either player, and the ball will normally be played as it lies.",
+    "ground_truth": "",
+    "format": "match"
+  },
+  {
+    "id": "test007",
+    "difficulty": "easy",
+    "category": "caddie",
+    "question": "Can your caddie give you advice during a round?",
+    "source URL": "https://www.randa.org/en/rog/the-rules-of-golf/rule-10",
+    "top_comment": "Yes, a player may seek advice from their caddie during a match.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test008",
+    "difficulty": "easy",
+    "category": "water_hazard",
+    "question": "If a pond has overflowed beyond its marked boundaries, what is the overflow area considered?",
+    "source URL": "https://onlineexammaker.com/kb/20-golf-rules-quiz-questions-and-answers/",
+    "top_comment": "The overflow that is outside the margin of the hazard is casual water.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test009",
+    "difficulty": "easy",
+    "category": "unplayable",
+    "question": "Who determines if a ball is unplayable?",
+    "source URL": "https://www.mygolfinstructor.com/instruction/rules-of-golf/unplayable-lie/",
+    "top_comment": "You are the sole judge of whether your ball is unplayable.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test010",
+    "difficulty": "easy",
+    "category": "match_play",
+    "question": "In match play, if your opponent deliberately moves your ball marker, what is the penalty?",
+    "source URL": "https://www.glenelggolf.com/cms/rules/a-guide-to-the-rules-of-match-play/",
+    "top_comment": "The opponent incurs a one penalty stroke and the marker must be replaced.",
+    "ground_truth": "",
+    "format": "match"
+  },
+  {
+    "id": "test011",
+    "difficulty": "medium",
+    "category": "GUR",
+    "question": "Your ball lies in a bunker that has been marked as GUR (Ground Under Repair). Where must you drop when taking full relief?",
+    "source URL": "https://forums.golfmonthly.com/threads/bunker-gur-where-to-drop.14609/",
+    "top_comment": "When taking full relief from a bunker that is GUR, you must drop in the general area outside the bunker at the nearest point of relief.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test012",
+    "difficulty": "medium",
+    "category": "provisional",
+    "question": "You play a provisional ball, then find your original ball which is clearly unplayable. Can you abandon the original and continue with the provisional?",
+    "source URL": "https://www.nationalclubgolfer.com/rules/unplayable-ball-can-i-play-my-provisional-ball-instead/",
+    "top_comment": "No, the provisional must be abandoned when the original ball is found. You must take unplayable ball relief from where the original ball lies.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test013",
+    "difficulty": "medium",
+    "category": "penalty_area",
+    "question": "Your ball crosses a red penalty area but then continues out of bounds. What are your relief options?",
+    "source URL": "https://forums.golfwrx.com/topic/1892960-ball-that-crosses-a-red-penalty-area-but-then-continues-ob/",
+    "top_comment": "Since the ball is OB, you must proceed under stroke and distance. The crossing of the penalty area is irrelevant.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test014",
+    "difficulty": "medium",
+    "category": "obstruction",
+    "question": "Your ball is in a bunker resting on a concrete drainage grate. What relief do you get?",
+    "source URL": "https://thegolfbusiness.co.uk/2011/12/the-rules-of-golf-surrounding-bunkers/",
+    "top_comment": "You can take relief from the immovable obstruction, but you must drop in the bunker at the nearest point of relief.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test015",
+    "difficulty": "medium",
+    "category": "match_play",
+    "question": "In match play, your ball overhangs the hole. Your opponent immediately concedes the putt and picks up your ball. What happens?",
+    "source URL": "https://www.wmga.com/wp-content/uploads/2024/02/Match-Play-Rules-and-Reminders.pdf",
+    "top_comment": "The putt is considered holed. A concession cannot be refused or withdrawn.",
+    "ground_truth": "",
+    "format": "match"
+  },
+  {
+    "id": "test016",
+    "difficulty": "medium",
+    "category": "embedded",
+    "question": "Your ball is embedded in the ground because someone stepped on it, not from your shot. Do you get free relief?",
+    "source URL": "https://www.golfdigest.com/story/rules-of-golf-most-misunderstood-rules-embedded-ball-bunker-penalty-area-out-of-bounds",
+    "top_comment": "No, for embedded ball relief, the ball must be in your own pitch mark from your previous stroke.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test017",
+    "difficulty": "medium",
+    "category": "dropping",
+    "question": "When dropping a ball for relief, how high must you drop it from?",
+    "source URL": "https://www.randa.org/en/rog/the-rules-of-golf/rule-14",
+    "top_comment": "The ball must be dropped from knee height, falling straight down without throwing, spinning or rolling.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test018",
+    "difficulty": "medium",
+    "category": "match_play",
+    "question": "In match play, you ask your opponent for advice about club selection. Your opponent tells you what club they used. What is the penalty?",
+    "source URL": "https://www.randa.org/en/rog/the-rules-of-golf/rule-10",
+    "top_comment": "Both players get the general penalty (loss of hole) - you for asking for advice and your opponent for giving it.",
+    "ground_truth": "",
+    "format": "match"
+  },
+  {
+    "id": "test019",
+    "difficulty": "medium",
+    "category": "bunker",
+    "question": "Can you remove a loose impediment (like a leaf) from a bunker if it's not near your ball?",
+    "source URL": "https://onlineexammaker.com/kb/20-golf-rules-quiz-questions-and-answers/",
+    "top_comment": "No, Rule 12.2a prohibits removing loose impediments in a bunker regardless of location.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test020",
+    "difficulty": "medium",
+    "category": "relief",
+    "question": "You declare your ball unplayable and pick it up, then realize you were entitled to free relief. Can you change your decision?",
+    "source URL": "https://www.golfdigest.com/story/rules-of-golf-review-unplayable-lie-picking-up-ball-changing-mind",
+    "top_comment": "Yes, as long as you haven't put a ball in play, you can still take the free relief.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test021",
+    "difficulty": "hard",
+    "category": "penalty_area",
+    "question": "Your ball travels over a red penalty area (water), lands in someone's yard (OB), then rolls back into the water. What are your relief options?",
+    "source URL": "https://forums.golfwrx.com/topic/1939579-ball-travels-over-penalty-area-water-and-lands-in-a-yard-ob-only-to-fall-back-into-the-water/",
+    "top_comment": "You proceed under penalty area relief using the point where the ball last crossed the penalty area margin before coming to rest in the penalty area, not where it went OB.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test022",
+    "difficulty": "hard",
+    "category": "match_play",
+    "question": "In match play, your opponent's ball overhangs the hole. You immediately pick it up thinking it's good. Your opponent hadn't conceded. What happens?",
+    "source URL": "https://www.glenelggolf.com/cms/rules/a-guide-to-the-rules-of-match-play/",
+    "top_comment": "If the ball would have fallen in during the reasonable time to reach the hole plus 10 seconds, it's treated as holed with the previous stroke. You get the general penalty.",
+    "ground_truth": "",
+    "format": "match"
+  },
+  {
+    "id": "test023",
+    "difficulty": "hard",
+    "category": "GUR",
+    "question": "Your ball is in a bunker marked as GUR, but there's an area of good sand nearby in the same bunker. Can you drop in the good sand?",
+    "source URL": "https://forums.golfwrx.com/topic/1869430-bunkers-out-of-playgur/",
+    "top_comment": "No, when the entire bunker is marked as GUR, you cannot get relief within the bunker. You must take full relief outside the bunker or play as it lies.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test024",
+    "difficulty": "hard",
+    "category": "ball_in_motion",
+    "question": "Your ball is rolling on the green when your opponent, not knowing you had played, walks into its path. The ball hits their foot and stops near the hole. What happens in match play?",
+    "source URL": "https://www.usga.org/content/usga/home-page/rules-hub/a-short-course-on-the-rules/quiz-questions-for-ball-in-motion.html",
+    "top_comment": "No penalty to either player. The ball is played as it lies since the deflection by the opponent was accidental.",
+    "ground_truth": "",
+    "format": "match"
+  },
+  {
+    "id": "test025",
+    "difficulty": "hard",
+    "category": "equipment",
+    "question": "During your round, your driver shaft cracks (not from abuse). Can you replace it with a different driver you have in your car?",
+    "source URL": "https://ilovegolfwhen.com/rules-of-golf-2026/",
+    "top_comment": "Yes, under the 2026 rules changes, you can replace a damaged club during the round if it wasn't damaged from abuse, using parts you or your group are carrying.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test026",
+    "difficulty": "hard",
+    "category": "pitch_mark",
+    "question": "Your ball lies in an unrepaired pitch mark that was clearly made by another player's ball. Can you take free relief?",
+    "source URL": "https://ilovegolfwhen.com/rules-of-golf-2026/",
+    "top_comment": "Yes, under the 2026 rules changes, you can take free relief from any unrepaired pitch mark below ground level, not just ones your ball created.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test027",
+    "difficulty": "hard",
+    "category": "match_play",
+    "question": "In match play, you accidentally play your opponent's ball from the rough. When do you realize the mistake and what's the penalty?",
+    "source URL": "https://www.wmga.com/wp-content/uploads/2024/02/Match-Play-Rules-and-Reminders.pdf",
+    "top_comment": "You lose the hole when you make a stroke at a wrong ball, regardless of when you discover the mistake.",
+    "ground_truth": "",
+    "format": "match"
+  },
+  {
+    "id": "test028",
+    "difficulty": "hard",
+    "category": "bunker",
+    "question": "Your ball is in a bunker on damaged artificial lining (concrete/matting). The sand doesn't completely cover the artificial surface. What relief do you get?",
+    "source URL": "https://forums.golfmonthly.com/threads/free-relief-from-damaged-bunker-lining.119852/",
+    "top_comment": "You can take relief from the immovable obstruction but must drop in the bunker. If no relief is available in the bunker, you can take penalty relief outside the bunker.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test029",
+    "difficulty": "hard",
+    "category": "preferred_lies",
+    "question": "When preferred lies are in effect, how far can you move your ball under the 2026 rules?",
+    "source URL": "https://www.golfyack.com/spotlight/golf-rules-changes-for-2026-what-the-tours-are-actually-updating-and-why",
+    "top_comment": "Under 2026 rules changes, you can move your ball one scorecard length (not a full club length) when preferred lies are in effect.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test030",
+    "difficulty": "hard",
+    "category": "OB",
+    "question": "Under the 2026 PGA Tour local rule changes, when does internal out of bounds apply?",
+    "source URL": "https://golf.com/instruction/rules/rules-changes-pga-tour-2026/",
+    "top_comment": "Internal OB only applies to balls struck from the tee, not from the fairway or other areas of the course.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test031",
+    "difficulty": "adversarial",
+    "category": "provisional",
+    "question": "You hit a provisional ball for a ball that might be lost. After a 2-minute search, you find what might be your original ball but aren't 100% sure it's yours. Should you continue with the provisional since you can't positively identify the original?",
+    "source URL": "https://www.randa.org/en/rog/the-rules-of-golf/rule-18",
+    "top_comment": "If you cannot positively identify the ball as yours, it is not your ball. You should continue with the provisional ball.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test032",
+    "difficulty": "adversarial",
+    "category": "match_play",
+    "question": "In match play, you concede your opponent's 3-foot putt, but they want to putt it anyway \"for practice.\" Can they do this?",
+    "source URL": "https://www.glenelggolf.com/cms/rules/a-guide-to-the-rules-of-match-play/",
+    "top_comment": "No, a concession cannot be refused. The hole is over and they cannot putt for practice during play of the hole.",
+    "ground_truth": "",
+    "format": "match"
+  },
+  {
+    "id": "test033",
+    "difficulty": "adversarial",
+    "category": "ball_movement",
+    "question": "Your ball moves slightly after you address it, but you weren't sure it moved and played it from the new position. Under 2026 rules, what's the penalty?",
+    "source URL": "https://ilovegolfwhen.com/rules-of-golf-2026/",
+    "top_comment": "If you were unaware the ball might have moved, the penalty is one stroke (not two) for playing from the wrong place.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test034",
+    "difficulty": "adversarial",
+    "category": "embedded",
+    "question": "Your ball is clearly embedded in the fairway, but it's embedded in sand that was scattered from a nearby bunker, not in the actual ground/turf. Do you get relief?",
+    "source URL": "https://www.golfdigest.com/story/rules-of-golf-most-misunderstood-rules-embedded-ball-bunker-penalty-area-out-of-bounds",
+    "top_comment": "No relief. The ball must be embedded in the ground itself, not in loose sand or other materials on top of the ground.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test035",
+    "difficulty": "adversarial",
+    "category": "bunker",
+    "question": "Your ball is in a bunker and you want to measure the distance to the pin. Can you place your rangefinder on the sand to stabilize it while measuring?",
+    "source URL": "https://thegolfbusiness.co.uk/2011/12/the-rules-of-golf-surrounding-bunkers/",
+    "top_comment": "No, this would be testing the condition of the sand which is prohibited under Rule 12.2a.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test036",
+    "difficulty": "adversarial",
+    "category": "match_play",
+    "question": "In match play, after your opponent holes out, you ask them what club they used for their approach shot. They tell you. Who gets penalized?",
+    "source URL": "https://www.randa.org/en/rog/the-rules-of-golf/rule-10",
+    "top_comment": "No one gets penalized. Information about clubs used for completed strokes can be shared; it's only advice about future strokes that's prohibited.",
+    "ground_truth": "",
+    "format": "match"
+  },
+  {
+    "id": "test037",
+    "difficulty": "adversarial",
+    "category": "penalty_area",
+    "question": "Your ball clearly went into a water hazard, but the area isn't marked with red or yellow stakes. Can you take penalty area relief?",
+    "source URL": "https://forums.golfwrx.com/topic/1847515-penalty-area-boundaries/",
+    "top_comment": "No, an area must be properly marked to be a penalty area. Without markings, you must treat it as you find it or take unplayable ball relief.",
+    "ground_truth": "",
+    "format": "stroke"
+  },
+  {
+    "id": "test038",
+    "difficulty": "adversarial",
+    "question": "You're taking relief from GUR and your ball rolls closer to the hole after dropping. Your playing partner says you must re-drop. Are they correct?",
+    "source URL": "https://www.usga.org/content/usga/home-page/rules/rules-2019/players-edition/rule-14.html",
+    "top_comment": "Not necessarily. The ball can roll closer to the hole as long as it doesn't roll outside the relief area and isn't nearer the hole than the reference point.",
+    "ground_truth": "",
     "format": "stroke",
-    "response": ""
+    "category": ""
   },
   {
-    "id": "test002\n- **difficulty**: easy\n- **category**: ball_marking\n- **question**: How should you mark your ball on the putting green before lifting it?\n- **source URL**: https://www.usga.org/content/usga/home-page/rules/rules-2019/players-edition/rule-14.html\n- **top_comment**: You must mark the spot by placing a ball-marker immediately behind or next to the ball or by placing a club on the ground immediately behind or next to the ball.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "easy\n- **category**: ball_marking\n- **question**: How should you mark your ball on the putting green before lifting it?\n- **source URL**: https://www.usga.org/content/usga/home-page/rules/rules-2019/players-edition/rule-14.html\n- **top_comment**: You must mark the spot by placing a ball-marker immediately behind or next to the ball or by placing a club on the ground immediately behind or next to the ball.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "ball_marking\n- **question**: How should you mark your ball on the putting green before lifting it?\n- **source URL**: https://www.usga.org/content/usga/home-page/rules/rules-2019/players-edition/rule-14.html\n- **top_comment**: You must mark the spot by placing a ball-marker immediately behind or next to the ball or by placing a club on the ground immediately behind or next to the ball.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "How should you mark your ball on the putting green before lifting it?\n- **source URL**: https://www.usga.org/content/usga/home-page/rules/rules-2019/players-edition/rule-14.html\n- **top_comment**: You must mark the spot by placing a ball-marker immediately behind or next to the ball or by placing a club on the ground immediately behind or next to the ball.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://www.usga.org/content/usga/home-page/rules/rules-2019/players-edition/rule-14.html\n- **top_comment**: You must mark the spot by placing a ball-marker immediately behind or next to the ball or by placing a club on the ground immediately behind or next to the ball.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "You must mark the spot by placing a ball-marker immediately behind or next to the ball or by placing a club on the ground immediately behind or next to the ball.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
+    "id": "test039",
+    "difficulty": "adversarial",
+    "category": "equipment",
+    "question": "Your caddie accidentally breaks your putter during the round (not from abuse). Can you replace it with a different putter from the pro shop?",
+    "source URL": "https://ilovegolfwhen.com/rules-of-golf-2026/",
+    "top_comment": "No, you can only replace a damaged club with one you or your group are carrying. You cannot go get a new club from the pro shop.",
+    "ground_truth": "",
+    "format": "stroke"
   },
   {
-    "id": "test003\n- **difficulty**: easy\n- **category**: equipment\n- **question**: Who is allowed to drop your ball when taking relief?\n- **source URL**: https://www.randa.org/en/rog/the-rules-of-golf/rule-14\n- **top_comment**: The ball must be dropped only by the player. Neither the player's caddie nor anyone else may do so.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "easy\n- **category**: equipment\n- **question**: Who is allowed to drop your ball when taking relief?\n- **source URL**: https://www.randa.org/en/rog/the-rules-of-golf/rule-14\n- **top_comment**: The ball must be dropped only by the player. Neither the player's caddie nor anyone else may do so.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "equipment\n- **question**: Who is allowed to drop your ball when taking relief?\n- **source URL**: https://www.randa.org/en/rog/the-rules-of-golf/rule-14\n- **top_comment**: The ball must be dropped only by the player. Neither the player's caddie nor anyone else may do so.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "Who is allowed to drop your ball when taking relief?\n- **source URL**: https://www.randa.org/en/rog/the-rules-of-golf/rule-14\n- **top_comment**: The ball must be dropped only by the player. Neither the player's caddie nor anyone else may do so.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://www.randa.org/en/rog/the-rules-of-golf/rule-14\n- **top_comment**: The ball must be dropped only by the player. Neither the player's caddie nor anyone else may do so.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "The ball must be dropped only by the player. Neither the player's caddie nor anyone else may do so.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
-  },
-  {
-    "id": "test004\n- **difficulty**: easy\n- **category**: provisional\n- **question**: When can you play a provisional ball?\n- **source URL**: https://sites.google.com/site/kitchenergaffers/rules-guidelines/provisional-ball\n- **top_comment**: A provisional ball can be played if a ball might be lost or if it might be out of bounds.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "easy\n- **category**: provisional\n- **question**: When can you play a provisional ball?\n- **source URL**: https://sites.google.com/site/kitchenergaffers/rules-guidelines/provisional-ball\n- **top_comment**: A provisional ball can be played if a ball might be lost or if it might be out of bounds.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "provisional\n- **question**: When can you play a provisional ball?\n- **source URL**: https://sites.google.com/site/kitchenergaffers/rules-guidelines/provisional-ball\n- **top_comment**: A provisional ball can be played if a ball might be lost or if it might be out of bounds.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "When can you play a provisional ball?\n- **source URL**: https://sites.google.com/site/kitchenergaffers/rules-guidelines/provisional-ball\n- **top_comment**: A provisional ball can be played if a ball might be lost or if it might be out of bounds.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://sites.google.com/site/kitchenergaffers/rules-guidelines/provisional-ball\n- **top_comment**: A provisional ball can be played if a ball might be lost or if it might be out of bounds.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "A provisional ball can be played if a ball might be lost or if it might be out of bounds.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
-  },
-  {
-    "id": "test005\n- **difficulty**: easy\n- **category**: embedded\n- **question**: Where on the course can you get free relief from an embedded ball?\n- **source URL**: https://www.golfmonthly.com/videos/rules/rules-of-golf-plugged-lie\n- **top_comment**: Unless you are in a bunker or penalty area, you get relief without penalty from an embedded ball in the general area.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "easy\n- **category**: embedded\n- **question**: Where on the course can you get free relief from an embedded ball?\n- **source URL**: https://www.golfmonthly.com/videos/rules/rules-of-golf-plugged-lie\n- **top_comment**: Unless you are in a bunker or penalty area, you get relief without penalty from an embedded ball in the general area.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "embedded\n- **question**: Where on the course can you get free relief from an embedded ball?\n- **source URL**: https://www.golfmonthly.com/videos/rules/rules-of-golf-plugged-lie\n- **top_comment**: Unless you are in a bunker or penalty area, you get relief without penalty from an embedded ball in the general area.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "Where on the course can you get free relief from an embedded ball?\n- **source URL**: https://www.golfmonthly.com/videos/rules/rules-of-golf-plugged-lie\n- **top_comment**: Unless you are in a bunker or penalty area, you get relief without penalty from an embedded ball in the general area.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://www.golfmonthly.com/videos/rules/rules-of-golf-plugged-lie\n- **top_comment**: Unless you are in a bunker or penalty area, you get relief without penalty from an embedded ball in the general area.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "Unless you are in a bunker or penalty area, you get relief without penalty from an embedded ball in the general area.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
-  },
-  {
-    "id": "test006\n- **difficulty**: easy\n- **category**: match_play\n- **question**: In match play, if your ball in motion accidentally hits your opponent, what is the penalty?\n- **source URL**: https://www.glenelggolf.com/cms/rules/a-guide-to-the-rules-of-match-play/\n- **top_comment**: There is no penalty to either player, and the ball will normally be played as it lies.\n- **ground_truth**: \n- **format**: match",
-    "difficulty": "easy\n- **category**: match_play\n- **question**: In match play, if your ball in motion accidentally hits your opponent, what is the penalty?\n- **source URL**: https://www.glenelggolf.com/cms/rules/a-guide-to-the-rules-of-match-play/\n- **top_comment**: There is no penalty to either player, and the ball will normally be played as it lies.\n- **ground_truth**: \n- **format**: match",
-    "category": "match_play\n- **question**: In match play, if your ball in motion accidentally hits your opponent, what is the penalty?\n- **source URL**: https://www.glenelggolf.com/cms/rules/a-guide-to-the-rules-of-match-play/\n- **top_comment**: There is no penalty to either player, and the ball will normally be played as it lies.\n- **ground_truth**: \n- **format**: match",
-    "question": "In match play, if your ball in motion accidentally hits your opponent, what is the penalty?\n- **source URL**: https://www.glenelggolf.com/cms/rules/a-guide-to-the-rules-of-match-play/\n- **top_comment**: There is no penalty to either player, and the ball will normally be played as it lies.\n- **ground_truth**: \n- **format**: match",
-    "source_url": "https://www.glenelggolf.com/cms/rules/a-guide-to-the-rules-of-match-play/\n- **top_comment**: There is no penalty to either player, and the ball will normally be played as it lies.\n- **ground_truth**: \n- **format**: match",
-    "top_comment": "There is no penalty to either player, and the ball will normally be played as it lies.\n- **ground_truth**: \n- **format**: match",
-    "format": "match",
-    "response": ""
-  },
-  {
-    "id": "test007\n- **difficulty**: easy\n- **category**: caddie\n- **question**: Can your caddie give you advice during a round?\n- **source URL**: https://www.randa.org/en/rog/the-rules-of-golf/rule-10\n- **top_comment**: Yes, a player may seek advice from their caddie during a match.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "easy\n- **category**: caddie\n- **question**: Can your caddie give you advice during a round?\n- **source URL**: https://www.randa.org/en/rog/the-rules-of-golf/rule-10\n- **top_comment**: Yes, a player may seek advice from their caddie during a match.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "caddie\n- **question**: Can your caddie give you advice during a round?\n- **source URL**: https://www.randa.org/en/rog/the-rules-of-golf/rule-10\n- **top_comment**: Yes, a player may seek advice from their caddie during a match.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "Can your caddie give you advice during a round?\n- **source URL**: https://www.randa.org/en/rog/the-rules-of-golf/rule-10\n- **top_comment**: Yes, a player may seek advice from their caddie during a match.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://www.randa.org/en/rog/the-rules-of-golf/rule-10\n- **top_comment**: Yes, a player may seek advice from their caddie during a match.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "Yes, a player may seek advice from their caddie during a match.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
-  },
-  {
-    "id": "test008\n- **difficulty**: easy\n- **category**: water_hazard\n- **question**: If a pond has overflowed beyond its marked boundaries, what is the overflow area considered?\n- **source URL**: https://onlineexammaker.com/kb/20-golf-rules-quiz-questions-and-answers/\n- **top_comment**: The overflow that is outside the margin of the hazard is casual water.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "easy\n- **category**: water_hazard\n- **question**: If a pond has overflowed beyond its marked boundaries, what is the overflow area considered?\n- **source URL**: https://onlineexammaker.com/kb/20-golf-rules-quiz-questions-and-answers/\n- **top_comment**: The overflow that is outside the margin of the hazard is casual water.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "water_hazard\n- **question**: If a pond has overflowed beyond its marked boundaries, what is the overflow area considered?\n- **source URL**: https://onlineexammaker.com/kb/20-golf-rules-quiz-questions-and-answers/\n- **top_comment**: The overflow that is outside the margin of the hazard is casual water.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "If a pond has overflowed beyond its marked boundaries, what is the overflow area considered?\n- **source URL**: https://onlineexammaker.com/kb/20-golf-rules-quiz-questions-and-answers/\n- **top_comment**: The overflow that is outside the margin of the hazard is casual water.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://onlineexammaker.com/kb/20-golf-rules-quiz-questions-and-answers/\n- **top_comment**: The overflow that is outside the margin of the hazard is casual water.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "The overflow that is outside the margin of the hazard is casual water.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
-  },
-  {
-    "id": "test009\n- **difficulty**: easy\n- **category**: unplayable\n- **question**: Who determines if a ball is unplayable?\n- **source URL**: https://www.mygolfinstructor.com/instruction/rules-of-golf/unplayable-lie/\n- **top_comment**: You are the sole judge of whether your ball is unplayable.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "easy\n- **category**: unplayable\n- **question**: Who determines if a ball is unplayable?\n- **source URL**: https://www.mygolfinstructor.com/instruction/rules-of-golf/unplayable-lie/\n- **top_comment**: You are the sole judge of whether your ball is unplayable.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "unplayable\n- **question**: Who determines if a ball is unplayable?\n- **source URL**: https://www.mygolfinstructor.com/instruction/rules-of-golf/unplayable-lie/\n- **top_comment**: You are the sole judge of whether your ball is unplayable.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "Who determines if a ball is unplayable?\n- **source URL**: https://www.mygolfinstructor.com/instruction/rules-of-golf/unplayable-lie/\n- **top_comment**: You are the sole judge of whether your ball is unplayable.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://www.mygolfinstructor.com/instruction/rules-of-golf/unplayable-lie/\n- **top_comment**: You are the sole judge of whether your ball is unplayable.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "You are the sole judge of whether your ball is unplayable.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
-  },
-  {
-    "id": "test010\n- **difficulty**: easy\n- **category**: match_play\n- **question**: In match play, if your opponent deliberately moves your ball marker, what is the penalty?\n- **source URL**: https://www.glenelggolf.com/cms/rules/a-guide-to-the-rules-of-match-play/\n- **top_comment**: The opponent incurs a one penalty stroke and the marker must be replaced.\n- **ground_truth**: \n- **format**: match\n\n## Medium Golf Rules Questions (10)",
-    "difficulty": "easy\n- **category**: match_play\n- **question**: In match play, if your opponent deliberately moves your ball marker, what is the penalty?\n- **source URL**: https://www.glenelggolf.com/cms/rules/a-guide-to-the-rules-of-match-play/\n- **top_comment**: The opponent incurs a one penalty stroke and the marker must be replaced.\n- **ground_truth**: \n- **format**: match\n\n## Medium Golf Rules Questions (10)",
-    "category": "match_play\n- **question**: In match play, if your opponent deliberately moves your ball marker, what is the penalty?\n- **source URL**: https://www.glenelggolf.com/cms/rules/a-guide-to-the-rules-of-match-play/\n- **top_comment**: The opponent incurs a one penalty stroke and the marker must be replaced.\n- **ground_truth**: \n- **format**: match\n\n## Medium Golf Rules Questions (10)",
-    "question": "In match play, if your opponent deliberately moves your ball marker, what is the penalty?\n- **source URL**: https://www.glenelggolf.com/cms/rules/a-guide-to-the-rules-of-match-play/\n- **top_comment**: The opponent incurs a one penalty stroke and the marker must be replaced.\n- **ground_truth**: \n- **format**: match\n\n## Medium Golf Rules Questions (10)",
-    "source_url": "https://www.glenelggolf.com/cms/rules/a-guide-to-the-rules-of-match-play/\n- **top_comment**: The opponent incurs a one penalty stroke and the marker must be replaced.\n- **ground_truth**: \n- **format**: match\n\n## Medium Golf Rules Questions (10)",
-    "top_comment": "The opponent incurs a one penalty stroke and the marker must be replaced.\n- **ground_truth**: \n- **format**: match\n\n## Medium Golf Rules Questions (10)",
-    "format": "match\n\n## Medium Golf Rules Questions (10)",
-    "response": ""
-  },
-  {
-    "id": "test011\n- **difficulty**: medium\n- **category**: GUR\n- **question**: Your ball lies in a bunker that has been marked as GUR (Ground Under Repair). Where must you drop when taking full relief?\n- **source URL**: https://forums.golfmonthly.com/threads/bunker-gur-where-to-drop.14609/\n- **top_comment**: When taking full relief from a bunker that is GUR, you must drop in the general area outside the bunker at the nearest point of relief.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "medium\n- **category**: GUR\n- **question**: Your ball lies in a bunker that has been marked as GUR (Ground Under Repair). Where must you drop when taking full relief?\n- **source URL**: https://forums.golfmonthly.com/threads/bunker-gur-where-to-drop.14609/\n- **top_comment**: When taking full relief from a bunker that is GUR, you must drop in the general area outside the bunker at the nearest point of relief.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "GUR\n- **question**: Your ball lies in a bunker that has been marked as GUR (Ground Under Repair). Where must you drop when taking full relief?\n- **source URL**: https://forums.golfmonthly.com/threads/bunker-gur-where-to-drop.14609/\n- **top_comment**: When taking full relief from a bunker that is GUR, you must drop in the general area outside the bunker at the nearest point of relief.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "Your ball lies in a bunker that has been marked as GUR (Ground Under Repair). Where must you drop when taking full relief?\n- **source URL**: https://forums.golfmonthly.com/threads/bunker-gur-where-to-drop.14609/\n- **top_comment**: When taking full relief from a bunker that is GUR, you must drop in the general area outside the bunker at the nearest point of relief.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://forums.golfmonthly.com/threads/bunker-gur-where-to-drop.14609/\n- **top_comment**: When taking full relief from a bunker that is GUR, you must drop in the general area outside the bunker at the nearest point of relief.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "When taking full relief from a bunker that is GUR, you must drop in the general area outside the bunker at the nearest point of relief.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
-  },
-  {
-    "id": "test012\n- **difficulty**: medium\n- **category**: provisional\n- **question**: You play a provisional ball, then find your original ball which is clearly unplayable. Can you abandon the original and continue with the provisional?\n- **source URL**: https://www.nationalclubgolfer.com/rules/unplayable-ball-can-i-play-my-provisional-ball-instead/\n- **top_comment**: No, the provisional must be abandoned when the original ball is found. You must take unplayable ball relief from where the original ball lies.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "medium\n- **category**: provisional\n- **question**: You play a provisional ball, then find your original ball which is clearly unplayable. Can you abandon the original and continue with the provisional?\n- **source URL**: https://www.nationalclubgolfer.com/rules/unplayable-ball-can-i-play-my-provisional-ball-instead/\n- **top_comment**: No, the provisional must be abandoned when the original ball is found. You must take unplayable ball relief from where the original ball lies.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "provisional\n- **question**: You play a provisional ball, then find your original ball which is clearly unplayable. Can you abandon the original and continue with the provisional?\n- **source URL**: https://www.nationalclubgolfer.com/rules/unplayable-ball-can-i-play-my-provisional-ball-instead/\n- **top_comment**: No, the provisional must be abandoned when the original ball is found. You must take unplayable ball relief from where the original ball lies.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "You play a provisional ball, then find your original ball which is clearly unplayable. Can you abandon the original and continue with the provisional?\n- **source URL**: https://www.nationalclubgolfer.com/rules/unplayable-ball-can-i-play-my-provisional-ball-instead/\n- **top_comment**: No, the provisional must be abandoned when the original ball is found. You must take unplayable ball relief from where the original ball lies.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://www.nationalclubgolfer.com/rules/unplayable-ball-can-i-play-my-provisional-ball-instead/\n- **top_comment**: No, the provisional must be abandoned when the original ball is found. You must take unplayable ball relief from where the original ball lies.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "No, the provisional must be abandoned when the original ball is found. You must take unplayable ball relief from where the original ball lies.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
-  },
-  {
-    "id": "test013\n- **difficulty**: medium\n- **category**: penalty_area\n- **question**: Your ball crosses a red penalty area but then continues out of bounds. What are your relief options?\n- **source URL**: https://forums.golfwrx.com/topic/1892960-ball-that-crosses-a-red-penalty-area-but-then-continues-ob/\n- **top_comment**: Since the ball is OB, you must proceed under stroke and distance. The crossing of the penalty area is irrelevant.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "medium\n- **category**: penalty_area\n- **question**: Your ball crosses a red penalty area but then continues out of bounds. What are your relief options?\n- **source URL**: https://forums.golfwrx.com/topic/1892960-ball-that-crosses-a-red-penalty-area-but-then-continues-ob/\n- **top_comment**: Since the ball is OB, you must proceed under stroke and distance. The crossing of the penalty area is irrelevant.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "penalty_area\n- **question**: Your ball crosses a red penalty area but then continues out of bounds. What are your relief options?\n- **source URL**: https://forums.golfwrx.com/topic/1892960-ball-that-crosses-a-red-penalty-area-but-then-continues-ob/\n- **top_comment**: Since the ball is OB, you must proceed under stroke and distance. The crossing of the penalty area is irrelevant.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "Your ball crosses a red penalty area but then continues out of bounds. What are your relief options?\n- **source URL**: https://forums.golfwrx.com/topic/1892960-ball-that-crosses-a-red-penalty-area-but-then-continues-ob/\n- **top_comment**: Since the ball is OB, you must proceed under stroke and distance. The crossing of the penalty area is irrelevant.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://forums.golfwrx.com/topic/1892960-ball-that-crosses-a-red-penalty-area-but-then-continues-ob/\n- **top_comment**: Since the ball is OB, you must proceed under stroke and distance. The crossing of the penalty area is irrelevant.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "Since the ball is OB, you must proceed under stroke and distance. The crossing of the penalty area is irrelevant.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
-  },
-  {
-    "id": "test014\n- **difficulty**: medium\n- **category**: obstruction\n- **question**: Your ball is in a bunker resting on a concrete drainage grate. What relief do you get?\n- **source URL**: https://thegolfbusiness.co.uk/2011/12/the-rules-of-golf-surrounding-bunkers/\n- **top_comment**: You can take relief from the immovable obstruction, but you must drop in the bunker at the nearest point of relief.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "medium\n- **category**: obstruction\n- **question**: Your ball is in a bunker resting on a concrete drainage grate. What relief do you get?\n- **source URL**: https://thegolfbusiness.co.uk/2011/12/the-rules-of-golf-surrounding-bunkers/\n- **top_comment**: You can take relief from the immovable obstruction, but you must drop in the bunker at the nearest point of relief.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "obstruction\n- **question**: Your ball is in a bunker resting on a concrete drainage grate. What relief do you get?\n- **source URL**: https://thegolfbusiness.co.uk/2011/12/the-rules-of-golf-surrounding-bunkers/\n- **top_comment**: You can take relief from the immovable obstruction, but you must drop in the bunker at the nearest point of relief.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "Your ball is in a bunker resting on a concrete drainage grate. What relief do you get?\n- **source URL**: https://thegolfbusiness.co.uk/2011/12/the-rules-of-golf-surrounding-bunkers/\n- **top_comment**: You can take relief from the immovable obstruction, but you must drop in the bunker at the nearest point of relief.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://thegolfbusiness.co.uk/2011/12/the-rules-of-golf-surrounding-bunkers/\n- **top_comment**: You can take relief from the immovable obstruction, but you must drop in the bunker at the nearest point of relief.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "You can take relief from the immovable obstruction, but you must drop in the bunker at the nearest point of relief.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
-  },
-  {
-    "id": "test015\n- **difficulty**: medium\n- **category**: match_play\n- **question**: In match play, your ball overhangs the hole. Your opponent immediately concedes the putt and picks up your ball. What happens?\n- **source URL**: https://www.wmga.com/wp-content/uploads/2024/02/Match-Play-Rules-and-Reminders.pdf\n- **top_comment**: The putt is considered holed. A concession cannot be refused or withdrawn.\n- **ground_truth**: \n- **format**: match",
-    "difficulty": "medium\n- **category**: match_play\n- **question**: In match play, your ball overhangs the hole. Your opponent immediately concedes the putt and picks up your ball. What happens?\n- **source URL**: https://www.wmga.com/wp-content/uploads/2024/02/Match-Play-Rules-and-Reminders.pdf\n- **top_comment**: The putt is considered holed. A concession cannot be refused or withdrawn.\n- **ground_truth**: \n- **format**: match",
-    "category": "match_play\n- **question**: In match play, your ball overhangs the hole. Your opponent immediately concedes the putt and picks up your ball. What happens?\n- **source URL**: https://www.wmga.com/wp-content/uploads/2024/02/Match-Play-Rules-and-Reminders.pdf\n- **top_comment**: The putt is considered holed. A concession cannot be refused or withdrawn.\n- **ground_truth**: \n- **format**: match",
-    "question": "In match play, your ball overhangs the hole. Your opponent immediately concedes the putt and picks up your ball. What happens?\n- **source URL**: https://www.wmga.com/wp-content/uploads/2024/02/Match-Play-Rules-and-Reminders.pdf\n- **top_comment**: The putt is considered holed. A concession cannot be refused or withdrawn.\n- **ground_truth**: \n- **format**: match",
-    "source_url": "https://www.wmga.com/wp-content/uploads/2024/02/Match-Play-Rules-and-Reminders.pdf\n- **top_comment**: The putt is considered holed. A concession cannot be refused or withdrawn.\n- **ground_truth**: \n- **format**: match",
-    "top_comment": "The putt is considered holed. A concession cannot be refused or withdrawn.\n- **ground_truth**: \n- **format**: match",
-    "format": "match",
-    "response": ""
-  },
-  {
-    "id": "test016\n- **difficulty**: medium\n- **category**: embedded\n- **question**: Your ball is embedded in the ground because someone stepped on it, not from your shot. Do you get free relief?\n- **source URL**: https://www.golfdigest.com/story/rules-of-golf-most-misunderstood-rules-embedded-ball-bunker-penalty-area-out-of-bounds\n- **top_comment**: No, for embedded ball relief, the ball must be in your own pitch mark from your previous stroke.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "medium\n- **category**: embedded\n- **question**: Your ball is embedded in the ground because someone stepped on it, not from your shot. Do you get free relief?\n- **source URL**: https://www.golfdigest.com/story/rules-of-golf-most-misunderstood-rules-embedded-ball-bunker-penalty-area-out-of-bounds\n- **top_comment**: No, for embedded ball relief, the ball must be in your own pitch mark from your previous stroke.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "embedded\n- **question**: Your ball is embedded in the ground because someone stepped on it, not from your shot. Do you get free relief?\n- **source URL**: https://www.golfdigest.com/story/rules-of-golf-most-misunderstood-rules-embedded-ball-bunker-penalty-area-out-of-bounds\n- **top_comment**: No, for embedded ball relief, the ball must be in your own pitch mark from your previous stroke.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "Your ball is embedded in the ground because someone stepped on it, not from your shot. Do you get free relief?\n- **source URL**: https://www.golfdigest.com/story/rules-of-golf-most-misunderstood-rules-embedded-ball-bunker-penalty-area-out-of-bounds\n- **top_comment**: No, for embedded ball relief, the ball must be in your own pitch mark from your previous stroke.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://www.golfdigest.com/story/rules-of-golf-most-misunderstood-rules-embedded-ball-bunker-penalty-area-out-of-bounds\n- **top_comment**: No, for embedded ball relief, the ball must be in your own pitch mark from your previous stroke.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "No, for embedded ball relief, the ball must be in your own pitch mark from your previous stroke.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
-  },
-  {
-    "id": "test017\n- **difficulty**: medium\n- **category**: dropping\n- **question**: When dropping a ball for relief, how high must you drop it from?\n- **source URL**: https://www.randa.org/en/rog/the-rules-of-golf/rule-14\n- **top_comment**: The ball must be dropped from knee height, falling straight down without throwing, spinning or rolling.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "medium\n- **category**: dropping\n- **question**: When dropping a ball for relief, how high must you drop it from?\n- **source URL**: https://www.randa.org/en/rog/the-rules-of-golf/rule-14\n- **top_comment**: The ball must be dropped from knee height, falling straight down without throwing, spinning or rolling.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "dropping\n- **question**: When dropping a ball for relief, how high must you drop it from?\n- **source URL**: https://www.randa.org/en/rog/the-rules-of-golf/rule-14\n- **top_comment**: The ball must be dropped from knee height, falling straight down without throwing, spinning or rolling.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "When dropping a ball for relief, how high must you drop it from?\n- **source URL**: https://www.randa.org/en/rog/the-rules-of-golf/rule-14\n- **top_comment**: The ball must be dropped from knee height, falling straight down without throwing, spinning or rolling.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://www.randa.org/en/rog/the-rules-of-golf/rule-14\n- **top_comment**: The ball must be dropped from knee height, falling straight down without throwing, spinning or rolling.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "The ball must be dropped from knee height, falling straight down without throwing, spinning or rolling.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
-  },
-  {
-    "id": "test018\n- **difficulty**: medium\n- **category**: match_play\n- **question**: In match play, you ask your opponent for advice about club selection. Your opponent tells you what club they used. What is the penalty?\n- **source URL**: https://www.randa.org/en/rog/the-rules-of-golf/rule-10\n- **top_comment**: Both players get the general penalty (loss of hole) - you for asking for advice and your opponent for giving it.\n- **ground_truth**: \n- **format**: match",
-    "difficulty": "medium\n- **category**: match_play\n- **question**: In match play, you ask your opponent for advice about club selection. Your opponent tells you what club they used. What is the penalty?\n- **source URL**: https://www.randa.org/en/rog/the-rules-of-golf/rule-10\n- **top_comment**: Both players get the general penalty (loss of hole) - you for asking for advice and your opponent for giving it.\n- **ground_truth**: \n- **format**: match",
-    "category": "match_play\n- **question**: In match play, you ask your opponent for advice about club selection. Your opponent tells you what club they used. What is the penalty?\n- **source URL**: https://www.randa.org/en/rog/the-rules-of-golf/rule-10\n- **top_comment**: Both players get the general penalty (loss of hole) - you for asking for advice and your opponent for giving it.\n- **ground_truth**: \n- **format**: match",
-    "question": "In match play, you ask your opponent for advice about club selection. Your opponent tells you what club they used. What is the penalty?\n- **source URL**: https://www.randa.org/en/rog/the-rules-of-golf/rule-10\n- **top_comment**: Both players get the general penalty (loss of hole) - you for asking for advice and your opponent for giving it.\n- **ground_truth**: \n- **format**: match",
-    "source_url": "https://www.randa.org/en/rog/the-rules-of-golf/rule-10\n- **top_comment**: Both players get the general penalty (loss of hole) - you for asking for advice and your opponent for giving it.\n- **ground_truth**: \n- **format**: match",
-    "top_comment": "Both players get the general penalty (loss of hole) - you for asking for advice and your opponent for giving it.\n- **ground_truth**: \n- **format**: match",
-    "format": "match",
-    "response": ""
-  },
-  {
-    "id": "test019\n- **difficulty**: medium\n- **category**: bunker\n- **question**: Can you remove a loose impediment (like a leaf) from a bunker if it's not near your ball?\n- **source URL**: https://onlineexammaker.com/kb/20-golf-rules-quiz-questions-and-answers/\n- **top_comment**: No, Rule 12.2a prohibits removing loose impediments in a bunker regardless of location.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "medium\n- **category**: bunker\n- **question**: Can you remove a loose impediment (like a leaf) from a bunker if it's not near your ball?\n- **source URL**: https://onlineexammaker.com/kb/20-golf-rules-quiz-questions-and-answers/\n- **top_comment**: No, Rule 12.2a prohibits removing loose impediments in a bunker regardless of location.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "bunker\n- **question**: Can you remove a loose impediment (like a leaf) from a bunker if it's not near your ball?\n- **source URL**: https://onlineexammaker.com/kb/20-golf-rules-quiz-questions-and-answers/\n- **top_comment**: No, Rule 12.2a prohibits removing loose impediments in a bunker regardless of location.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "Can you remove a loose impediment (like a leaf) from a bunker if it's not near your ball?\n- **source URL**: https://onlineexammaker.com/kb/20-golf-rules-quiz-questions-and-answers/\n- **top_comment**: No, Rule 12.2a prohibits removing loose impediments in a bunker regardless of location.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://onlineexammaker.com/kb/20-golf-rules-quiz-questions-and-answers/\n- **top_comment**: No, Rule 12.2a prohibits removing loose impediments in a bunker regardless of location.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "No, Rule 12.2a prohibits removing loose impediments in a bunker regardless of location.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
-  },
-  {
-    "id": "test020\n- **difficulty**: medium\n- **category**: relief\n- **question**: You declare your ball unplayable and pick it up, then realize you were entitled to free relief. Can you change your decision?\n- **source URL**: https://www.golfdigest.com/story/rules-of-golf-review-unplayable-lie-picking-up-ball-changing-mind\n- **top_comment**: Yes, as long as you haven't put a ball in play, you can still take the free relief.\n- **ground_truth**: \n- **format**: stroke\n\n## Hard Golf Rules Questions (10)",
-    "difficulty": "medium\n- **category**: relief\n- **question**: You declare your ball unplayable and pick it up, then realize you were entitled to free relief. Can you change your decision?\n- **source URL**: https://www.golfdigest.com/story/rules-of-golf-review-unplayable-lie-picking-up-ball-changing-mind\n- **top_comment**: Yes, as long as you haven't put a ball in play, you can still take the free relief.\n- **ground_truth**: \n- **format**: stroke\n\n## Hard Golf Rules Questions (10)",
-    "category": "relief\n- **question**: You declare your ball unplayable and pick it up, then realize you were entitled to free relief. Can you change your decision?\n- **source URL**: https://www.golfdigest.com/story/rules-of-golf-review-unplayable-lie-picking-up-ball-changing-mind\n- **top_comment**: Yes, as long as you haven't put a ball in play, you can still take the free relief.\n- **ground_truth**: \n- **format**: stroke\n\n## Hard Golf Rules Questions (10)",
-    "question": "You declare your ball unplayable and pick it up, then realize you were entitled to free relief. Can you change your decision?\n- **source URL**: https://www.golfdigest.com/story/rules-of-golf-review-unplayable-lie-picking-up-ball-changing-mind\n- **top_comment**: Yes, as long as you haven't put a ball in play, you can still take the free relief.\n- **ground_truth**: \n- **format**: stroke\n\n## Hard Golf Rules Questions (10)",
-    "source_url": "https://www.golfdigest.com/story/rules-of-golf-review-unplayable-lie-picking-up-ball-changing-mind\n- **top_comment**: Yes, as long as you haven't put a ball in play, you can still take the free relief.\n- **ground_truth**: \n- **format**: stroke\n\n## Hard Golf Rules Questions (10)",
-    "top_comment": "Yes, as long as you haven't put a ball in play, you can still take the free relief.\n- **ground_truth**: \n- **format**: stroke\n\n## Hard Golf Rules Questions (10)",
-    "format": "stroke\n\n## Hard Golf Rules Questions (10)",
-    "response": ""
-  },
-  {
-    "id": "test021\n- **difficulty**: hard\n- **category**: penalty_area\n- **question**: Your ball travels over a red penalty area (water), lands in someone's yard (OB), then rolls back into the water. What are your relief options?\n- **source URL**: https://forums.golfwrx.com/topic/1939579-ball-travels-over-penalty-area-water-and-lands-in-a-yard-ob-only-to-fall-back-into-the-water/\n- **top_comment**: You proceed under penalty area relief using the point where the ball last crossed the penalty area margin before coming to rest in the penalty area, not where it went OB.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "hard\n- **category**: penalty_area\n- **question**: Your ball travels over a red penalty area (water), lands in someone's yard (OB), then rolls back into the water. What are your relief options?\n- **source URL**: https://forums.golfwrx.com/topic/1939579-ball-travels-over-penalty-area-water-and-lands-in-a-yard-ob-only-to-fall-back-into-the-water/\n- **top_comment**: You proceed under penalty area relief using the point where the ball last crossed the penalty area margin before coming to rest in the penalty area, not where it went OB.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "penalty_area\n- **question**: Your ball travels over a red penalty area (water), lands in someone's yard (OB), then rolls back into the water. What are your relief options?\n- **source URL**: https://forums.golfwrx.com/topic/1939579-ball-travels-over-penalty-area-water-and-lands-in-a-yard-ob-only-to-fall-back-into-the-water/\n- **top_comment**: You proceed under penalty area relief using the point where the ball last crossed the penalty area margin before coming to rest in the penalty area, not where it went OB.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "Your ball travels over a red penalty area (water), lands in someone's yard (OB), then rolls back into the water. What are your relief options?\n- **source URL**: https://forums.golfwrx.com/topic/1939579-ball-travels-over-penalty-area-water-and-lands-in-a-yard-ob-only-to-fall-back-into-the-water/\n- **top_comment**: You proceed under penalty area relief using the point where the ball last crossed the penalty area margin before coming to rest in the penalty area, not where it went OB.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://forums.golfwrx.com/topic/1939579-ball-travels-over-penalty-area-water-and-lands-in-a-yard-ob-only-to-fall-back-into-the-water/\n- **top_comment**: You proceed under penalty area relief using the point where the ball last crossed the penalty area margin before coming to rest in the penalty area, not where it went OB.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "You proceed under penalty area relief using the point where the ball last crossed the penalty area margin before coming to rest in the penalty area, not where it went OB.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
-  },
-  {
-    "id": "test022\n- **difficulty**: hard\n- **category**: match_play\n- **question**: In match play, your opponent's ball overhangs the hole. You immediately pick it up thinking it's good. Your opponent hadn't conceded. What happens?\n- **source URL**: https://www.glenelggolf.com/cms/rules/a-guide-to-the-rules-of-match-play/\n- **top_comment**: If the ball would have fallen in during the reasonable time to reach the hole plus 10 seconds, it's treated as holed with the previous stroke. You get the general penalty.\n- **ground_truth**: \n- **format**: match",
-    "difficulty": "hard\n- **category**: match_play\n- **question**: In match play, your opponent's ball overhangs the hole. You immediately pick it up thinking it's good. Your opponent hadn't conceded. What happens?\n- **source URL**: https://www.glenelggolf.com/cms/rules/a-guide-to-the-rules-of-match-play/\n- **top_comment**: If the ball would have fallen in during the reasonable time to reach the hole plus 10 seconds, it's treated as holed with the previous stroke. You get the general penalty.\n- **ground_truth**: \n- **format**: match",
-    "category": "match_play\n- **question**: In match play, your opponent's ball overhangs the hole. You immediately pick it up thinking it's good. Your opponent hadn't conceded. What happens?\n- **source URL**: https://www.glenelggolf.com/cms/rules/a-guide-to-the-rules-of-match-play/\n- **top_comment**: If the ball would have fallen in during the reasonable time to reach the hole plus 10 seconds, it's treated as holed with the previous stroke. You get the general penalty.\n- **ground_truth**: \n- **format**: match",
-    "question": "In match play, your opponent's ball overhangs the hole. You immediately pick it up thinking it's good. Your opponent hadn't conceded. What happens?\n- **source URL**: https://www.glenelggolf.com/cms/rules/a-guide-to-the-rules-of-match-play/\n- **top_comment**: If the ball would have fallen in during the reasonable time to reach the hole plus 10 seconds, it's treated as holed with the previous stroke. You get the general penalty.\n- **ground_truth**: \n- **format**: match",
-    "source_url": "https://www.glenelggolf.com/cms/rules/a-guide-to-the-rules-of-match-play/\n- **top_comment**: If the ball would have fallen in during the reasonable time to reach the hole plus 10 seconds, it's treated as holed with the previous stroke. You get the general penalty.\n- **ground_truth**: \n- **format**: match",
-    "top_comment": "If the ball would have fallen in during the reasonable time to reach the hole plus 10 seconds, it's treated as holed with the previous stroke. You get the general penalty.\n- **ground_truth**: \n- **format**: match",
-    "format": "match",
-    "response": ""
-  },
-  {
-    "id": "test023\n- **difficulty**: hard\n- **category**: GUR\n- **question**: Your ball is in a bunker marked as GUR, but there's an area of good sand nearby in the same bunker. Can you drop in the good sand?\n- **source URL**: https://forums.golfwrx.com/topic/1869430-bunkers-out-of-playgur/\n- **top_comment**: No, when the entire bunker is marked as GUR, you cannot get relief within the bunker. You must take full relief outside the bunker or play as it lies.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "hard\n- **category**: GUR\n- **question**: Your ball is in a bunker marked as GUR, but there's an area of good sand nearby in the same bunker. Can you drop in the good sand?\n- **source URL**: https://forums.golfwrx.com/topic/1869430-bunkers-out-of-playgur/\n- **top_comment**: No, when the entire bunker is marked as GUR, you cannot get relief within the bunker. You must take full relief outside the bunker or play as it lies.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "GUR\n- **question**: Your ball is in a bunker marked as GUR, but there's an area of good sand nearby in the same bunker. Can you drop in the good sand?\n- **source URL**: https://forums.golfwrx.com/topic/1869430-bunkers-out-of-playgur/\n- **top_comment**: No, when the entire bunker is marked as GUR, you cannot get relief within the bunker. You must take full relief outside the bunker or play as it lies.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "Your ball is in a bunker marked as GUR, but there's an area of good sand nearby in the same bunker. Can you drop in the good sand?\n- **source URL**: https://forums.golfwrx.com/topic/1869430-bunkers-out-of-playgur/\n- **top_comment**: No, when the entire bunker is marked as GUR, you cannot get relief within the bunker. You must take full relief outside the bunker or play as it lies.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://forums.golfwrx.com/topic/1869430-bunkers-out-of-playgur/\n- **top_comment**: No, when the entire bunker is marked as GUR, you cannot get relief within the bunker. You must take full relief outside the bunker or play as it lies.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "No, when the entire bunker is marked as GUR, you cannot get relief within the bunker. You must take full relief outside the bunker or play as it lies.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
-  },
-  {
-    "id": "test024\n- **difficulty**: hard\n- **category**: ball_in_motion\n- **question**: Your ball is rolling on the green when your opponent, not knowing you had played, walks into its path. The ball hits their foot and stops near the hole. What happens in match play?\n- **source URL**: https://www.usga.org/content/usga/home-page/rules-hub/a-short-course-on-the-rules/quiz-questions-for-ball-in-motion.html\n- **top_comment**: No penalty to either player. The ball is played as it lies since the deflection by the opponent was accidental.\n- **ground_truth**: \n- **format**: match",
-    "difficulty": "hard\n- **category**: ball_in_motion\n- **question**: Your ball is rolling on the green when your opponent, not knowing you had played, walks into its path. The ball hits their foot and stops near the hole. What happens in match play?\n- **source URL**: https://www.usga.org/content/usga/home-page/rules-hub/a-short-course-on-the-rules/quiz-questions-for-ball-in-motion.html\n- **top_comment**: No penalty to either player. The ball is played as it lies since the deflection by the opponent was accidental.\n- **ground_truth**: \n- **format**: match",
-    "category": "ball_in_motion\n- **question**: Your ball is rolling on the green when your opponent, not knowing you had played, walks into its path. The ball hits their foot and stops near the hole. What happens in match play?\n- **source URL**: https://www.usga.org/content/usga/home-page/rules-hub/a-short-course-on-the-rules/quiz-questions-for-ball-in-motion.html\n- **top_comment**: No penalty to either player. The ball is played as it lies since the deflection by the opponent was accidental.\n- **ground_truth**: \n- **format**: match",
-    "question": "Your ball is rolling on the green when your opponent, not knowing you had played, walks into its path. The ball hits their foot and stops near the hole. What happens in match play?\n- **source URL**: https://www.usga.org/content/usga/home-page/rules-hub/a-short-course-on-the-rules/quiz-questions-for-ball-in-motion.html\n- **top_comment**: No penalty to either player. The ball is played as it lies since the deflection by the opponent was accidental.\n- **ground_truth**: \n- **format**: match",
-    "source_url": "https://www.usga.org/content/usga/home-page/rules-hub/a-short-course-on-the-rules/quiz-questions-for-ball-in-motion.html\n- **top_comment**: No penalty to either player. The ball is played as it lies since the deflection by the opponent was accidental.\n- **ground_truth**: \n- **format**: match",
-    "top_comment": "No penalty to either player. The ball is played as it lies since the deflection by the opponent was accidental.\n- **ground_truth**: \n- **format**: match",
-    "format": "match",
-    "response": ""
-  },
-  {
-    "id": "test025\n- **difficulty**: hard\n- **category**: equipment\n- **question**: During your round, your driver shaft cracks (not from abuse). Can you replace it with a different driver you have in your car?\n- **source URL**: https://ilovegolfwhen.com/rules-of-golf-2026/\n- **top_comment**: Yes, under the 2026 rules changes, you can replace a damaged club during the round if it wasn't damaged from abuse, using parts you or your group are carrying.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "hard\n- **category**: equipment\n- **question**: During your round, your driver shaft cracks (not from abuse). Can you replace it with a different driver you have in your car?\n- **source URL**: https://ilovegolfwhen.com/rules-of-golf-2026/\n- **top_comment**: Yes, under the 2026 rules changes, you can replace a damaged club during the round if it wasn't damaged from abuse, using parts you or your group are carrying.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "equipment\n- **question**: During your round, your driver shaft cracks (not from abuse). Can you replace it with a different driver you have in your car?\n- **source URL**: https://ilovegolfwhen.com/rules-of-golf-2026/\n- **top_comment**: Yes, under the 2026 rules changes, you can replace a damaged club during the round if it wasn't damaged from abuse, using parts you or your group are carrying.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "During your round, your driver shaft cracks (not from abuse). Can you replace it with a different driver you have in your car?\n- **source URL**: https://ilovegolfwhen.com/rules-of-golf-2026/\n- **top_comment**: Yes, under the 2026 rules changes, you can replace a damaged club during the round if it wasn't damaged from abuse, using parts you or your group are carrying.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://ilovegolfwhen.com/rules-of-golf-2026/\n- **top_comment**: Yes, under the 2026 rules changes, you can replace a damaged club during the round if it wasn't damaged from abuse, using parts you or your group are carrying.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "Yes, under the 2026 rules changes, you can replace a damaged club during the round if it wasn't damaged from abuse, using parts you or your group are carrying.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
-  },
-  {
-    "id": "test026\n- **difficulty**: hard\n- **category**: pitch_mark\n- **question**: Your ball lies in an unrepaired pitch mark that was clearly made by another player's ball. Can you take free relief?\n- **source URL**: https://ilovegolfwhen.com/rules-of-golf-2026/\n- **top_comment**: Yes, under the 2026 rules changes, you can take free relief from any unrepaired pitch mark below ground level, not just ones your ball created.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "hard\n- **category**: pitch_mark\n- **question**: Your ball lies in an unrepaired pitch mark that was clearly made by another player's ball. Can you take free relief?\n- **source URL**: https://ilovegolfwhen.com/rules-of-golf-2026/\n- **top_comment**: Yes, under the 2026 rules changes, you can take free relief from any unrepaired pitch mark below ground level, not just ones your ball created.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "pitch_mark\n- **question**: Your ball lies in an unrepaired pitch mark that was clearly made by another player's ball. Can you take free relief?\n- **source URL**: https://ilovegolfwhen.com/rules-of-golf-2026/\n- **top_comment**: Yes, under the 2026 rules changes, you can take free relief from any unrepaired pitch mark below ground level, not just ones your ball created.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "Your ball lies in an unrepaired pitch mark that was clearly made by another player's ball. Can you take free relief?\n- **source URL**: https://ilovegolfwhen.com/rules-of-golf-2026/\n- **top_comment**: Yes, under the 2026 rules changes, you can take free relief from any unrepaired pitch mark below ground level, not just ones your ball created.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://ilovegolfwhen.com/rules-of-golf-2026/\n- **top_comment**: Yes, under the 2026 rules changes, you can take free relief from any unrepaired pitch mark below ground level, not just ones your ball created.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "Yes, under the 2026 rules changes, you can take free relief from any unrepaired pitch mark below ground level, not just ones your ball created.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
-  },
-  {
-    "id": "test027\n- **difficulty**: hard\n- **category**: match_play\n- **question**: In match play, you accidentally play your opponent's ball from the rough. When do you realize the mistake and what's the penalty?\n- **source URL**: https://www.wmga.com/wp-content/uploads/2024/02/Match-Play-Rules-and-Reminders.pdf\n- **top_comment**: You lose the hole when you make a stroke at a wrong ball, regardless of when you discover the mistake.\n- **ground_truth**: \n- **format**: match",
-    "difficulty": "hard\n- **category**: match_play\n- **question**: In match play, you accidentally play your opponent's ball from the rough. When do you realize the mistake and what's the penalty?\n- **source URL**: https://www.wmga.com/wp-content/uploads/2024/02/Match-Play-Rules-and-Reminders.pdf\n- **top_comment**: You lose the hole when you make a stroke at a wrong ball, regardless of when you discover the mistake.\n- **ground_truth**: \n- **format**: match",
-    "category": "match_play\n- **question**: In match play, you accidentally play your opponent's ball from the rough. When do you realize the mistake and what's the penalty?\n- **source URL**: https://www.wmga.com/wp-content/uploads/2024/02/Match-Play-Rules-and-Reminders.pdf\n- **top_comment**: You lose the hole when you make a stroke at a wrong ball, regardless of when you discover the mistake.\n- **ground_truth**: \n- **format**: match",
-    "question": "In match play, you accidentally play your opponent's ball from the rough. When do you realize the mistake and what's the penalty?\n- **source URL**: https://www.wmga.com/wp-content/uploads/2024/02/Match-Play-Rules-and-Reminders.pdf\n- **top_comment**: You lose the hole when you make a stroke at a wrong ball, regardless of when you discover the mistake.\n- **ground_truth**: \n- **format**: match",
-    "source_url": "https://www.wmga.com/wp-content/uploads/2024/02/Match-Play-Rules-and-Reminders.pdf\n- **top_comment**: You lose the hole when you make a stroke at a wrong ball, regardless of when you discover the mistake.\n- **ground_truth**: \n- **format**: match",
-    "top_comment": "You lose the hole when you make a stroke at a wrong ball, regardless of when you discover the mistake.\n- **ground_truth**: \n- **format**: match",
-    "format": "match",
-    "response": ""
-  },
-  {
-    "id": "test028\n- **difficulty**: hard\n- **category**: bunker\n- **question**: Your ball is in a bunker on damaged artificial lining (concrete/matting). The sand doesn't completely cover the artificial surface. What relief do you get?\n- **source URL**: https://forums.golfmonthly.com/threads/free-relief-from-damaged-bunker-lining.119852/\n- **top_comment**: You can take relief from the immovable obstruction but must drop in the bunker. If no relief is available in the bunker, you can take penalty relief outside the bunker.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "hard\n- **category**: bunker\n- **question**: Your ball is in a bunker on damaged artificial lining (concrete/matting). The sand doesn't completely cover the artificial surface. What relief do you get?\n- **source URL**: https://forums.golfmonthly.com/threads/free-relief-from-damaged-bunker-lining.119852/\n- **top_comment**: You can take relief from the immovable obstruction but must drop in the bunker. If no relief is available in the bunker, you can take penalty relief outside the bunker.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "bunker\n- **question**: Your ball is in a bunker on damaged artificial lining (concrete/matting). The sand doesn't completely cover the artificial surface. What relief do you get?\n- **source URL**: https://forums.golfmonthly.com/threads/free-relief-from-damaged-bunker-lining.119852/\n- **top_comment**: You can take relief from the immovable obstruction but must drop in the bunker. If no relief is available in the bunker, you can take penalty relief outside the bunker.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "Your ball is in a bunker on damaged artificial lining (concrete/matting). The sand doesn't completely cover the artificial surface. What relief do you get?\n- **source URL**: https://forums.golfmonthly.com/threads/free-relief-from-damaged-bunker-lining.119852/\n- **top_comment**: You can take relief from the immovable obstruction but must drop in the bunker. If no relief is available in the bunker, you can take penalty relief outside the bunker.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://forums.golfmonthly.com/threads/free-relief-from-damaged-bunker-lining.119852/\n- **top_comment**: You can take relief from the immovable obstruction but must drop in the bunker. If no relief is available in the bunker, you can take penalty relief outside the bunker.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "You can take relief from the immovable obstruction but must drop in the bunker. If no relief is available in the bunker, you can take penalty relief outside the bunker.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
-  },
-  {
-    "id": "test029\n- **difficulty**: hard\n- **category**: preferred_lies\n- **question**: When preferred lies are in effect, how far can you move your ball under the 2026 rules?\n- **source URL**: https://www.golfyack.com/spotlight/golf-rules-changes-for-2026-what-the-tours-are-actually-updating-and-why\n- **top_comment**: Under 2026 rules changes, you can move your ball one scorecard length (not a full club length) when preferred lies are in effect.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "hard\n- **category**: preferred_lies\n- **question**: When preferred lies are in effect, how far can you move your ball under the 2026 rules?\n- **source URL**: https://www.golfyack.com/spotlight/golf-rules-changes-for-2026-what-the-tours-are-actually-updating-and-why\n- **top_comment**: Under 2026 rules changes, you can move your ball one scorecard length (not a full club length) when preferred lies are in effect.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "preferred_lies\n- **question**: When preferred lies are in effect, how far can you move your ball under the 2026 rules?\n- **source URL**: https://www.golfyack.com/spotlight/golf-rules-changes-for-2026-what-the-tours-are-actually-updating-and-why\n- **top_comment**: Under 2026 rules changes, you can move your ball one scorecard length (not a full club length) when preferred lies are in effect.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "When preferred lies are in effect, how far can you move your ball under the 2026 rules?\n- **source URL**: https://www.golfyack.com/spotlight/golf-rules-changes-for-2026-what-the-tours-are-actually-updating-and-why\n- **top_comment**: Under 2026 rules changes, you can move your ball one scorecard length (not a full club length) when preferred lies are in effect.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://www.golfyack.com/spotlight/golf-rules-changes-for-2026-what-the-tours-are-actually-updating-and-why\n- **top_comment**: Under 2026 rules changes, you can move your ball one scorecard length (not a full club length) when preferred lies are in effect.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "Under 2026 rules changes, you can move your ball one scorecard length (not a full club length) when preferred lies are in effect.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
-  },
-  {
-    "id": "test030\n- **difficulty**: hard\n- **category**: OB\n- **question**: Under the 2026 PGA Tour local rule changes, when does internal out of bounds apply?\n- **source URL**: https://golf.com/instruction/rules/rules-changes-pga-tour-2026/\n- **top_comment**: Internal OB only applies to balls struck from the tee, not from the fairway or other areas of the course.\n- **ground_truth**: \n- **format**: stroke\n\n## Adversarial Golf Rules Questions (10)",
-    "difficulty": "hard\n- **category**: OB\n- **question**: Under the 2026 PGA Tour local rule changes, when does internal out of bounds apply?\n- **source URL**: https://golf.com/instruction/rules/rules-changes-pga-tour-2026/\n- **top_comment**: Internal OB only applies to balls struck from the tee, not from the fairway or other areas of the course.\n- **ground_truth**: \n- **format**: stroke\n\n## Adversarial Golf Rules Questions (10)",
-    "category": "OB\n- **question**: Under the 2026 PGA Tour local rule changes, when does internal out of bounds apply?\n- **source URL**: https://golf.com/instruction/rules/rules-changes-pga-tour-2026/\n- **top_comment**: Internal OB only applies to balls struck from the tee, not from the fairway or other areas of the course.\n- **ground_truth**: \n- **format**: stroke\n\n## Adversarial Golf Rules Questions (10)",
-    "question": "Under the 2026 PGA Tour local rule changes, when does internal out of bounds apply?\n- **source URL**: https://golf.com/instruction/rules/rules-changes-pga-tour-2026/\n- **top_comment**: Internal OB only applies to balls struck from the tee, not from the fairway or other areas of the course.\n- **ground_truth**: \n- **format**: stroke\n\n## Adversarial Golf Rules Questions (10)",
-    "source_url": "https://golf.com/instruction/rules/rules-changes-pga-tour-2026/\n- **top_comment**: Internal OB only applies to balls struck from the tee, not from the fairway or other areas of the course.\n- **ground_truth**: \n- **format**: stroke\n\n## Adversarial Golf Rules Questions (10)",
-    "top_comment": "Internal OB only applies to balls struck from the tee, not from the fairway or other areas of the course.\n- **ground_truth**: \n- **format**: stroke\n\n## Adversarial Golf Rules Questions (10)",
-    "format": "stroke\n\n## Adversarial Golf Rules Questions (10)",
-    "response": ""
-  },
-  {
-    "id": "test031\n- **difficulty**: adversarial\n- **category**: provisional\n- **question**: You hit a provisional ball for a ball that might be lost. After a 2-minute search, you find what might be your original ball but aren't 100% sure it's yours. Should you continue with the provisional since you can't positively identify the original?\n- **source URL**: https://www.randa.org/en/rog/the-rules-of-golf/rule-18\n- **top_comment**: If you cannot positively identify the ball as yours, it is not your ball. You should continue with the provisional ball.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "adversarial\n- **category**: provisional\n- **question**: You hit a provisional ball for a ball that might be lost. After a 2-minute search, you find what might be your original ball but aren't 100% sure it's yours. Should you continue with the provisional since you can't positively identify the original?\n- **source URL**: https://www.randa.org/en/rog/the-rules-of-golf/rule-18\n- **top_comment**: If you cannot positively identify the ball as yours, it is not your ball. You should continue with the provisional ball.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "provisional\n- **question**: You hit a provisional ball for a ball that might be lost. After a 2-minute search, you find what might be your original ball but aren't 100% sure it's yours. Should you continue with the provisional since you can't positively identify the original?\n- **source URL**: https://www.randa.org/en/rog/the-rules-of-golf/rule-18\n- **top_comment**: If you cannot positively identify the ball as yours, it is not your ball. You should continue with the provisional ball.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "You hit a provisional ball for a ball that might be lost. After a 2-minute search, you find what might be your original ball but aren't 100% sure it's yours. Should you continue with the provisional since you can't positively identify the original?\n- **source URL**: https://www.randa.org/en/rog/the-rules-of-golf/rule-18\n- **top_comment**: If you cannot positively identify the ball as yours, it is not your ball. You should continue with the provisional ball.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://www.randa.org/en/rog/the-rules-of-golf/rule-18\n- **top_comment**: If you cannot positively identify the ball as yours, it is not your ball. You should continue with the provisional ball.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "If you cannot positively identify the ball as yours, it is not your ball. You should continue with the provisional ball.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
-  },
-  {
-    "id": "test032\n- **difficulty**: adversarial\n- **category**: match_play\n- **question**: In match play, you concede your opponent's 3-foot putt, but they want to putt it anyway \"for practice.\" Can they do this?\n- **source URL**: https://www.glenelggolf.com/cms/rules/a-guide-to-the-rules-of-match-play/\n- **top_comment**: No, a concession cannot be refused. The hole is over and they cannot putt for practice during play of the hole.\n- **ground_truth**: \n- **format**: match",
-    "difficulty": "adversarial\n- **category**: match_play\n- **question**: In match play, you concede your opponent's 3-foot putt, but they want to putt it anyway \"for practice.\" Can they do this?\n- **source URL**: https://www.glenelggolf.com/cms/rules/a-guide-to-the-rules-of-match-play/\n- **top_comment**: No, a concession cannot be refused. The hole is over and they cannot putt for practice during play of the hole.\n- **ground_truth**: \n- **format**: match",
-    "category": "match_play\n- **question**: In match play, you concede your opponent's 3-foot putt, but they want to putt it anyway \"for practice.\" Can they do this?\n- **source URL**: https://www.glenelggolf.com/cms/rules/a-guide-to-the-rules-of-match-play/\n- **top_comment**: No, a concession cannot be refused. The hole is over and they cannot putt for practice during play of the hole.\n- **ground_truth**: \n- **format**: match",
-    "question": "In match play, you concede your opponent's 3-foot putt, but they want to putt it anyway \"for practice.\" Can they do this?\n- **source URL**: https://www.glenelggolf.com/cms/rules/a-guide-to-the-rules-of-match-play/\n- **top_comment**: No, a concession cannot be refused. The hole is over and they cannot putt for practice during play of the hole.\n- **ground_truth**: \n- **format**: match",
-    "source_url": "https://www.glenelggolf.com/cms/rules/a-guide-to-the-rules-of-match-play/\n- **top_comment**: No, a concession cannot be refused. The hole is over and they cannot putt for practice during play of the hole.\n- **ground_truth**: \n- **format**: match",
-    "top_comment": "No, a concession cannot be refused. The hole is over and they cannot putt for practice during play of the hole.\n- **ground_truth**: \n- **format**: match",
-    "format": "match",
-    "response": ""
-  },
-  {
-    "id": "test033\n- **difficulty**: adversarial\n- **category**: ball_movement\n- **question**: Your ball moves slightly after you address it, but you weren't sure it moved and played it from the new position. Under 2026 rules, what's the penalty?\n- **source URL**: https://ilovegolfwhen.com/rules-of-golf-2026/\n- **top_comment**: If you were unaware the ball might have moved, the penalty is one stroke (not two) for playing from the wrong place.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "adversarial\n- **category**: ball_movement\n- **question**: Your ball moves slightly after you address it, but you weren't sure it moved and played it from the new position. Under 2026 rules, what's the penalty?\n- **source URL**: https://ilovegolfwhen.com/rules-of-golf-2026/\n- **top_comment**: If you were unaware the ball might have moved, the penalty is one stroke (not two) for playing from the wrong place.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "ball_movement\n- **question**: Your ball moves slightly after you address it, but you weren't sure it moved and played it from the new position. Under 2026 rules, what's the penalty?\n- **source URL**: https://ilovegolfwhen.com/rules-of-golf-2026/\n- **top_comment**: If you were unaware the ball might have moved, the penalty is one stroke (not two) for playing from the wrong place.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "Your ball moves slightly after you address it, but you weren't sure it moved and played it from the new position. Under 2026 rules, what's the penalty?\n- **source URL**: https://ilovegolfwhen.com/rules-of-golf-2026/\n- **top_comment**: If you were unaware the ball might have moved, the penalty is one stroke (not two) for playing from the wrong place.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://ilovegolfwhen.com/rules-of-golf-2026/\n- **top_comment**: If you were unaware the ball might have moved, the penalty is one stroke (not two) for playing from the wrong place.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "If you were unaware the ball might have moved, the penalty is one stroke (not two) for playing from the wrong place.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
-  },
-  {
-    "id": "test034\n- **difficulty**: adversarial\n- **category**: embedded\n- **question**: Your ball is clearly embedded in the fairway, but it's embedded in sand that was scattered from a nearby bunker, not in the actual ground/turf. Do you get relief?\n- **source URL**: https://www.golfdigest.com/story/rules-of-golf-most-misunderstood-rules-embedded-ball-bunker-penalty-area-out-of-bounds\n- **top_comment**: No relief. The ball must be embedded in the ground itself, not in loose sand or other materials on top of the ground.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "adversarial\n- **category**: embedded\n- **question**: Your ball is clearly embedded in the fairway, but it's embedded in sand that was scattered from a nearby bunker, not in the actual ground/turf. Do you get relief?\n- **source URL**: https://www.golfdigest.com/story/rules-of-golf-most-misunderstood-rules-embedded-ball-bunker-penalty-area-out-of-bounds\n- **top_comment**: No relief. The ball must be embedded in the ground itself, not in loose sand or other materials on top of the ground.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "embedded\n- **question**: Your ball is clearly embedded in the fairway, but it's embedded in sand that was scattered from a nearby bunker, not in the actual ground/turf. Do you get relief?\n- **source URL**: https://www.golfdigest.com/story/rules-of-golf-most-misunderstood-rules-embedded-ball-bunker-penalty-area-out-of-bounds\n- **top_comment**: No relief. The ball must be embedded in the ground itself, not in loose sand or other materials on top of the ground.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "Your ball is clearly embedded in the fairway, but it's embedded in sand that was scattered from a nearby bunker, not in the actual ground/turf. Do you get relief?\n- **source URL**: https://www.golfdigest.com/story/rules-of-golf-most-misunderstood-rules-embedded-ball-bunker-penalty-area-out-of-bounds\n- **top_comment**: No relief. The ball must be embedded in the ground itself, not in loose sand or other materials on top of the ground.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://www.golfdigest.com/story/rules-of-golf-most-misunderstood-rules-embedded-ball-bunker-penalty-area-out-of-bounds\n- **top_comment**: No relief. The ball must be embedded in the ground itself, not in loose sand or other materials on top of the ground.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "No relief. The ball must be embedded in the ground itself, not in loose sand or other materials on top of the ground.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
-  },
-  {
-    "id": "test035\n- **difficulty**: adversarial\n- **category**: bunker\n- **question**: Your ball is in a bunker and you want to measure the distance to the pin. Can you place your rangefinder on the sand to stabilize it while measuring?\n- **source URL**: https://thegolfbusiness.co.uk/2011/12/the-rules-of-golf-surrounding-bunkers/\n- **top_comment**: No, this would be testing the condition of the sand which is prohibited under Rule 12.2a.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "adversarial\n- **category**: bunker\n- **question**: Your ball is in a bunker and you want to measure the distance to the pin. Can you place your rangefinder on the sand to stabilize it while measuring?\n- **source URL**: https://thegolfbusiness.co.uk/2011/12/the-rules-of-golf-surrounding-bunkers/\n- **top_comment**: No, this would be testing the condition of the sand which is prohibited under Rule 12.2a.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "bunker\n- **question**: Your ball is in a bunker and you want to measure the distance to the pin. Can you place your rangefinder on the sand to stabilize it while measuring?\n- **source URL**: https://thegolfbusiness.co.uk/2011/12/the-rules-of-golf-surrounding-bunkers/\n- **top_comment**: No, this would be testing the condition of the sand which is prohibited under Rule 12.2a.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "Your ball is in a bunker and you want to measure the distance to the pin. Can you place your rangefinder on the sand to stabilize it while measuring?\n- **source URL**: https://thegolfbusiness.co.uk/2011/12/the-rules-of-golf-surrounding-bunkers/\n- **top_comment**: No, this would be testing the condition of the sand which is prohibited under Rule 12.2a.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://thegolfbusiness.co.uk/2011/12/the-rules-of-golf-surrounding-bunkers/\n- **top_comment**: No, this would be testing the condition of the sand which is prohibited under Rule 12.2a.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "No, this would be testing the condition of the sand which is prohibited under Rule 12.2a.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
-  },
-  {
-    "id": "test036\n- **difficulty**: adversarial\n- **category**: match_play\n- **question**: In match play, after your opponent holes out, you ask them what club they used for their approach shot. They tell you. Who gets penalized?\n- **source URL**: https://www.randa.org/en/rog/the-rules-of-golf/rule-10\n- **top_comment**: No one gets penalized. Information about clubs used for completed strokes can be shared; it's only advice about future strokes that's prohibited.\n- **ground_truth**: \n- **format**: match",
-    "difficulty": "adversarial\n- **category**: match_play\n- **question**: In match play, after your opponent holes out, you ask them what club they used for their approach shot. They tell you. Who gets penalized?\n- **source URL**: https://www.randa.org/en/rog/the-rules-of-golf/rule-10\n- **top_comment**: No one gets penalized. Information about clubs used for completed strokes can be shared; it's only advice about future strokes that's prohibited.\n- **ground_truth**: \n- **format**: match",
-    "category": "match_play\n- **question**: In match play, after your opponent holes out, you ask them what club they used for their approach shot. They tell you. Who gets penalized?\n- **source URL**: https://www.randa.org/en/rog/the-rules-of-golf/rule-10\n- **top_comment**: No one gets penalized. Information about clubs used for completed strokes can be shared; it's only advice about future strokes that's prohibited.\n- **ground_truth**: \n- **format**: match",
-    "question": "In match play, after your opponent holes out, you ask them what club they used for their approach shot. They tell you. Who gets penalized?\n- **source URL**: https://www.randa.org/en/rog/the-rules-of-golf/rule-10\n- **top_comment**: No one gets penalized. Information about clubs used for completed strokes can be shared; it's only advice about future strokes that's prohibited.\n- **ground_truth**: \n- **format**: match",
-    "source_url": "https://www.randa.org/en/rog/the-rules-of-golf/rule-10\n- **top_comment**: No one gets penalized. Information about clubs used for completed strokes can be shared; it's only advice about future strokes that's prohibited.\n- **ground_truth**: \n- **format**: match",
-    "top_comment": "No one gets penalized. Information about clubs used for completed strokes can be shared; it's only advice about future strokes that's prohibited.\n- **ground_truth**: \n- **format**: match",
-    "format": "match",
-    "response": ""
-  },
-  {
-    "id": "test037\n- **difficulty**: adversarial\n- **category**: penalty_area\n- **question**: Your ball clearly went into a water hazard, but the area isn't marked with red or yellow stakes. Can you take penalty area relief?\n- **source URL**: https://forums.golfwrx.com/topic/1847515-penalty-area-boundaries/\n- **top_comment**: No, an area must be properly marked to be a penalty area. Without markings, you must treat it as you find it or take unplayable ball relief.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "adversarial\n- **category**: penalty_area\n- **question**: Your ball clearly went into a water hazard, but the area isn't marked with red or yellow stakes. Can you take penalty area relief?\n- **source URL**: https://forums.golfwrx.com/topic/1847515-penalty-area-boundaries/\n- **top_comment**: No, an area must be properly marked to be a penalty area. Without markings, you must treat it as you find it or take unplayable ball relief.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "penalty_area\n- **question**: Your ball clearly went into a water hazard, but the area isn't marked with red or yellow stakes. Can you take penalty area relief?\n- **source URL**: https://forums.golfwrx.com/topic/1847515-penalty-area-boundaries/\n- **top_comment**: No, an area must be properly marked to be a penalty area. Without markings, you must treat it as you find it or take unplayable ball relief.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "Your ball clearly went into a water hazard, but the area isn't marked with red or yellow stakes. Can you take penalty area relief?\n- **source URL**: https://forums.golfwrx.com/topic/1847515-penalty-area-boundaries/\n- **top_comment**: No, an area must be properly marked to be a penalty area. Without markings, you must treat it as you find it or take unplayable ball relief.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://forums.golfwrx.com/topic/1847515-penalty-area-boundaries/\n- **top_comment**: No, an area must be properly marked to be a penalty area. Without markings, you must treat it as you find it or take unplayable ball relief.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "No, an area must be properly marked to be a penalty area. Without markings, you must treat it as you find it or take unplayable ball relief.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
-  },
-  {
-    "id": "test038\n- **difficulty**: adversarial\n- **question**: You're taking relief from GUR and your ball rolls closer to the hole after dropping. Your playing partner says you must re-drop. Are they correct?\n- **source URL**: https://www.usga.org/content/usga/home-page/rules/rules-2019/players-edition/rule-14.html\n- **top_comment**: Not necessarily. The ball can roll closer to the hole as long as it doesn't roll outside the relief area and isn't nearer the hole than the reference point.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "adversarial\n- **question**: You're taking relief from GUR and your ball rolls closer to the hole after dropping. Your playing partner says you must re-drop. Are they correct?\n- **source URL**: https://www.usga.org/content/usga/home-page/rules/rules-2019/players-edition/rule-14.html\n- **top_comment**: Not necessarily. The ball can roll closer to the hole as long as it doesn't roll outside the relief area and isn't nearer the hole than the reference point.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "",
-    "question": "You're taking relief from GUR and your ball rolls closer to the hole after dropping. Your playing partner says you must re-drop. Are they correct?\n- **source URL**: https://www.usga.org/content/usga/home-page/rules/rules-2019/players-edition/rule-14.html\n- **top_comment**: Not necessarily. The ball can roll closer to the hole as long as it doesn't roll outside the relief area and isn't nearer the hole than the reference point.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://www.usga.org/content/usga/home-page/rules/rules-2019/players-edition/rule-14.html\n- **top_comment**: Not necessarily. The ball can roll closer to the hole as long as it doesn't roll outside the relief area and isn't nearer the hole than the reference point.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "Not necessarily. The ball can roll closer to the hole as long as it doesn't roll outside the relief area and isn't nearer the hole than the reference point.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
-  },
-  {
-    "id": "test039\n- **difficulty**: adversarial\n- **category**: equipment\n- **question**: Your caddie accidentally breaks your putter during the round (not from abuse). Can you replace it with a different putter from the pro shop?\n- **source URL**: https://ilovegolfwhen.com/rules-of-golf-2026/\n- **top_comment**: No, you can only replace a damaged club with one you or your group are carrying. You cannot go get a new club from the pro shop.\n- **ground_truth**: \n- **format**: stroke",
-    "difficulty": "adversarial\n- **category**: equipment\n- **question**: Your caddie accidentally breaks your putter during the round (not from abuse). Can you replace it with a different putter from the pro shop?\n- **source URL**: https://ilovegolfwhen.com/rules-of-golf-2026/\n- **top_comment**: No, you can only replace a damaged club with one you or your group are carrying. You cannot go get a new club from the pro shop.\n- **ground_truth**: \n- **format**: stroke",
-    "category": "equipment\n- **question**: Your caddie accidentally breaks your putter during the round (not from abuse). Can you replace it with a different putter from the pro shop?\n- **source URL**: https://ilovegolfwhen.com/rules-of-golf-2026/\n- **top_comment**: No, you can only replace a damaged club with one you or your group are carrying. You cannot go get a new club from the pro shop.\n- **ground_truth**: \n- **format**: stroke",
-    "question": "Your caddie accidentally breaks your putter during the round (not from abuse). Can you replace it with a different putter from the pro shop?\n- **source URL**: https://ilovegolfwhen.com/rules-of-golf-2026/\n- **top_comment**: No, you can only replace a damaged club with one you or your group are carrying. You cannot go get a new club from the pro shop.\n- **ground_truth**: \n- **format**: stroke",
-    "source_url": "https://ilovegolfwhen.com/rules-of-golf-2026/\n- **top_comment**: No, you can only replace a damaged club with one you or your group are carrying. You cannot go get a new club from the pro shop.\n- **ground_truth**: \n- **format**: stroke",
-    "top_comment": "No, you can only replace a damaged club with one you or your group are carrying. You cannot go get a new club from the pro shop.\n- **ground_truth**: \n- **format**: stroke",
-    "format": "stroke",
-    "response": ""
-  },
-  {
-    "id": "test040\n- **difficulty**: adversarial\n- **category**: unplayable\n- **question**: Your ball is in an impossible lie in the woods. You decide it's unplayable and want to go back to the tee using stroke-and-distance, but your caddie already threw a ball down for lateral relief. Must you play the dropped ball?\n- **source URL**: https://www.mygolfinstructor.com/instruction/rules-of-golf/unplayable-lie/\n- **top_comment**: No, as long as you haven't made a stroke at the dropped ball, you can pick it up and choose a different relief option, including stroke-and-distance.\n- **ground_truth**: \n- **format**: stroke\n\n---\n\n*Test cases compiled from various golf rules sources including USGA quizzes, golf forums, and community discussions. Sources include Golf Monthly, GolfWRX, USGA, Golf Digest, and official R&A publications.*",
-    "difficulty": "adversarial\n- **category**: unplayable\n- **question**: Your ball is in an impossible lie in the woods. You decide it's unplayable and want to go back to the tee using stroke-and-distance, but your caddie already threw a ball down for lateral relief. Must you play the dropped ball?\n- **source URL**: https://www.mygolfinstructor.com/instruction/rules-of-golf/unplayable-lie/\n- **top_comment**: No, as long as you haven't made a stroke at the dropped ball, you can pick it up and choose a different relief option, including stroke-and-distance.\n- **ground_truth**: \n- **format**: stroke\n\n---\n\n*Test cases compiled from various golf rules sources including USGA quizzes, golf forums, and community discussions. Sources include Golf Monthly, GolfWRX, USGA, Golf Digest, and official R&A publications.*",
-    "category": "unplayable\n- **question**: Your ball is in an impossible lie in the woods. You decide it's unplayable and want to go back to the tee using stroke-and-distance, but your caddie already threw a ball down for lateral relief. Must you play the dropped ball?\n- **source URL**: https://www.mygolfinstructor.com/instruction/rules-of-golf/unplayable-lie/\n- **top_comment**: No, as long as you haven't made a stroke at the dropped ball, you can pick it up and choose a different relief option, including stroke-and-distance.\n- **ground_truth**: \n- **format**: stroke\n\n---\n\n*Test cases compiled from various golf rules sources including USGA quizzes, golf forums, and community discussions. Sources include Golf Monthly, GolfWRX, USGA, Golf Digest, and official R&A publications.*",
-    "question": "Your ball is in an impossible lie in the woods. You decide it's unplayable and want to go back to the tee using stroke-and-distance, but your caddie already threw a ball down for lateral relief. Must you play the dropped ball?\n- **source URL**: https://www.mygolfinstructor.com/instruction/rules-of-golf/unplayable-lie/\n- **top_comment**: No, as long as you haven't made a stroke at the dropped ball, you can pick it up and choose a different relief option, including stroke-and-distance.\n- **ground_truth**: \n- **format**: stroke\n\n---\n\n*Test cases compiled from various golf rules sources including USGA quizzes, golf forums, and community discussions. Sources include Golf Monthly, GolfWRX, USGA, Golf Digest, and official R&A publications.*",
-    "source_url": "https://www.mygolfinstructor.com/instruction/rules-of-golf/unplayable-lie/\n- **top_comment**: No, as long as you haven't made a stroke at the dropped ball, you can pick it up and choose a different relief option, including stroke-and-distance.\n- **ground_truth**: \n- **format**: stroke\n\n---\n\n*Test cases compiled from various golf rules sources including USGA quizzes, golf forums, and community discussions. Sources include Golf Monthly, GolfWRX, USGA, Golf Digest, and official R&A publications.*",
-    "top_comment": "No, as long as you haven't made a stroke at the dropped ball, you can pick it up and choose a different relief option, including stroke-and-distance.\n- **ground_truth**: \n- **format**: stroke\n\n---\n\n*Test cases compiled from various golf rules sources including USGA quizzes, golf forums, and community discussions. Sources include Golf Monthly, GolfWRX, USGA, Golf Digest, and official R&A publications.*",
-    "format": "stroke\n\n---\n\n*Test cases compiled from various golf rules sources including USGA quizzes, golf forums, and community discussions. Sources include Golf Monthly, GolfWRX, USGA, Golf Digest, and official R&A publications.*",
-    "response": ""
+    "id": "test040",
+    "difficulty": "adversarial",
+    "category": "unplayable",
+    "question": "Your ball is in an impossible lie in the woods. You decide it's unplayable and want to go back to the tee using stroke-and-distance, but your caddie already threw a ball down for lateral relief. Must you play the dropped ball?",
+    "source URL": "https://www.mygolfinstructor.com/instruction/rules-of-golf/unplayable-lie/",
+    "top_comment": "No, as long as you haven't made a stroke at the dropped ball, you can pick it up and choose a different relief option, including stroke-and-distance.",
+    "ground_truth": "",
+    "format": "stroke"
   }
 ]

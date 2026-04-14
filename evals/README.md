@@ -9,14 +9,14 @@ A two-stage evaluation system for testing golf rules AI bots with comprehensive 
 # Run with default settings (auto-extracts all versions)
 ./run_golf_rules_eval.py
 
-# Use different model
-./run_golf_rules_eval.py --model "claude-3-5-sonnet-20241022"
+# Use different model (any working Claude model)
+./run_golf_rules_eval.py --model "claude-3-haiku-20240307"
 ```
 
 ### 2. Grade Results
 ```bash
 # Grade the results (replace with your actual eval directory)
-./grade_golf_rules_eval.py --eval-dir "v0.1_rv1_20260413_143000"
+./grade_golf_rules_eval.py --eval-dir "v0.1_haiku_rv1_20260413_143000"
 ```
 
 ## Workflow
@@ -26,7 +26,7 @@ A two-stage evaluation system for testing golf rules AI bots with comprehensive 
 - Auto-extracts rubric version from local `RUBRIC.md` frontmatter  
 - Loads golf rules test cases from local `golf_rules_test_cases.json`
 - Sends each question sequentially to Anthropic API with system prompt
-- Creates versioned folder: `v{prompt_version}_r{rubric_version}_{timestamp}`
+- Creates versioned folder: `v{prompt_version}_{model_abbrev}_r{rubric_version}_{timestamp}`
 - Copies all reference files and creates initial manifest
 
 ### Stage 2: Grader (`grade_golf_rules_eval.py`) 
@@ -38,7 +38,7 @@ A two-stage evaluation system for testing golf rules AI bots with comprehensive 
 
 ## Output Structure
 
-Each evaluation run creates a folder: `v{prompt_version}_r{rubric_version}_{timestamp}/`
+Each evaluation run creates a folder: `v{prompt_version}_{model_abbrev}_r{rubric_version}_{timestamp}/`
 
 **Complete file structure:**
 - `manifest.json` - Metadata + summary with scores and breakdowns  
@@ -48,6 +48,10 @@ Each evaluation run creates a folder: `v{prompt_version}_r{rubric_version}_{time
 - `responses.json` - Raw model outputs
 - `grades.json` - Per-case scores + reasoning
 - `summary.json` - Aggregates (total, by difficulty, by category)
+
+## Model Compatibility
+
+Both scripts default to `claude-3-haiku-20240307` which is known to work. If you want to use other models, verify they're available in your API access before running.
 
 ## Command Line Options
 
@@ -63,8 +67,8 @@ Each evaluation run creates a folder: `v{prompt_version}_r{rubric_version}_{time
 ### Grader  
 ```bash
 ./grade_golf_rules_eval.py \
-  --eval-dir "v0.1_rv1_20260413_143000" \
-  --model "claude-3-5-sonnet-20241022" \
+  --eval-dir "v0.1_haiku_rv1_20260413_143000" \
+  --model "claude-3-haiku-20240307" \
   --rate-limit 0.5
 ```
 
@@ -86,7 +90,6 @@ The `manifest.json` file contains complete evaluation metadata:
   "aggregate_score": 75.2,
   "aggregate_max": 100,
   "breakdowns": {
-    "by_difficulty": {"easy": 92, "medium": 78, "hard": 65, "adversarial": 55},
     "by_category": {"penalty_area": 80, "bunker": 70},
     "fail_conditions_triggered": {"hallucinated_rule": 2, "safety": 0}
   }
@@ -109,17 +112,17 @@ From local `RUBRIC.md`:
 ```bash
 # Run baseline evaluation (all versions auto-detected)
 ./run_golf_rules_eval.py
-# Creates: v0.1_rv1_20260413_143000/
+# Creates: v0.1_haiku_rv1_20260413_143000/
 
 # Grade the results  
-./grade_golf_rules_eval.py --eval-dir "v0.1_rv1_20260413_143000"
+./grade_golf_rules_eval.py --eval-dir "v0.1_haiku_rv1_20260413_143000"
 
 # Test with different model
-./run_golf_rules_eval.py --model "claude-3-5-sonnet-20241022"
-# Creates: v0.1_rv1_20260413_144500/
+./run_golf_rules_eval.py --model "claude-3-haiku-20240307"
+# Creates: v0.1_haiku_rv1_20260413_144500/
 
 # Grade the new results
-./grade_golf_rules_eval.py --eval-dir "v0.1_rv1_20260413_144500"
+./grade_golf_rules_eval.py --eval-dir "v0.1_haiku_rv1_20260413_144500"
 ```
 
 The system enables easy comparison across different models, prompts, and configurations with complete reproducibility through versioned artifacts.

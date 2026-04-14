@@ -156,6 +156,64 @@ class GolfRulesEvaluator:
         self.logger.warning("RUBRIC.md not found, using default version v1")
         return 'v1'
 
+    def _api_call_with_retry(self, **kwargs):
+        """Make API call with exponential backoff retry for rate limiting"""
+        max_retries = 3
+        base_delay = 5  # Start with 5 seconds
+
+        for attempt in range(max_retries + 1):
+            try:
+                return self.client.messages.create(**kwargs)
+            except Exception as e:
+                # Check if it's a rate limiting error (429 or 529)
+                error_str = str(e)
+                is_rate_limit = (
+                    '429' in error_str or
+                    '529' in error_str or
+                    'rate' in error_str.lower() or
+                    'too many requests' in error_str.lower()
+                )
+                if is_rate_limit and attempt < max_retries:
+                    delay = base_delay * (2 ** attempt)  # 5, 10, 20 seconds
+                    self.logger.warning(f"Rate limited (attempt {attempt + 1}/{max_retries + 1}), waiting {delay}s...")
+                    time.sleep(delay)
+                    continue
+                else:
+                    # Re-raise if not rate limiting or max retries exceeded
+                    raise
+
+    def _abbreviate_model_name(self, model_name: str) -> str:
+        """Abbreviate model name for directory naming"""
+        model_abbreviations = {
+            'claude-3-haiku-20240307': 'haiku',
+            'claude-3-5-sonnet-20241022': 'sonnet35',
+            'claude-3-opus-20240229': 'opus',
+            'claude-sonnet-4-6': 'sonnet4',
+            'claude-opus-4-6': 'opus4',
+            'claude-haiku-4-5': 'haiku4',
+        }
+
+        # Try exact match first
+        if model_name in model_abbreviations:
+            return model_abbreviations[model_name]
+
+        # Fallback: extract model family from name
+        model_lower = model_name.lower()
+        if 'haiku' in model_lower:
+            return 'haiku' if '3' in model_lower else 'haiku4'
+        elif 'sonnet' in model_lower:
+            if '3-5' in model_lower or '3.5' in model_lower:
+                return 'sonnet35'
+            elif '4' in model_lower:
+                return 'sonnet4'
+            else:
+                return 'sonnet'
+        elif 'opus' in model_lower:
+            return 'opus4' if '4' in model_lower else 'opus'
+        else:
+            # Unknown model, use first 10 chars
+            return model_name[:10].replace('-', '').replace('.', '')
+
     def load_test_cases(self, test_cases_file: str) -> List[Dict[str, Any]]:
         """Load test cases from JSON file"""
         with open(test_cases_file, 'r', encoding='utf-8') as f:
@@ -167,7 +225,7 @@ class GolfRulesEvaluator:
         timestamp = datetime.now().isoformat()
 
         try:
-            response = self.client.messages.create(
+            response = self._api_call_with_retry(
                 model=self.model,
                 max_tokens=4096,
                 system=self.system_prompt,
@@ -205,7 +263,7 @@ class GolfRulesEvaluator:
             end_time = time.time()
             response_time_ms = (end_time - start_time) * 1000
 
-            self.logger.error(f"✗ {test_case['id']} failed: {str(e)}")
+            # Error logged to result, not terminal
 
             result = test_case.copy()
             result.update({
@@ -249,8 +307,9 @@ class GolfRulesEvaluator:
         # Create timestamp
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-        # Create output directory with new naming convention
-        output_dir = Path(f"{self.system_prompt_version}_r{self.rubric_version}_{timestamp}")
+        # Create output directory with new naming convention including model
+        model_abbrev = self._abbreviate_model_name(self.model)
+        output_dir = Path(f"{self.system_prompt_version}_{model_abbrev}_r{self.rubric_version}_{timestamp}")
         output_dir.mkdir(parents=True, exist_ok=True)
 
         # 1. responses.json - Raw model outputs
