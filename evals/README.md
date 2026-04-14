@@ -22,7 +22,7 @@ A two-stage evaluation system for testing golf rules AI bots with comprehensive 
 ## Workflow
 
 ### Stage 1: Test Runner (`run_golf_rules_eval.py`)
-- Auto-extracts system prompt version from `../prompts/golf_rules_system_prompt_v0.1.md` frontmatter
+- Auto-extracts system prompt version from `../prompts/golf_rules_system_prompt_v0.2.md` frontmatter
 - Auto-extracts rubric version from local `RUBRIC.md` frontmatter  
 - Loads golf rules test cases from local `golf_rules_test_cases.json`
 - Sends each question sequentially to Anthropic API with system prompt
@@ -60,7 +60,7 @@ Both scripts default to `claude-3-haiku-20240307` which is known to work. If you
 ./run_golf_rules_eval.py \
   --model "claude-3-haiku-20240307" \
   --test-cases "golf_rules_test_cases.json" \
-  --system-prompt "../prompts/golf_rules_system_prompt_v0.1.md" \
+  --system-prompt "../prompts/golf_rules_system_prompt_v0.2.md" \
   --rate-limit 1.0
 ```
 

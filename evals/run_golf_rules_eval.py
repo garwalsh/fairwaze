@@ -79,7 +79,7 @@ class GolfRulesEvaluator:
         api_key: Optional[str] = None,
         model: str = "claude-3-haiku-20240307",
         rate_limit_delay: float = 1.0,
-        system_prompt_file: str = "golf_rules_system_prompt_v0.1.md"
+        system_prompt_file: str = "golf_rules_system_prompt_v0.2.md"
     ):
         """Initialize the evaluator"""
         # Load environment variables
@@ -118,8 +118,8 @@ class GolfRulesEvaluator:
             system_prompt_file,
             f"../{system_prompt_file}",
             f"../../{system_prompt_file}",
-            "../prompts/golf_rules_system_prompt_v0.1.md",  # Default fallback
-            "../golf_rules_system_prompt_v0.1.md"  # Legacy fallback
+            "../prompts/golf_rules_system_prompt_v0.2.md",  # Default fallback
+            "../golf_rules_system_prompt_v0.2.md"  # Legacy fallback
         ]
 
         for path in possible_paths:
@@ -380,7 +380,7 @@ async def main():
                        type=float, default=1.0,
                        help="Delay between requests (seconds)")
     parser.add_argument("--system-prompt",
-                       default="../prompts/golf_rules_system_prompt_v0.1.md",
+                       default="../prompts/golf_rules_system_prompt_v0.2.md",
                        help="Path to system prompt file")
 
     args = parser.parse_args()
