@@ -32,7 +32,7 @@ The bot acts as an experienced USGA rules official, providing rulings for on-cou
 <br>
 
 <figure>
-<img src="evals/dashboard_screenshotv0.2.png" alt="v0.2 Eval Dashboard">
+<img src="dashboard/dashboard_screenshotv0.2.png" alt="v0.2 Eval Dashboard">
 <figcaption><em>Interactive eval dashboard showing v0.2 results across 40 test cases and 4 difficulty tiers.</em></figcaption>
 </figure>
 
@@ -202,7 +202,7 @@ Rule number citations increased from 4/40 (10%) to 7/40 (17.5%). Adding detailed
 
 The rule number regression illustrates a general prompt engineering pattern: instructions that add domain knowledge can undermine instructions that constrain output format. The v0.3 plan is to move rule number suppression from prompt instruction to post-processing (regex strip), accepting that the prompt alone can't reliably prevent this.
 
-![v0.1 Dashboard Screenshot](evals/dashboard_screenshotv0.1.png)
+![v0.1 Dashboard Screenshot](dashboard/dashboard_screenshotv0.1.png)
 
 ---
 
@@ -268,7 +268,7 @@ python evals/run_golf_rules_eval.py
 python evals/grade_golf_rules_eval.py
 
 # View results
-open evals/dashboard.html
+open dashboard/dashboard.html
 ```
 
 ---

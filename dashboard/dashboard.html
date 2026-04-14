@@ -159,10 +159,16 @@
             background: var(--card-bg);
             border: 2px solid var(--border);
             border-radius: 12px;
-            padding: 8px 24px 8px 16px;
+            padding: 8px 40px 8px 16px !important;
             font-weight: 500;
             color: #e2e8f0;
             transition: all 0.3s ease;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23e2e8f0' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
         }
 
         .dropdown-select:focus {
@@ -438,7 +444,7 @@ function Dashboard() {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-3 gap-x-6 gap-y-2 text-sm max-w-4xl">
+                    <div className="grid grid-cols-3 gap-x-6 gap-y-2 text-sm" style={{maxWidth: '56rem'}}>
                         <div>
                             <span className="text-gray-500">Model:</span>
                             <span className="ml-2 font-medium text-gray-100">
@@ -457,16 +463,12 @@ function Dashboard() {
                                 {new Date(manifest.timestamp).toLocaleDateString()}
                             </span>
                         </div>
-                        <div className="col-span-3 max-w-2xl">
-                            <span className="text-gray-500">Changes:</span>
-                            <div className="font-medium text-gray-100 mt-1"
+                        <div className="col-span-3" style={{maxWidth: '100%', overflow: 'hidden'}}>
+                            <span className="text-gray-500">Changes: </span>
+                            <span className="font-medium text-gray-100"
                                  style={{
-                                     display: '-webkit-box',
-                                     WebkitLineClamp: 2,
-                                     WebkitBoxOrient: 'vertical',
-                                     overflow: 'hidden',
                                      lineHeight: '1.4'
-                                 }}>{manifest.changes_from_previous}</div>
+                                 }}>{manifest.changes_from_previous}</span>
                         </div>
                     </div>
                 </div>
