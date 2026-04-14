@@ -96,6 +96,31 @@ class GolfRulesGrader:
 
         raise FileNotFoundError(f"RUBRIC.md not found. Tried: {possible_paths}")
 
+    def _sanitize_json_text(self, text: str) -> str:
+        """Sanitize JSON text by replacing problematic control characters"""
+        import re
+
+        # Very aggressive sanitization approach
+        sanitized = text
+
+        # Replace ALL control characters with spaces
+        # This includes \x00-\x1f (except \t, \n, \r) and \x7f-\x9f
+        sanitized = re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f\x7f-\x9f]', ' ', sanitized)
+
+        # Normalize whitespace - replace any sequence of whitespace with single spaces
+        # except within the structure of the JSON
+        lines = sanitized.split('\n')
+        clean_lines = []
+        for line in lines:
+            # Clean up extra whitespace but preserve JSON structure
+            line = re.sub(r'[ \t]+', ' ', line.strip())
+            if line:
+                clean_lines.append(line)
+
+        sanitized = '\n'.join(clean_lines)
+
+        return sanitized
+
     def _api_call_with_retry(self, **kwargs):
         """Make API call with exponential backoff retry for rate limiting"""
         max_retries = 3
@@ -206,15 +231,45 @@ Remember: Accuracy is weighted x2 in the total score calculation.
 
             # Parse JSON response
             try:
+                # First try parsing the original response
                 grade_data = json.loads(response_text)
-            except json.JSONDecodeError:
-                # Try to extract JSON from response if it's wrapped in other text
-                import re
-                json_match = re.search(r'\{.*\}', response_text, re.DOTALL)
-                if json_match:
-                    grade_data = json.loads(json_match.group(0))
-                else:
-                    raise ValueError("Could not parse JSON from response")
+            except json.JSONDecodeError as e:
+                try:
+                    # Try sanitizing control characters
+                    sanitized_text = self._sanitize_json_text(response_text)
+                    grade_data = json.loads(sanitized_text)
+                except json.JSONDecodeError as e2:
+                    # Try to extract JSON from response if it's wrapped in other text
+                    import re
+                    json_match = re.search(r'\{.*\}', response_text, re.DOTALL)
+                    if json_match:
+                        json_text = json_match.group(0)
+                        try:
+                            grade_data = json.loads(json_text)
+                        except json.JSONDecodeError as e3:
+                            try:
+                                # Try sanitizing the extracted JSON
+                                sanitized_json = self._sanitize_json_text(json_text)
+                                grade_data = json.loads(sanitized_json)
+                            except json.JSONDecodeError as e4:
+                                # Final fallback: try to manually fix common issues
+                                final_attempt = sanitized_json
+                                # Replace common problematic sequences
+                                final_attempt = final_attempt.replace('\\"', '"')
+                                final_attempt = re.sub(r'\\n', '\n', final_attempt)
+                                final_attempt = re.sub(r'\\t', '\t', final_attempt)
+                                final_attempt = re.sub(r'[\r\n\t]+', ' ', final_attempt)
+
+                                try:
+                                    grade_data = json.loads(final_attempt)
+                                except json.JSONDecodeError as e5:
+                                    # Log the problematic text for debugging
+                                    self.logger.error(f"Failed to parse JSON for {response_data['id']}:")
+                                    self.logger.error(f"Original response length: {len(response_text)}")
+                                    self.logger.error(f"Response preview: {response_text[:500]}")
+                                    raise ValueError(f"Could not parse JSON from response. Final error: {e5}")
+                    else:
+                        raise ValueError(f"Could not parse JSON from response. No JSON object found. Original error: {e}")
 
             # Validate and calculate total
             accuracy = grade_data.get('accuracy', 0)
